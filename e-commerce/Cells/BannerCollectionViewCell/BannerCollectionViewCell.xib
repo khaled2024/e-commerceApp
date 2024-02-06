@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="BannerCollectionViewCell" id="gTV-IL-0wX" customClass="BannerCollectionViewCell" customModule="e_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1120" height="613"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="1120" height="613"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-social-media-banner" translatesAutoresizingMaskIntoConstraints="NO" id="ZM7-QY-HAA">
+                        <rect key="frame" x="0.0" y="0.0" width="1120" height="613"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZM7-QY-HAA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7NW-uF-dqx"/>
+                <constraint firstItem="ZM7-QY-HAA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HRB-m1-z2e"/>
+                <constraint firstAttribute="bottom" secondItem="ZM7-QY-HAA" secondAttribute="bottom" id="Xuc-vB-7lx"/>
+                <constraint firstAttribute="trailing" secondItem="ZM7-QY-HAA" secondAttribute="trailing" id="pA4-q1-rJ9"/>
+            </constraints>
+            <size key="customSize" width="1060" height="564"/>
+            <connections>
+                <outlet property="bannerImageView" destination="ZM7-QY-HAA" id="fSZ-1a-rNt"/>
+            </connections>
+            <point key="canvasLocation" x="706.87022900763361" y="-56.690140845070424"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="food-social-media-banner" width="360" height="303"/>
+    </resources>
+</document>
