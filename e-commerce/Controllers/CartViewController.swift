@@ -24,9 +24,7 @@ class CartViewController: UIViewController {
     }
     func setUpDesign(){
         confirmBtn.layer.cornerRadius = 15
-        
     }
-
 }
 // extensions
 extension CartViewController: UITableViewDelegate,UITableViewDataSource{

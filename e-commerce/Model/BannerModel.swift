@@ -65,14 +65,14 @@ let categories =
 let restaurants =
 [
     RestaurantModel(image: "resturant-pizza", name: "Pizza house",state: .open),
-    RestaurantModel(image: "resturant-kebab", name: "Pizza house",state: .close),
-    RestaurantModel(image: "resturant-Burger", name: "Pizza house",state: .close),
+    RestaurantModel(image: "resturant-kebab", name: "kebab house",state: .close),
+    RestaurantModel(image: "resturant-Burger", name: "Burger house",state: .close),
     RestaurantModel(image: "resturant-pizza", name: "Pizza house",state: .open),
-    RestaurantModel(image: "resturant-kebab", name: "Pizza house",state: .close),
-    RestaurantModel(image: "resturant-Burger", name: "Pizza house",state: .close),
+    RestaurantModel(image: "resturant-kebab", name: "kebab house",state: .close),
+    RestaurantModel(image: "resturant-Burger", name: "Burger house",state: .close),
     RestaurantModel(image: "resturant-pizza", name: "Pizza house",state: .open),
-    RestaurantModel(image: "resturant-kebab", name: "Pizza house",state: .open),
-    RestaurantModel(image: "resturant-Burger", name: "Pizza house",state: .close)
+    RestaurantModel(image: "resturant-kebab", name: "kebab house",state: .close),
+    RestaurantModel(image: "resturant-Burger", name: "Burger house",state: .close)
 ]
 
 

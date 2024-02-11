@@ -51,7 +51,6 @@ class ProductDetailViewController: UIViewController {
         backBtn.layer.cornerRadius = 10
         priceView.layer.cornerRadius = 20
         quantityView.layer.cornerRadius = 20
-//        gotocartBtn.layer.cornerRadius = 10
         gotocartBtn.roundCorners(corners: [.bottomLeft,.bottomRight,.topRight], radius: 15)
         smallBtn.setUpLayer(size: 12, borderColor: UIColor.systemOrange.cgColor, borderWidth: 1)
         mediumBtn.setUpLayer(size: 12, borderColor: UIColor.systemOrange.cgColor, borderWidth: 1)

@@ -194,11 +194,11 @@
 			children = (
 				EA78A5EA2B60559D00790B12 /* AppDelegate.swift */,
 				EA78A5EC2B60559D00790B12 /* SceneDelegate.swift */,
-				EA2439232B63A66A00ACD5BE /* extensions.swift */,
-				EA78A5F02B60559D00790B12 /* Main.storyboard */,
+				EABC61972B78C590002F4B67 /* Extensions */,
 				EA6AE0992B62AE8000AE45DB /* Controllers */,
 				EA6AE0982B62AE6500AE45DB /* Cells */,
 				EA6AE0962B62AE4900AE45DB /* Model */,
+				EA78A5F02B60559D00790B12 /* Main.storyboard */,
 				EA78A5F32B60559D00790B12 /* Assets.xcassets */,
 				EA78A5F52B60559D00790B12 /* LaunchScreen.storyboard */,
 				EA78A5F82B60559D00790B12 /* Info.plist */,
@@ -239,6 +239,14 @@
 				EA9E8E902B61B03500A250B0 /* RestaurantsCollectionViewCell.xib */,
 			);
 			path = RestaurantsCell;
+			sourceTree = "<group>";
+		};
+		EABC61972B78C590002F4B67 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA2439232B63A66A00ACD5BE /* extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
