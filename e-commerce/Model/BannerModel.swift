@@ -43,6 +43,20 @@ enum Available: String {
     case Exist = "Exist"
     case Expired = "Expired"
 }
+// onboarding
+struct Slide {
+    let title: String
+    let animation: String
+    let buttonColor: UIColor
+    let buttonTitle: String
+}
+let collectionSlides: [Slide] = [
+    .init(title: "get your food to you under 30 min anytime", animation: "", buttonColor: .systemYellow, buttonTitle: "Next"),
+    .init(title: "get your food to you under 30 min anytime", animation: "", buttonColor: .systemYellow, buttonTitle: "Next"),
+    .init(title: "get your food to you under 30 min anytime", animation: "", buttonColor: .systemGreen, buttonTitle: "Get Started"),
+    
+
+]
 
 let bannerImages =
 [
