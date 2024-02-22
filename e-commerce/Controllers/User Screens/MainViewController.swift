@@ -177,25 +177,3 @@ extension MainViewController: UICollectionViewDelegate,UICollectionViewDataSourc
         return 0
     }
 }
-
-//    func setNavbarButtons(){
-//        let searchBtn = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchButtonTapped))
-//        searchBtn.tintColor = .systemGray2
-//        let optionsBtn = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal.decrease"), style: .plain, target: self, action: #selector(optionButtonTapped))
-//        searchBtn.tintColor = .systemGray2
-//        optionsBtn.tintColor = .systemGray2
-//        navigationItem.rightBarButtonItem = searchBtn
-//        navigationItem.leftBarButtonItem = optionsBtn
-//    }
-//    @objc func searchButtonTapped(){
-//        print("search-Button-Tapped")
-//    }
-//    @objc func optionButtonTapped(){
-//        print("options-Button-Tapped")
-//    }
-//    func hideNavbar(){
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-//        self.navigationController?.navigationBar.isTranslucent = true
-//        self.view.backgroundColor = UIColor.clear
-//    }

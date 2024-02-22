@@ -41,4 +41,13 @@ extension UIButton{
         self.layer.borderColor = borderColor
         self.layer.borderWidth = borderWidth
     }
+    func setUpShadow(){
+        self.layer.cornerRadius = 10
+        self.layer.shadowColor = UIColor.systemYellow.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.backgroundColor = .white
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 0.3
+        self.layer.shadowPath = nil
+    }
 }

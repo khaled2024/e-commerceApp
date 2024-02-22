@@ -44,6 +44,7 @@ class CategoryTableViewCell: UITableViewCell{
         super.setSelected(selected, animated: animated)
     }
 }
+// UICollectionViewDelegate,UICollectionViewDataSource
 extension CategoryTableViewCell: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0{
@@ -95,7 +96,6 @@ extension CategoryTableViewCell: UICollectionViewDelegate,UICollectionViewDataSo
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
         if indexPath.section == 1{
             let resturant = resturants[indexPath.row]
             delegate?.showResturantDetail(cell: self, resturant: resturant)
@@ -111,7 +111,7 @@ extension CategoryTableViewCell: UICollectionViewDelegate,UICollectionViewDataSo
         if indexPath.section == 0{
             return CGSize(width: collectionView.frame.width/5, height: collectionView.frame.height)
         }else if indexPath.section == 1{
-            return CGSize(width: collectionView.frame.width/3, height: collectionView.frame.height/4)
+            return CGSize(width: collectionView.frame.width/3, height: collectionView.frame.height/3.2)
             // return CGSize(width: collectionView.frame.width/3.2, height: 150)
         }
         else if indexPath.section == 2{

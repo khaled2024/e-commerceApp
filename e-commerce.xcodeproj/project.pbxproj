@@ -151,11 +151,11 @@
 		EA6AE0982B62AE6500AE45DB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				EA9E8E822B61801500A250B0 /* CategoriesCell */,
-				EA6AE0912B62690800AE45DB /* BestProducts */,
-				EA9E8E8E2B61B01D00A250B0 /* RestaurantsCell */,
-				EA9E8E852B61829400A250B0 /* CategoryCollectionViewCell */,
 				EA9E8E812B61800000A250B0 /* BannerCollectionViewCell */,
+				EA9E8E822B61801500A250B0 /* CategoriesCell */,
+				EA9E8E852B61829400A250B0 /* CategoryCollectionViewCell */,
+				EA9E8E8E2B61B01D00A250B0 /* RestaurantsCell */,
+				EA6AE0912B62690800AE45DB /* BestProducts */,
 				EA4BF1A82B63B63E00743F3F /* IngredientsCell */,
 				EA2ECF9F2B643F4200DF2C31 /* FavouriteCell */,
 				EA4BF1AD2B63DB7B00743F3F /* OrdersCell */,
@@ -245,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				EA78A5EE2B60559D00790B12 /* MainViewController.swift */,
+				EAB2B6112B86A55800A7D419 /* SecondMainViewController.swift */,
 				EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */,
 				EA5E7F8E2B630F2F0045C6D7 /* CartViewController.swift */,
 				EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */,
@@ -252,7 +253,6 @@
 				EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */,
 				EACFEE2F2B656469008AE44C /* SearchViewController.swift */,
 				EACFEE312B65888D008AE44C /* TrackViewController.swift */,
-				EAB2B6112B86A55800A7D419 /* SecondMainViewController.swift */,
 			);
 			path = "User Screens";
 			sourceTree = "<group>";
