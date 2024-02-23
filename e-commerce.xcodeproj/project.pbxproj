@@ -44,6 +44,10 @@
 		EAB2B6172B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B6162B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift */; };
 		EACFEE302B656469008AE44C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFEE2F2B656469008AE44C /* SearchViewController.swift */; };
 		EACFEE322B65888D008AE44C /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFEE312B65888D008AE44C /* TrackViewController.swift */; };
+		EAE8416D2B888E65006E2742 /* extensions+UiNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8416C2B888E65006E2742 /* extensions+UiNavController.swift */; };
+		EAE8416F2B88918A006E2742 /* AdminTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8416E2B88918A006E2742 /* AdminTabBarController.swift */; };
+		EAE841712B8891F4006E2742 /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE841702B8891F4006E2742 /* AdminHomeViewController.swift */; };
+		EAE841752B88991E006E2742 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE841742B88991E006E2742 /* MarketViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +92,10 @@
 		EAB2B6162B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		EACFEE2F2B656469008AE44C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EACFEE312B65888D008AE44C /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		EAE8416C2B888E65006E2742 /* extensions+UiNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extensions+UiNavController.swift"; sourceTree = "<group>"; };
+		EAE8416E2B88918A006E2742 /* AdminTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabBarController.swift; sourceTree = "<group>"; };
+		EAE841702B8891F4006E2742 /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
+		EAE841742B88991E006E2742 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				EA2439232B63A66A00ACD5BE /* extensions.swift */,
+				EAE8416C2B888E65006E2742 /* extensions+UiNavController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,8 +314,19 @@
 		EAC75B672B8817140023CD97 /* Admin Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EAE841762B889A1C006E2742 /* HomeAdminScreens */,
 			);
 			path = "Admin Screens";
+			sourceTree = "<group>";
+		};
+		EAE841762B889A1C006E2742 /* HomeAdminScreens */ = {
+			isa = PBXGroup;
+			children = (
+				EAE8416E2B88918A006E2742 /* AdminTabBarController.swift */,
+				EAE841702B8891F4006E2742 /* AdminHomeViewController.swift */,
+				EAE841742B88991E006E2742 /* MarketViewController.swift */,
+			);
+			path = HomeAdminScreens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +446,8 @@
 				EA5E7F932B6310510045C6D7 /* CartTableViewCell.swift in Sources */,
 				EA4BF1AB2B63DB7700743F3F /* OrdersTableViewCell.swift in Sources */,
 				EA2439222B63A0DA00ACD5BE /* ProductDetailViewController.swift in Sources */,
+				EAE8416F2B88918A006E2742 /* AdminTabBarController.swift in Sources */,
+				EAE8416D2B888E65006E2742 /* extensions+UiNavController.swift in Sources */,
 				EAB2B6172B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift in Sources */,
 				EACFEE302B656469008AE44C /* SearchViewController.swift in Sources */,
 				EAB2B6122B86A55800A7D419 /* SecondMainViewController.swift in Sources */,
@@ -433,10 +455,12 @@
 				EA78A6002B605A5A00790B12 /* BannerCollectionViewCell.swift in Sources */,
 				EA6AE0942B62694400AE45DB /* bestProductsCollectionViewCell.swift in Sources */,
 				EA78A5ED2B60559D00790B12 /* SceneDelegate.swift in Sources */,
+				EAE841752B88991E006E2742 /* MarketViewController.swift in Sources */,
 				EA6AE09B2B62AEE100AE45DB /* ResturantDetailViewController.swift in Sources */,
 				EACFEE322B65888D008AE44C /* TrackViewController.swift in Sources */,
 				EA5E7F8F2B630F2F0045C6D7 /* CartViewController.swift in Sources */,
 				EA78A6032B605B5A00790B12 /* Models.swift in Sources */,
+				EAE841712B8891F4006E2742 /* AdminHomeViewController.swift in Sources */,
 				EA9E8E882B6182B600A250B0 /* CategoryCollectionViewCell.swift in Sources */,
 				EA9E8E842B6180A300A250B0 /* CategoryTableViewCell.swift in Sources */,
 			);

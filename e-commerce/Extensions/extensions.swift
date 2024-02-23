@@ -22,8 +22,6 @@ extension UIView{
         self.layer.shadowOpacity = 0.5
         self.layer.shadowOffset = CGSize(width: 1, height: 1)
     }
-}
-extension UIView {
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds,
                                 byRoundingCorners: corners,
@@ -34,6 +32,7 @@ extension UIView {
         
         layer.mask = maskLayer
     }
+
 }
 extension UIButton{
     func setUpLayer(size: CGFloat,borderColor: CGColor,borderWidth: CGFloat){
