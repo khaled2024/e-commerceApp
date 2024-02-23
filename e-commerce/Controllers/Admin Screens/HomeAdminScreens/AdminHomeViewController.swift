@@ -9,14 +9,12 @@ import UIKit
 
 class AdminHomeViewController: UIViewController {
     @IBOutlet weak var adminDetailsView: UIView!
-    
     @IBOutlet weak var dashboardView: UIView!
     @IBOutlet weak var analyticsView: UIView!
     @IBOutlet weak var usersBtn: UIButton!
     @IBOutlet weak var usersView: UIView!
     @IBOutlet weak var marketBtn: UIButton!
     @IBOutlet weak var marketView: UIView!
-    
     @IBOutlet weak var driversBtn: UIButton!
     @IBOutlet weak var driversView: UIView!
     @IBOutlet weak var ordersBtn: UIButton!
@@ -25,8 +23,6 @@ class AdminHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpDesign()
-        
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -36,7 +32,7 @@ class AdminHomeViewController: UIViewController {
     // functions :-
     func setUpDesign(){
         title = "Home"
-        adminDetailsView.roundCorners(corners: [.bottomLeft,.bottomRight], radius: 15)
+        adminDetailsView.layer.cornerRadius = 15
         analyticsView.layer.cornerRadius = 15
         dashboardView.layer.cornerRadius = 15
         ordersView.layer.cornerRadius = 15
@@ -48,15 +44,22 @@ class AdminHomeViewController: UIViewController {
     }
     // btn tapped
     @IBAction func usersBtnTapped(_ sender: UIButton) {
+        
     }
     @IBAction func ordersBtnTapped(_ sender: UIButton) {
         
     }
     @IBAction func driversBtnTapped(_ sender: UIButton) {
+        
     }
     @IBAction func marketBtnTapped(_ sender: UIButton) {
-        print("push")
+        print("Push Market Screen")
         let marketVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "MarketViewController")as! MarketViewController
         navigationController?.pushViewController(marketVC, animated: true)
+    }
+    @IBAction func CostumerServicesBtnTapped(_ sender: UIButton) {
+        print("CostumerServicesTapped")
+        let CostumerServicesVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "CostumerServicesViewController")as! CostumerServicesViewController
+        self.navigationController?.pushViewController(CostumerServicesVC, animated: true)
     }
 }
