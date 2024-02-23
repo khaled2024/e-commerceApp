@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C393C34C492BC0D700319162 /* Pods_e_commerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3355D14F0F1A4E0CD5579FF /* Pods_e_commerce.framework */; };
 		EA2439222B63A0DA00ACD5BE /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */; };
 		EA2439242B63A66A00ACD5BE /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2439232B63A66A00ACD5BE /* extensions.swift */; };
 		EA2ECF9C2B63E14E00DF2C31 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECF9B2B63E14E00DF2C31 /* OrderViewController.swift */; };
@@ -45,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		115995DC1A5829155968989F /* Pods-e-commerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-commerce.debug.xcconfig"; path = "Target Support Files/Pods-e-commerce/Pods-e-commerce.debug.xcconfig"; sourceTree = "<group>"; };
+		502C74A3159D6B65B285C69C /* Pods-e-commerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-commerce.release.xcconfig"; path = "Target Support Files/Pods-e-commerce/Pods-e-commerce.release.xcconfig"; sourceTree = "<group>"; };
+		C3355D14F0F1A4E0CD5579FF /* Pods_e_commerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_commerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		EA2439232B63A66A00ACD5BE /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		EA2ECF9B2B63E14E00DF2C31 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
@@ -89,12 +93,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C393C34C492BC0D700319162 /* Pods_e_commerce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46D276822810A62050A5C5D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				115995DC1A5829155968989F /* Pods-e-commerce.debug.xcconfig */,
+				502C74A3159D6B65B285C69C /* Pods-e-commerce.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		72B5D874627A529C9DF9C42A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3355D14F0F1A4E0CD5579FF /* Pods_e_commerce.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA2ECF9F2B643F4200DF2C31 /* FavouriteCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				EAB2B6182B86AE5000A7D419 /* Onboarding */,
+				EAC75B672B8817140023CD97 /* Admin Screens */,
 				EAB2B6132B86A72800A7D419 /* User Screens */,
 			);
 			path = Controllers;
@@ -178,6 +201,8 @@
 			children = (
 				EA78A5E92B60559D00790B12 /* e-commerce */,
 				EA78A5E82B60559D00790B12 /* Products */,
+				46D276822810A62050A5C5D9 /* Pods */,
+				72B5D874627A529C9DF9C42A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,6 +299,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		EAC75B672B8817140023CD97 /* Admin Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Admin Screens";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +313,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA78A5FB2B60559D00790B12 /* Build configuration list for PBXNativeTarget "e-commerce" */;
 			buildPhases = (
+				3FC2E297D3A74701A777CCC9 /* [CP] Check Pods Manifest.lock */,
 				EA78A5E32B60559D00790B12 /* Sources */,
 				EA78A5E42B60559D00790B12 /* Frameworks */,
 				EA78A5E52B60559D00790B12 /* Resources */,
@@ -347,6 +380,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FC2E297D3A74701A777CCC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-e-commerce-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA78A5E32B60559D00790B12 /* Sources */ = {
@@ -523,6 +581,7 @@
 		};
 		EA78A5FC2B60559D00790B12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 115995DC1A5829155968989F /* Pods-e-commerce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -550,6 +609,7 @@
 		};
 		EA78A5FD2B60559D00790B12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 502C74A3159D6B65B285C69C /* Pods-e-commerce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -46,15 +46,14 @@ enum Available: String {
 // onboarding
 struct Slide {
     let title: String
-    let animation: String
+    let image: String
     let buttonColor: UIColor
     let buttonTitle: String
 }
 let collectionSlides: [Slide] = [
-    .init(title: "get your food to you under 30 min anytime", animation: "", buttonColor: .systemYellow, buttonTitle: "Next"),
-    .init(title: "get your food to you under 30 min anytime", animation: "", buttonColor: .systemYellow, buttonTitle: "Next"),
-    .init(title: "get your food to you under 30 min anytime", animation: "", buttonColor: .systemGreen, buttonTitle: "Get Started"),
-    
+    .init(title: "get your food to you under 30 min anytime", image: "fastFood", buttonColor: .systemYellow, buttonTitle: "Next"),
+    .init(title: "get your food to you under 30 min anytime", image: "orderFood", buttonColor: .systemYellow, buttonTitle: "Next"),
+    .init(title: "get your food to you under 30 min anytime", image: "delivaruGuy2", buttonColor: .systemGreen, buttonTitle: "Get Started"),
 
 ]
 

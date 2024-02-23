@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Ci-62-Va1">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -1781,17 +1781,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nza-BF-cYr">
-                                                    <rect key="frame" x="0.0" y="179.66666666666663" width="363" height="363"/>
+                                                    <rect key="frame" x="0.0" y="114.33333333333334" width="363" height="493.66666666666663"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6q-Or-6ZI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="363" height="234.33333333333334"/>
-                                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                        </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delivaruGuy" translatesAutoresizingMaskIntoConstraints="NO" id="Tg4-G6-V6t">
+                                                            <rect key="frame" x="0.0" y="0.0" width="363" height="363"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Tg4-G6-V6t" secondAttribute="height" multiplier="1:1" id="DPT-Df-QTI"/>
+                                                            </constraints>
+                                                        </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNQ-oz-H6L">
-                                                            <rect key="frame" x="0.0" y="234.33333333333334" width="363" height="68.666666666666657"/>
+                                                            <rect key="frame" x="0.0" y="363" width="363" height="70.666666666666686"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food is the best Food is the best Food is the best Food is the best" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="oxj-5r-eoS">
-                                                                    <rect key="frame" x="30" y="5" width="303" height="43.666666666666664"/>
+                                                                    <rect key="frame" x="30" y="5" width="303" height="45.666666666666664"/>
                                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -1806,7 +1809,7 @@
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p0D-Rl-YCW">
-                                                            <rect key="frame" x="0.0" y="303" width="363" height="60"/>
+                                                            <rect key="frame" x="0.0" y="433.66666666666669" width="363" height="60"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAY-Ep-Hr7">
                                                                     <rect key="frame" x="0.0" y="0.0" width="20" height="60"/>
@@ -1839,9 +1842,6 @@
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="e6q-Or-6ZI" firstAttribute="width" secondItem="Nza-BF-cYr" secondAttribute="height" multiplier="1:1" id="gpn-tG-5jU"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -1853,7 +1853,7 @@
                                         <size key="customSize" width="363" height="722"/>
                                         <connections>
                                             <outlet property="descriptionLbl" destination="oxj-5r-eoS" id="coF-4P-zWh"/>
-                                            <outlet property="imageCell" destination="e6q-Or-6ZI" id="jpI-EM-lb4"/>
+                                            <outlet property="imageCell" destination="Tg4-G6-V6t" id="HWH-P0-uVs"/>
                                             <outlet property="nextBtn" destination="6K8-Kv-efI" id="aZY-u8-0gL"/>
                                         </connections>
                                     </collectionViewCell>
@@ -1878,7 +1878,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKF-Fc-pNO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3180.9160305343512" y="-1082.3943661971832"/>
+            <point key="canvasLocation" x="3069" y="-775"/>
         </scene>
     </scenes>
     <resources>
@@ -1889,20 +1889,21 @@
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="cube.fill" catalog="system" width="128" height="123"/>
+        <image name="delivaruGuy" width="2000" height="2000"/>
         <image name="fast-delivery" width="33.333332061767578" height="33.333332061767578"/>
         <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="house.fill" catalog="system" width="32" height="32"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
         <image name="location" catalog="system" width="128" height="119"/>
         <image name="location" width="800" height="600"/>
-        <image name="magnifyingglass" catalog="system" width="32" height="32"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="message" catalog="system" width="128" height="116"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="person.line.dotted.person" catalog="system" width="128" height="59"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="resturant-Burger" width="480" height="320"/>
         <image name="road.lane.arrowtriangle.2.inward" catalog="system" width="128" height="60"/>
-        <image name="text.alignleft" catalog="system" width="32" height="32"/>
+        <image name="text.alignleft" catalog="system" width="128" height="99"/>
         <image name="truck.box" catalog="system" width="128" height="90"/>
         <image name="truck.box.badge.clock" catalog="system" width="128" height="99"/>
         <systemColor name="scrollViewTexturedBackgroundColor">
@@ -1925,9 +1926,6 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
