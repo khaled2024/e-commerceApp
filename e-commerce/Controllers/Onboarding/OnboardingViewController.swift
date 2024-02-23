@@ -42,7 +42,7 @@ class OnboardingViewController: UIViewController {
         }
     }
     func showMainApp(){
-        let mainVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "TabbarVC")
+        let mainVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "MainTabBarController")as! MainTabBarController
         mainVC.modalPresentationStyle = .fullScreen
         self.present(mainVC, animated: true)
     }

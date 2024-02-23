@@ -1728,10 +1728,10 @@
             </objects>
             <point key="canvasLocation" x="8384" y="-27"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="fWS-qo-yrX">
             <objects>
-                <tabBarController storyboardIdentifier="TabbarVC" automaticallyAdjustsScrollViewInsets="NO" id="NpY-Zw-NXh" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="NpY-Zw-NXh" customClass="MainTabBarController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GGZ-rl-oBR">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1740,10 +1740,10 @@
                         <color key="selectedImageTintColor" red="0.94509804249999996" green="0.61176472900000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="QKk-ow-YED"/>
-                        <segue destination="vfT-4C-ktj" kind="relationship" relationship="viewControllers" id="Jhr-xt-fIq"/>
-                        <segue destination="OE8-Oy-EWJ" kind="relationship" relationship="viewControllers" id="wcm-X0-ZMS"/>
-                        <segue destination="woA-BF-CpU" kind="relationship" relationship="viewControllers" id="ilE-6h-tM7"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zWW-cL-OKk"/>
+                        <segue destination="vfT-4C-ktj" kind="relationship" relationship="viewControllers" id="BZI-Vx-gSx"/>
+                        <segue destination="woA-BF-CpU" kind="relationship" relationship="viewControllers" id="Goe-fi-6Yn"/>
+                        <segue destination="OE8-Oy-EWJ" kind="relationship" relationship="viewControllers" id="dLd-yW-AZn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNV-Yz-na9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1894,8 +1894,8 @@
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
-        <image name="location" catalog="system" width="128" height="119"/>
         <image name="location" width="800" height="600"/>
+        <image name="location" catalog="system" width="128" height="119"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="message" catalog="system" width="128" height="116"/>
         <image name="minus" catalog="system" width="128" height="26"/>

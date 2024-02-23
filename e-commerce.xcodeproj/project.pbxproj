@@ -33,6 +33,7 @@
 		EA78A6002B605A5A00790B12 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78A5FE2B605A5A00790B12 /* BannerCollectionViewCell.swift */; };
 		EA78A6012B605A5A00790B12 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA78A5FF2B605A5A00790B12 /* BannerCollectionViewCell.xib */; };
 		EA78A6032B605B5A00790B12 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78A6022B605B5A00790B12 /* Models.swift */; };
+		EA8881FF2B8823EF00A1B51A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8881FE2B8823EF00A1B51A /* MainTabBarController.swift */; };
 		EA9E8E842B6180A300A250B0 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E8E832B6180A300A250B0 /* CategoryTableViewCell.swift */; };
 		EA9E8E882B6182B600A250B0 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E8E862B6182B600A250B0 /* CategoryCollectionViewCell.swift */; };
 		EA9E8E892B6182B600A250B0 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E8E872B6182B600A250B0 /* CategoryCollectionViewCell.xib */; };
@@ -76,6 +77,7 @@
 		EA78A5FE2B605A5A00790B12 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA78A5FF2B605A5A00790B12 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA78A6022B605B5A00790B12 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		EA8881FE2B8823EF00A1B51A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		EA9E8E832B6180A300A250B0 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		EA9E8E862B6182B600A250B0 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA9E8E872B6182B600A250B0 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 		EAB2B6132B86A72800A7D419 /* User Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EA8881FE2B8823EF00A1B51A /* MainTabBarController.swift */,
 				EA78A5EE2B60559D00790B12 /* MainViewController.swift */,
 				EAB2B6112B86A55800A7D419 /* SecondMainViewController.swift */,
 				EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */,
@@ -413,6 +416,7 @@
 			files = (
 				EA4BF1A62B63B63700743F3F /* IngredientsTableViewCell.swift in Sources */,
 				EA78A5EF2B60559D00790B12 /* MainViewController.swift in Sources */,
+				EA8881FF2B8823EF00A1B51A /* MainTabBarController.swift in Sources */,
 				EA9E8E912B61B03500A250B0 /* RestaurantsCollectionViewCell.swift in Sources */,
 				EA78A5EB2B60559D00790B12 /* AppDelegate.swift in Sources */,
 				EAB2B6152B86A74800A7D419 /* OnboardingViewController.swift in Sources */,
