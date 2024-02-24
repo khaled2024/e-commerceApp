@@ -12,6 +12,8 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     private let slides: [Slide] = collectionSlides
+    private let storageManager = StorageManager()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,13 @@ class OnboardingViewController: UIViewController {
         // page controll
         pageControl.numberOfPages = slides.count
         pageControl.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2)
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // storage manager
+        storageManager.setOnboardingSeen()
+        
     }
     // functions
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -42,7 +51,7 @@ class OnboardingViewController: UIViewController {
         }
     }
     func showMainApp(){
-        let mainVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "TabbarVC")
+        let mainVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "MainTabBarController")as! MainTabBarController
         mainVC.modalPresentationStyle = .fullScreen
         self.present(mainVC, animated: true)
     }

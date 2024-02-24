@@ -20,7 +20,6 @@ struct RestaurantModel {
     let image: String
     let name: String
     let state: State
-    
 }
 enum State: String{
     case open = "open"
@@ -54,9 +53,7 @@ let collectionSlides: [Slide] = [
     .init(title: "get your food to you under 30 min anytime", image: "fastFood", buttonColor: .systemYellow, buttonTitle: "Next"),
     .init(title: "get your food to you under 30 min anytime", image: "orderFood", buttonColor: .systemYellow, buttonTitle: "Next"),
     .init(title: "get your food to you under 30 min anytime", image: "delivaruGuy2", buttonColor: .systemGreen, buttonTitle: "Get Started"),
-
 ]
-
 let bannerImages =
 [
     BannerModel(image:  "food-social-media-banner")
@@ -87,8 +84,6 @@ let restaurants =
     RestaurantModel(image: "resturant-kebab", name: "kebab house",state: .close),
     RestaurantModel(image: "resturant-Burger", name: "Burger house",state: .close)
 ]
-
-
 let bestProducts =
 [
     Product(image: "resturant-pizza", productName: "Pizza Hut", resturantName: "Pizza Home", price: "15.00"),
