@@ -60,9 +60,9 @@ extension CostumerServicesViewController: UITableViewDelegate,UITableViewDataSou
         tableView.deselectRow(at: indexPath, animated: true)
         let costumer = costumers[indexPath.row]
         print(costumer.name)
-        let chatRoomVC = navManager.instantiate(screen: .chatRoom)
+        let chatRoomVC = navManager.instantiate(screen: .chatRoom)as! ChatRoomViewController
         navigationController?.pushViewController(chatRoomVC, animated: true)
-        chatRoomVC.title = costumer.name
+        chatRoomVC.user = costumer
         
     }
     

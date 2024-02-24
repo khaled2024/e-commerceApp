@@ -22,3 +22,27 @@ let costumers: [CostumerModel] = [
     .init(name: "khalifa", message: "my name is khalifa, hello there", time: "5:30", costumerImage: "sadPerson"),
     .init(name: "khaled", message: "my name is khaled, hello there", time: "2:30", costumerImage: "delivaruGuy")
 ]
+let marketUsers: [CostumerModel] = [
+    .init(name: "khaled", message: "my name is khaled, hello there", time: "2:30", costumerImage: "delivaruGuy"),
+    .init(name: "Hussien", message: "my name is Hussien, hello there", time: "2:30", costumerImage: "sadPerson"),
+    .init(name: "khalifa", message: "my name is khalifa, hello there", time: "5:30", costumerImage: "sadPerson"),
+    .init(name: "khaled", message: "my name is khaled, hello there", time: "2:30", costumerImage: "delivaruGuy"),
+    .init(name: "khaled", message: "my name is khaled, hello there", time: "2:30", costumerImage: "sadPerson"),
+    .init(name: "Hussien", message: "my name is Hussien, hello there", time: "2:30", costumerImage: "delivaruGuy"),
+    .init(name: "khalifa", message: "my name is khalifa, hello there", time: "5:30", costumerImage: "sadPerson"),
+    .init(name: "khaled", message: "my name is khaled, hello there", time: "2:30", costumerImage: "delivaruGuy"),
+    .init(name: "khaled", message: "my name is khaled, hello there", time: "2:30", costumerImage: "delivaruGuy"),
+    .init(name: "Hussien", message: "my name is Hussien, hello there", time: "2:30", costumerImage: "sadPerson"),
+    .init(name: "khalifa", message: "my name is khalifa, hello there", time: "5:30", costumerImage: "sadPerson"),
+    .init(name: "khaled", message: "my name is khaled, hello there", time: "2:30", costumerImage: "delivaruGuy")
+]
+let drivers: [CostumerModel] = [
+    .init(name: "khaled", message: "my name is khaled, hello there", time: "2:30", costumerImage: "sadPerson"),
+    .init(name: "Hussien", message: "my name is Hussien, hello there", time: "2:30", costumerImage: "delivaruGuy"),
+    .init(name: "khalifa", message: "my name is khalifa, hello there", time: "5:30", costumerImage: "sadPerson"),
+    .init(name: "khaled", message: "my name is khaled, hello there", time: "2:30", costumerImage: "delivaruGuy"),
+    .init(name: "khaled", message: "my name is khaled, hello there", time: "2:30", costumerImage: "delivaruGuy"),
+    .init(name: "Hussien", message: "my name is Hussien, hello there", time: "2:30", costumerImage: "sadPerson"),
+    .init(name: "khalifa", message: "my name is khalifa, hello there", time: "5:30", costumerImage: "sadPerson"),
+    .init(name: "khaled", message: "my name is khaled, hello there", time: "2:30", costumerImage: "delivaruGuy")
+]

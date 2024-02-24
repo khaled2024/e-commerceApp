@@ -15,6 +15,7 @@ class ChatRoomViewController: UIViewController {
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var messageView: UIView!
     static let identifier = String(describing: ChatRoomViewController.self)
+    var user: CostumerModel!
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpData()
@@ -37,6 +38,8 @@ class ChatRoomViewController: UIViewController {
     func setUpLogic(){
     }
     func setUpData(){
+        self.userName.text = user.name
+        self.userImage.image = UIImage(named: user.costumerImage)
         
     }
     // btn tapped :-

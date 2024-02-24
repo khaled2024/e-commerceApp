@@ -17,6 +17,7 @@ class NavigationManager{
         case marketDetail
         case CostumerServicesVC
         case drivers
+        case editMarket
     }
     enum PushScreenToParse {
         case marketVC
@@ -59,6 +60,9 @@ class NavigationManager{
         case .drivers:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: DriversViewController.identifier)
+        case .editMarket:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: "EditMarketViewController")
         }
         nav.pushViewController(viewController, animated: true)
     }

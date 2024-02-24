@@ -49,6 +49,9 @@ struct Slide {
     let buttonColor: UIColor
     let buttonTitle: String
 }
+
+
+// dumy data
 let collectionSlides: [Slide] = [
     .init(title: "get your food to you under 30 min anytime", image: "fastFood", buttonColor: .systemYellow, buttonTitle: "Next"),
     .init(title: "get your food to you under 30 min anytime", image: "orderFood", buttonColor: .systemYellow, buttonTitle: "Next"),
@@ -141,3 +144,4 @@ let favouriteProducts = [
     Favourite(image: UIImage(named: "burger2")!, productName: "Burger", available: .Exist),
     Favourite(image: UIImage(named: "burger2")!, productName: "Burger", available: .Expired)
 ]
+ 

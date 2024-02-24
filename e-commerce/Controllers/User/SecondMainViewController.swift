@@ -32,9 +32,9 @@ class SecondMainViewController: UIViewController {
         mainTableView.dataSource = self
     }
     func setUpDesign(){
-        chatBtn.setUpShadow()
-        deliverBtn.setUpShadow()
-        cartBtn.setUpShadow()
+        chatBtn.setUpShadow(color: .systemYellow)
+        deliverBtn.setUpShadow(color: .systemYellow)
+        cartBtn.setUpShadow(color: .systemYellow)
         filterBtn.layer.cornerRadius = 15
         bannerImage.layer.cornerRadius = 20
     }

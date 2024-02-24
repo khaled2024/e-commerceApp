@@ -9,6 +9,7 @@ import UIKit
 
 class MarketViewController: UIViewController {
     
+    @IBOutlet weak var marketSegmentControll: UISegmentedControl!
     @IBOutlet weak var marketCollectionView: UICollectionView!
     @IBOutlet weak var addMarketBtn: UIButton!
     @IBOutlet weak var marketsView: UIView!
@@ -31,6 +32,8 @@ class MarketViewController: UIViewController {
     }
     func setUpDesign(){
         addMarketBtn.layer.cornerRadius = 10
+        marketSegmentControll.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal) // Change UIColor.red to your desired color
+        marketSegmentControll.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected) // Change UIColor.blue to your desired color
     }
     
     @IBAction func dismissBtn(_ sender: UIButton) {

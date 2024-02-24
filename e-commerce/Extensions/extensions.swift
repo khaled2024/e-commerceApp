@@ -6,7 +6,11 @@
 //
 
 import UIKit
-
+extension UIImageView{
+    func makeCircle(){
+        self.layer.cornerRadius = self.frame.height/2
+    }
+}
 extension UIView{
     func setUpLayers(){
         self.layer.cornerRadius = 20
@@ -31,6 +35,9 @@ extension UIView{
         
         layer.mask = maskLayer
     }
+    func setCorners(){
+        self.layer.cornerRadius = 15
+    }
     func setUpShadoww(){
         self.layer.cornerRadius = 10
         self.layer.shadowColor = UIColor.systemYellow.cgColor
@@ -48,9 +55,9 @@ extension UIButton{
         self.layer.borderColor = borderColor
         self.layer.borderWidth = borderWidth
     }
-    func setUpShadow(){
+    func setUpShadow(color: UIColor){
         self.layer.cornerRadius = 10
-        self.layer.shadowColor = UIColor.systemYellow.cgColor
+        self.layer.shadowColor = color.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
         self.backgroundColor = .white
         self.layer.shadowRadius = 5
