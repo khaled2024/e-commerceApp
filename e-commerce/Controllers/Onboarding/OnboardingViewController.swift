@@ -13,7 +13,7 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     private let slides: [Slide] = collectionSlides
     private let storageManager = StorageManager()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
