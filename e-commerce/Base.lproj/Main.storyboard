@@ -2108,8 +2108,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOM-CB-xDl">
                                         <rect key="frame" x="25" y="48" width="130" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="building.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n1c-m6-Uu3">
-                                                <rect key="frame" x="20" y="15.33333333333333" width="30" height="29.666666666666671"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketsDashboard" translatesAutoresizingMaskIntoConstraints="NO" id="n1c-m6-Uu3">
+                                                <rect key="frame" x="20" y="15" width="30" height="30"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="BET-cU-NAx"/>
@@ -2159,7 +2159,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9T-QZ-KUi">
                                         <rect key="frame" x="203" y="48" width="130" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delavary" translatesAutoresizingMaskIntoConstraints="NO" id="r3c-G4-6Q7">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="driversDashboard" translatesAutoresizingMaskIntoConstraints="NO" id="r3c-G4-6Q7">
                                                 <rect key="frame" x="20" y="15" width="30" height="30"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -2210,8 +2210,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkg-mA-Ppc">
                                         <rect key="frame" x="25" y="160" width="130" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candybarphone" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vZC-mp-cTd">
-                                                <rect key="frame" x="20" y="15.999999999999996" width="30" height="28.333333333333332"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ordersDashboard" translatesAutoresizingMaskIntoConstraints="NO" id="vZC-mp-cTd">
+                                                <rect key="frame" x="20" y="15" width="30" height="30"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="KNp-PM-zHl"/>
@@ -2261,8 +2261,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgP-g4-eGz">
                                         <rect key="frame" x="203" y="160" width="130" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HyU-w9-06m">
-                                                <rect key="frame" x="15" y="16.666666666666664" width="30" height="28.333333333333336"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="usersDashboard" translatesAutoresizingMaskIntoConstraints="NO" id="HyU-w9-06m">
+                                                <rect key="frame" x="15" y="15" width="30" height="30"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="9im-Pc-JMY"/>
@@ -2509,7 +2509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMg-3L-2bK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3428" y="3687"/>
+            <point key="canvasLocation" x="3378" y="3687"/>
         </scene>
         <!--Chat Room View Controller-->
         <scene sceneID="trG-SA-gAr">
@@ -2814,26 +2814,25 @@
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="bannerImage" width="892" height="467"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
-        <image name="building.2" catalog="system" width="128" height="108"/>
         <image name="burgerLogo" width="546" height="457"/>
-        <image name="candybarphone" catalog="system" width="98" height="128"/>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="cube.fill" catalog="system" width="128" height="123"/>
-        <image name="delavary" width="170.66667175292969" height="170.66667175292969"/>
         <image name="delivaruGuy" width="2000" height="2000"/>
+        <image name="driversDashboard" width="512" height="512"/>
         <image name="ellipsis.message" catalog="system" width="128" height="116"/>
         <image name="fast-delivery" width="33.333332061767578" height="33.333332061767578"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
-        <image name="location" width="800" height="600"/>
         <image name="location" catalog="system" width="128" height="119"/>
+        <image name="location" width="800" height="600"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="marketsDashboard" width="512" height="512"/>
         <image name="message" catalog="system" width="128" height="116"/>
         <image name="minus" catalog="system" width="128" height="26"/>
-        <image name="person.3" catalog="system" width="128" height="66"/>
+        <image name="ordersDashboard" width="512" height="512"/>
         <image name="person.line.dotted.person" catalog="system" width="128" height="59"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="resturant-Burger" width="480" height="320"/>
@@ -2842,6 +2841,7 @@
         <image name="text.alignleft" catalog="system" width="128" height="99"/>
         <image name="truck.box" catalog="system" width="128" height="90"/>
         <image name="truck.box.badge.clock" catalog="system" width="128" height="99"/>
+        <image name="usersDashboard" width="512" height="512"/>
         <systemColor name="scrollViewTexturedBackgroundColor">
             <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
