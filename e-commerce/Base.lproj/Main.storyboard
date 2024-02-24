@@ -2770,6 +2770,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BD7-TT-0aj"/>
+                    <connections>
+                        <outlet property="badgeView" destination="ndO-Kg-P5h" id="YNj-eF-4kw"/>
+                        <outlet property="chatView" destination="Ee0-Zr-IIm" id="dEe-kk-gi8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNq-i0-1N3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

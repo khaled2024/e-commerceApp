@@ -8,10 +8,14 @@
 import UIKit
 
 class ChatViewController: UIViewController {
+    @IBOutlet weak var chatView: UIView!
+    @IBOutlet weak var badgeView: UIView!
     static let identifier = String(describing: ChatViewController.self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        chatView.layer.cornerRadius = 15
+        badgeView.layer.cornerRadius = badgeView.frame.height/2
 
         // Do any additional setup after loading the view.
     }
@@ -21,15 +25,5 @@ class ChatViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
