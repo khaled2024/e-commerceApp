@@ -32,10 +32,15 @@ class ChatRoomViewController: UIViewController {
     }
     func setUpDesign(){
         userView.layer.cornerRadius = 15
-        messageView.setUpLayers()
+        messageView.backgroundColor = .white
         userImage.layer.cornerRadius = userImage.frame.height/2
     }
     func setUpLogic(){
+        messageTableView.delegate = self
+        messageTableView.dataSource = self
+        messageTableView.register(UserChatRoomTableViewCell.uiNib(), forCellReuseIdentifier: UserChatRoomTableViewCell.identifier)
+        messageTableView.separatorStyle = .none
+        messageTableView.allowsSelection = false
     }
     func setUpData(){
         self.userName.text = user.name
@@ -45,5 +50,20 @@ class ChatRoomViewController: UIViewController {
     // btn tapped :-
     @IBAction func dismissBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+}
+extension ChatRoomViewController: UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = messageTableView.dequeueReusableCell(withIdentifier: UserChatRoomTableViewCell.identifier, for: indexPath)as! UserChatRoomTableViewCell
+        let message = messages[indexPath.row]
+        cell.config(message: message)
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }

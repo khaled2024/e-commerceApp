@@ -27,13 +27,31 @@ extension UIView{
         self.layer.shadowOffset = CGSize(width: 1, height: 1)
     }
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: bounds,
-                                byRoundingCorners: corners,
-                                cornerRadii: CGSize(width: radius, height: radius))
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = path.cgPath
+        if #available(iOS 11,*){
+            var cornerMask = CACornerMask()
+            if corners.contains(.topLeft){
+                cornerMask.insert(.layerMinXMinYCorner)
+            }
+            if corners.contains(.topRight){
+                cornerMask.insert(.layerMaxXMinYCorner)
+            }
+            if corners.contains(.bottomLeft){
+                cornerMask.insert(.layerMinXMaxYCorner)
+            }
+            
+            if corners.contains(.bottomRight){
+                cornerMask.insert(.layerMaxXMaxYCorner)
+            }
+            self.layer.cornerRadius = radius
+            self.layer.maskedCorners = cornerMask
+        }else{
+            let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+            let maskLayer = CAShapeLayer()
+            maskLayer.path = path.cgPath
+            
+            self.layer.mask = maskLayer
+        }
         
-        layer.mask = maskLayer
     }
     func setCorners(){
         self.layer.cornerRadius = 15
@@ -47,7 +65,7 @@ extension UIView{
         self.layer.shadowOpacity = 0.3
         self.layer.shadowPath = nil
     }
-
+    
 }
 extension UIButton{
     func setUpLayer(size: CGFloat,borderColor: CGColor,borderWidth: CGFloat){

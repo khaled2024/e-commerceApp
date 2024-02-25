@@ -33,6 +33,14 @@
 		EA78A6002B605A5A00790B12 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78A5FE2B605A5A00790B12 /* BannerCollectionViewCell.swift */; };
 		EA78A6012B605A5A00790B12 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA78A5FF2B605A5A00790B12 /* BannerCollectionViewCell.xib */; };
 		EA8881FF2B8823EF00A1B51A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8881FE2B8823EF00A1B51A /* MainTabBarController.swift */; };
+		EA8A7A902B8B389300CCC677 /* UserChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7A8E2B8B389300CCC677 /* UserChatRoomTableViewCell.swift */; };
+		EA8A7A912B8B389300CCC677 /* UserChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8A7A8F2B8B389300CCC677 /* UserChatRoomTableViewCell.xib */; };
+		EA8A7A972B8B3C5400CCC677 /* Extension+UitableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7A922B8B3C5400CCC677 /* Extension+UitableView.swift */; };
+		EA8A7A982B8B3C5400CCC677 /* Extension+UitextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7A932B8B3C5400CCC677 /* Extension+UitextField.swift */; };
+		EA8A7A992B8B3C5400CCC677 /* Extension+UiimageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7A942B8B3C5400CCC677 /* Extension+UiimageView.swift */; };
+		EA8A7A9A2B8B3C5400CCC677 /* Extension+UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7A952B8B3C5400CCC677 /* Extension+UiView.swift */; };
+		EA8A7A9B2B8B3C5400CCC677 /* Extension+UiLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7A962B8B3C5400CCC677 /* Extension+UiLable.swift */; };
+		EA8A7A9D2B8B3EA900CCC677 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7A9C2B8B3EA900CCC677 /* MessageModel.swift */; };
 		EA9CCB382B89D58A00733C4F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9CCB372B89D58A00733C4F /* LoadingViewController.swift */; };
 		EA9CCB3A2B89DC7400733C4F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9CCB392B89DC7300733C4F /* StorageManager.swift */; };
 		EA9CCB3C2B89EE7700733C4F /* extension+UiViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9CCB3B2B89EE7700733C4F /* extension+UiViewContoller.swift */; };
@@ -97,6 +105,14 @@
 		EA78A5FE2B605A5A00790B12 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA78A5FF2B605A5A00790B12 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA8881FE2B8823EF00A1B51A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		EA8A7A8E2B8B389300CCC677 /* UserChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatRoomTableViewCell.swift; sourceTree = "<group>"; };
+		EA8A7A8F2B8B389300CCC677 /* UserChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChatRoomTableViewCell.xib; sourceTree = "<group>"; };
+		EA8A7A922B8B3C5400CCC677 /* Extension+UitableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UitableView.swift"; sourceTree = "<group>"; };
+		EA8A7A932B8B3C5400CCC677 /* Extension+UitextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UitextField.swift"; sourceTree = "<group>"; };
+		EA8A7A942B8B3C5400CCC677 /* Extension+UiimageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UiimageView.swift"; sourceTree = "<group>"; };
+		EA8A7A952B8B3C5400CCC677 /* Extension+UiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UiView.swift"; sourceTree = "<group>"; };
+		EA8A7A962B8B3C5400CCC677 /* Extension+UiLable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UiLable.swift"; sourceTree = "<group>"; };
+		EA8A7A9C2B8B3EA900CCC677 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		EA9CCB372B89D58A00733C4F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		EA9CCB392B89DC7300733C4F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		EA9CCB3B2B89EE7700733C4F /* extension+UiViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+UiViewContoller.swift"; sourceTree = "<group>"; };
@@ -214,8 +230,8 @@
 		EA3AFF742B8958B900709DA4 /* ChatAdmin */ = {
 			isa = PBXGroup;
 			children = (
-				EA9CCB3F2B8A011900733C4F /* ChatRoomViewController.swift */,
 				EA9CCB412B8A097100733C4F /* ChatViewController.swift */,
+				EA9CCB3F2B8A011900733C4F /* ChatRoomViewController.swift */,
 			);
 			path = ChatAdmin;
 			sourceTree = "<group>";
@@ -318,12 +334,22 @@
 			path = "e-commerce";
 			sourceTree = "<group>";
 		};
+		EA8A7A8D2B8B386000CCC677 /* userChatRoomTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA8A7A8E2B8B389300CCC677 /* UserChatRoomTableViewCell.swift */,
+				EA8A7A8F2B8B389300CCC677 /* UserChatRoomTableViewCell.xib */,
+			);
+			path = userChatRoomTableCell;
+			sourceTree = "<group>";
+		};
 		EA9CCB552B8A4FEC00733C4F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				EA9CCB502B8A4FE900733C4F /* CostumerModel.swift */,
 				EA9CCB512B8A4FE900733C4F /* MarketModel.swift */,
 				EA9CCB4F2B8A4FE900733C4F /* Models.swift */,
+				EA8A7A9C2B8B3EA900CCC677 /* MessageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -396,6 +422,11 @@
 				EA2439232B63A66A00ACD5BE /* extensions.swift */,
 				EAE8416C2B888E65006E2742 /* extensions+UiNavController.swift */,
 				EA9CCB3B2B89EE7700733C4F /* extension+UiViewContoller.swift */,
+				EA8A7A942B8B3C5400CCC677 /* Extension+UiimageView.swift */,
+				EA8A7A962B8B3C5400CCC677 /* Extension+UiLable.swift */,
+				EA8A7A922B8B3C5400CCC677 /* Extension+UitableView.swift */,
+				EA8A7A932B8B3C5400CCC677 /* Extension+UitextField.swift */,
+				EA8A7A952B8B3C5400CCC677 /* Extension+UiView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -440,6 +471,7 @@
 			children = (
 				EAE841822B890B6D006E2742 /* MarketCell */,
 				EAE841812B890B42006E2742 /* CostumerTableViewCell */,
+				EA8A7A8D2B8B386000CCC677 /* userChatRoomTableCell */,
 			);
 			path = AdminCells;
 			sourceTree = "<group>";
@@ -543,6 +575,7 @@
 				EA4BF1AC2B63DB7700743F3F /* OrdersTableViewCell.xib in Resources */,
 				EA78A5F72B60559D00790B12 /* LaunchScreen.storyboard in Resources */,
 				EAE841882B890D36006E2742 /* MarketCollectionViewCell.xib in Resources */,
+				EA8A7A912B8B389300CCC677 /* UserChatRoomTableViewCell.xib in Resources */,
 				EA9E8E892B6182B600A250B0 /* CategoryCollectionViewCell.xib in Resources */,
 				EA4BF1A72B63B63700743F3F /* IngredientsTableViewCell.xib in Resources */,
 				EA6AE0952B62694400AE45DB /* bestProductsCollectionViewCell.xib in Resources */,
@@ -590,6 +623,7 @@
 			files = (
 				EAF6440C2B894481006BDADE /* NavigationManager.swift in Sources */,
 				EA4BF1A62B63B63700743F3F /* IngredientsTableViewCell.swift in Sources */,
+				EA8A7A9A2B8B3C5400CCC677 /* Extension+UiView.swift in Sources */,
 				EA78A5EF2B60559D00790B12 /* MainViewController.swift in Sources */,
 				EA8881FF2B8823EF00A1B51A /* MainTabBarController.swift in Sources */,
 				EA9CCB3E2B89F94100733C4F /* DriversViewController.swift in Sources */,
@@ -605,14 +639,18 @@
 				EA5E7F932B6310510045C6D7 /* CartTableViewCell.swift in Sources */,
 				EA4BF1AB2B63DB7700743F3F /* OrdersTableViewCell.swift in Sources */,
 				EAE8417F2B88CAE4006E2742 /* CostumerTableViewCell.swift in Sources */,
+				EA8A7A972B8B3C5400CCC677 /* Extension+UitableView.swift in Sources */,
+				EA8A7A902B8B389300CCC677 /* UserChatRoomTableViewCell.swift in Sources */,
 				EA2439222B63A0DA00ACD5BE /* ProductDetailViewController.swift in Sources */,
 				EAE8416F2B88918A006E2742 /* AdminTabBarController.swift in Sources */,
 				EAE8416D2B888E65006E2742 /* extensions+UiNavController.swift in Sources */,
+				EA8A7A9B2B8B3C5400CCC677 /* Extension+UiLable.swift in Sources */,
 				EAB2B6172B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift in Sources */,
 				EAE8418F2B891D63006E2742 /* EditMarketViewController.swift in Sources */,
 				EACFEE302B656469008AE44C /* SearchViewController.swift in Sources */,
 				EAB2B6122B86A55800A7D419 /* SecondMainViewController.swift in Sources */,
 				EA2ECF9C2B63E14E00DF2C31 /* OrderViewController.swift in Sources */,
+				EA8A7A992B8B3C5400CCC677 /* Extension+UiimageView.swift in Sources */,
 				EA78A6002B605A5A00790B12 /* BannerCollectionViewCell.swift in Sources */,
 				EA6AE0942B62694400AE45DB /* bestProductsCollectionViewCell.swift in Sources */,
 				EAE841872B890D36006E2742 /* MarketCollectionViewCell.swift in Sources */,
@@ -627,6 +665,8 @@
 				EAE841712B8891F4006E2742 /* AdminHomeViewController.swift in Sources */,
 				EA9CCB522B8A4FEA00733C4F /* Models.swift in Sources */,
 				EA9CCB422B8A097100733C4F /* ChatViewController.swift in Sources */,
+				EA8A7A982B8B3C5400CCC677 /* Extension+UitextField.swift in Sources */,
+				EA8A7A9D2B8B3EA900CCC677 /* MessageModel.swift in Sources */,
 				EA9E8E882B6182B600A250B0 /* CategoryCollectionViewCell.swift in Sources */,
 				EAE8417A2B88C15A006E2742 /* CostumerServicesViewController.swift in Sources */,
 				EA9E8E842B6180A300A250B0 /* CategoryTableViewCell.swift in Sources */,
