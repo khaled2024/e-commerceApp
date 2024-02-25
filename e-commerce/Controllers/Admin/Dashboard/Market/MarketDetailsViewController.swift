@@ -44,10 +44,14 @@ class MarketDetailsViewController: UIViewController {
         super.viewDidLoad()
         setUpdesign()
         setUpData()
+        setupNavController()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    func setupNavController(){
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
     }
     // functions
     func setUpData(){
@@ -89,6 +93,9 @@ class MarketDetailsViewController: UIViewController {
     
     @IBAction func marketOrdersBtnTapped(_ sender: UIButton) {
         print("orders of market")
+        let marketOrders = navManager.instantiate(screen: .marketOrders)as! MarketOrdersViewController
+        navigationController?.pushViewController(marketOrders, animated: true)
+        marketOrders.marketTitle = market.marketName
     }
     
     @IBAction func marketUsersBtnTapped(_ sender: UIButton) {

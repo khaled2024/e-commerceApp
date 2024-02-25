@@ -43,6 +43,7 @@
 		EA8A7A9D2B8B3EA900CCC677 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7A9C2B8B3EA900CCC677 /* MessageModel.swift */; };
 		EA8A7AA72B8B5BCF00CCC677 /* TopNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7AA52B8B5BCF00CCC677 /* TopNavView.swift */; };
 		EA8A7AAA2B8B5E2600CCC677 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7AA92B8B5E2600CCC677 /* MoreViewController.swift */; };
+		EA8A7AB82B8B9A6C00CCC677 /* MarketOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7AB72B8B9A6C00CCC677 /* MarketOrdersViewController.swift */; };
 		EA9CCB382B89D58A00733C4F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9CCB372B89D58A00733C4F /* LoadingViewController.swift */; };
 		EA9CCB3A2B89DC7400733C4F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9CCB392B89DC7300733C4F /* StorageManager.swift */; };
 		EA9CCB3C2B89EE7700733C4F /* extension+UiViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9CCB3B2B89EE7700733C4F /* extension+UiViewContoller.swift */; };
@@ -117,6 +118,7 @@
 		EA8A7A9C2B8B3EA900CCC677 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		EA8A7AA52B8B5BCF00CCC677 /* TopNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavView.swift; sourceTree = "<group>"; };
 		EA8A7AA92B8B5E2600CCC677 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		EA8A7AB72B8B9A6C00CCC677 /* MarketOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketOrdersViewController.swift; sourceTree = "<group>"; };
 		EA9CCB372B89D58A00733C4F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		EA9CCB392B89DC7300733C4F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		EA9CCB3B2B89EE7700733C4F /* extension+UiViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+UiViewContoller.swift"; sourceTree = "<group>"; };
@@ -513,6 +515,7 @@
 				EAE841742B88991E006E2742 /* MarketViewController.swift */,
 				EAE8418C2B891D40006E2742 /* MarketDetailsViewController.swift */,
 				EAE8418E2B891D63006E2742 /* EditMarketViewController.swift */,
+				EA8A7AB72B8B9A6C00CCC677 /* MarketOrdersViewController.swift */,
 			);
 			path = Market;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				EA8A7A972B8B3C5400CCC677 /* Extension+UitableView.swift in Sources */,
 				EA8A7A902B8B389300CCC677 /* UserChatRoomTableViewCell.swift in Sources */,
 				EA2439222B63A0DA00ACD5BE /* ProductDetailViewController.swift in Sources */,
+				EA8A7AB82B8B9A6C00CCC677 /* MarketOrdersViewController.swift in Sources */,
 				EAE8416F2B88918A006E2742 /* AdminTabBarController.swift in Sources */,
 				EAE8416D2B888E65006E2742 /* extensions+UiNavController.swift in Sources */,
 				EA8A7A9B2B8B3C5400CCC677 /* Extension+UiLable.swift in Sources */,

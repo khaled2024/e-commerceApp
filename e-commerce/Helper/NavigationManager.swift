@@ -18,12 +18,14 @@ class NavigationManager{
         case CostumerServicesVC
         case drivers
         case editMarket
+        case marketOrders
     }
     enum PushScreenToParse {
         case marketVC
         case marketDetail
         case CostumerServicesVC
         case chatRoom
+        case marketOrders
     }
     // instantiate controler from storyboard and push it in view when we need to parse some data :-
     func instantiate(screen: PushScreenToParse)-> UIViewController{
@@ -41,6 +43,9 @@ class NavigationManager{
         case .chatRoom:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: ChatRoomViewController.identifier)
+        case .marketOrders:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: "MarketOrdersViewController")
         }
         return viewController
     }
@@ -63,6 +68,9 @@ class NavigationManager{
         case .editMarket:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: "EditMarketViewController")
+        case .marketOrders:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: "MarketOrdersViewController")
         }
         nav.pushViewController(viewController, animated: true)
     }
