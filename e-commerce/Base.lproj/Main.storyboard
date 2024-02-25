@@ -3440,15 +3440,30 @@
             </objects>
             <point key="canvasLocation" x="6995" y="2282"/>
         </scene>
-        <!--View Controller-->
+        <!--More View Controller-->
         <scene sceneID="cf6-3T-6Te">
             <objects>
-                <viewController id="Ed7-1g-npj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreViewController" id="Ed7-1g-npj" customClass="MoreViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xpe-6X-b15">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJQ-tb-CtF" customClass="TopNavView" customModule="e_commerce" customModuleProvider="target">
+                                <rect key="frame" x="10" y="113" width="373" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="gtg-Ti-SIG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mmx-dp-SEp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lJQ-tb-CtF" firstAttribute="top" secondItem="mmx-dp-SEp" secondAttribute="top" constant="10" id="9Jv-VS-guz"/>
+                            <constraint firstItem="lJQ-tb-CtF" firstAttribute="centerX" secondItem="Xpe-6X-b15" secondAttribute="centerX" id="Nde-1S-qKN"/>
+                            <constraint firstItem="mmx-dp-SEp" firstAttribute="trailing" secondItem="lJQ-tb-CtF" secondAttribute="trailing" constant="10" id="e7q-F8-4zf"/>
+                            <constraint firstItem="lJQ-tb-CtF" firstAttribute="leading" secondItem="mmx-dp-SEp" secondAttribute="leading" constant="10" id="gu3-vC-QY6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="W4r-wD-bhV"/>
                 </viewController>

@@ -8,6 +8,7 @@
 import UIKit
 
 class UserChatRoomTableViewCell: UITableViewCell {
+    // MARK: - outlets
     @IBOutlet weak var chatTextfield: UITextView!
     @IBOutlet weak var chatmessageView: UIView!
     @IBOutlet weak var chatstackView: UIStackView!
@@ -21,6 +22,7 @@ class UserChatRoomTableViewCell: UITableViewCell {
         // Initialization code
         setUpDesign()
     }
+    // MARK: - functions
     func setUpDesign(){
         
     }
@@ -40,3 +42,4 @@ class UserChatRoomTableViewCell: UITableViewCell {
         }
     }
 }
+

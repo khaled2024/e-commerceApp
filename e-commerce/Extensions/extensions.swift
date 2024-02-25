@@ -11,6 +11,7 @@ extension UIImageView{
         self.layer.cornerRadius = self.frame.height/2
     }
 }
+// MARK: - UiView Extension
 extension UIView{
     func setUpLayers(){
         self.layer.cornerRadius = 20
@@ -65,8 +66,14 @@ extension UIView{
         self.layer.shadowOpacity = 0.3
         self.layer.shadowPath = nil
     }
+    // load view from nib
+    func loadViewFromNib(nibName: String)-> UIView?{
+        let nib = UINib(nibName: nibName, bundle: Bundle(for: type(of: self)))
+        return nib.instantiate(withOwner: self, options: nil).first as? UIView
+    }
     
 }
+// MARK: - UIButton
 extension UIButton{
     func setUpLayer(size: CGFloat,borderColor: CGColor,borderWidth: CGFloat){
         self.layer.cornerRadius = size
