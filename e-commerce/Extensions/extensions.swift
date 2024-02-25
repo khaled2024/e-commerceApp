@@ -27,6 +27,7 @@ extension UIView{
         self.layer.shadowOpacity = 0.5
         self.layer.shadowOffset = CGSize(width: 1, height: 1)
     }
+    // MARK: -  rounded corner
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         if #available(iOS 11,*){
             var cornerMask = CACornerMask()
@@ -54,9 +55,11 @@ extension UIView{
         }
         
     }
+    // MARK: - corners only
     func setCorners(){
         self.layer.cornerRadius = 15
     }
+    // MARK: - make shadow
     func setUpShadoww(){
         self.layer.cornerRadius = 10
         self.layer.shadowColor = UIColor.systemYellow.cgColor
@@ -88,5 +91,8 @@ extension UIButton{
         self.layer.shadowRadius = 5
         self.layer.shadowOpacity = 0.3
         self.layer.shadowPath = nil
+    }
+    func makeCircle(){
+        self.layer.cornerRadius = self.frame.height/2
     }
 }
