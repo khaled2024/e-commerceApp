@@ -24,6 +24,7 @@ class AdminHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpDesign()
+        setupNavController()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -43,7 +44,11 @@ class AdminHomeViewController: UIViewController {
         customerSupportBtn.setUpShadow(color: .systemYellow)
         
     }
-    // btn tapped
+    func setupNavController(){
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.tintColor = UIColor.black
+    }
+    // MARK: -  btn tapped
     @IBAction func usersBtnTapped(_ sender: UIButton) {
         
     }
@@ -51,13 +56,12 @@ class AdminHomeViewController: UIViewController {
         
     }
     @IBAction func driversBtnTapped(_ sender: UIButton) {
-        navManager.push(screen: .drivers, nav: navigationController)
+        navManager.pushOnly(screen: .drivers, nav: navigationController)
         
     }
     @IBAction func marketBtnTapped(_ sender: UIButton) {
         print("Push Market Screen")
-        let marketVC = navManager.instantiate(screen: .marketVC)as! MarketViewController
-        navigationController?.pushViewController(marketVC, animated: true)
+       navManager.push(screen: .marketVC, nav: navigationController)
     }
     @IBAction func CostumerServicesBtnTapped(_ sender: UIButton) {
         print("CostumerServicesTapped")

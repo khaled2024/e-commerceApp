@@ -13,9 +13,9 @@ class AdminTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         adminTabbar.setUpLayers()
-
         
     }
+    
     
 
 }

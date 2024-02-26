@@ -68,4 +68,7 @@ class EditMarketViewController: UIViewController {
     @IBAction func editMarketCoverTapped(_ sender: UIButton) {
     }
     
+    @IBAction func backBtnTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

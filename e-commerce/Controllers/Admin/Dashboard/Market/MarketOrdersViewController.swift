@@ -16,7 +16,6 @@ class MarketOrdersViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.view.backgroundColor = .tertiarySystemGroupedBackground
-        
         navigationController?.navigationBar.tintColor = UIColor.black
         setData()
     }

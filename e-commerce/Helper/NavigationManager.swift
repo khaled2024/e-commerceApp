@@ -19,6 +19,7 @@ class NavigationManager{
         case drivers
         case editMarket
         case marketOrders
+        case chatRoom
     }
     enum PushScreenToParse {
         case marketVC
@@ -27,7 +28,7 @@ class NavigationManager{
         case chatRoom
         case marketOrders
     }
-    // instantiate controler from storyboard and push it in view when we need to parse some data :-
+    // MARK: - instantiate controler from storyboard and push it in view when we need to parse some data :-
     func instantiate(screen: PushScreenToParse)-> UIViewController{
         var viewController: UIViewController!
         switch screen {
@@ -49,7 +50,7 @@ class NavigationManager{
         }
         return viewController
     }
-    // Push controller with our parsing data :-
+    // MARK: - Push controller with our parsing data :-
     func push(screen: PushScreenOnly,nav: UINavigationController!){
         var viewController: UIViewController!
         switch screen {
@@ -71,9 +72,34 @@ class NavigationManager{
         case .marketOrders:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: "MarketOrdersViewController")
+        case .chatRoom:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: ChatRoomViewController.identifier)
         }
         nav.pushViewController(viewController, animated: true)
     }
+    
+    func pushOnly(screen: PushScreenOnly,nav: UINavigationController!){
+        var vc: UIViewController!
+        switch screen {
+        case .marketVC:
+            vc = MarketViewController()
+        case .marketDetail:
+            vc = MarketDetailsViewController()
+        case .CostumerServicesVC:
+            vc = CostumerServicesViewController()
+        case .drivers:
+            vc = DriversViewController()
+        case .editMarket:
+            vc = EditMarketViewController()
+        case .marketOrders:
+            vc = MarketOrdersViewController()
+        case .chatRoom:
+            vc = ChatRoomViewController()
+        }
+        nav.pushViewController(vc, animated: true)
+    }
+    
     func show(screen: Screen, incontroller: UIViewController){
         var viewController: UIViewController!
         switch screen {

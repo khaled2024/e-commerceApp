@@ -17,6 +17,8 @@ class MarketDetailsViewController: UIViewController {
     @IBOutlet weak var marketUsersDashboard: UIView!
     @IBOutlet weak var marketDashboard: UIView!
     // scroll view items
+    @IBOutlet weak var marketFoodTypeLbl: UILabel!
+    @IBOutlet weak var marketCategoryLable: UILabel!
     @IBOutlet weak var marketEditView: UIView!
     @IBOutlet weak var marketImage: UIImageView!
     @IBOutlet weak var editMarketBtn: UIButton!
@@ -56,6 +58,7 @@ class MarketDetailsViewController: UIViewController {
     // functions
     func setUpData(){
         self.marketNameLbl.text = market.marketName
+        self.marketCategoryLable.text = market.marketCategory
         marketDetailView.layer.cornerRadius = 15
     }
     func setUpdesign(){
@@ -93,9 +96,7 @@ class MarketDetailsViewController: UIViewController {
     
     @IBAction func marketOrdersBtnTapped(_ sender: UIButton) {
         print("orders of market")
-        let marketOrders = navManager.instantiate(screen: .marketOrders)as! MarketOrdersViewController
-        navigationController?.pushViewController(marketOrders, animated: true)
-        marketOrders.marketTitle = market.marketName
+        navManager.push(screen: .marketOrders, nav: navigationController)
     }
     
     @IBAction func marketUsersBtnTapped(_ sender: UIButton) {

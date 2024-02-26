@@ -40,7 +40,7 @@ class MarketViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 }
-// UICollectionViewDelegate, UICollectionViewDataSource
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension MarketViewController: UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return markets.count

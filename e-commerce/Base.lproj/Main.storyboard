@@ -3279,9 +3279,11 @@
                         <outlet property="editMarketBtn" destination="eUy-m7-ADN" id="asd-8J-tVe"/>
                         <outlet property="expireTF" destination="o8Y-tH-JAI" id="EPL-qW-a4V"/>
                         <outlet property="expireView" destination="rhS-5c-pUo" id="BGY-no-sGx"/>
+                        <outlet property="marketCategoryLable" destination="9i2-BW-iGV" id="t9n-Xs-LT1"/>
                         <outlet property="marketDashboard" destination="7yS-AV-eJZ" id="ocV-Tf-oql"/>
                         <outlet property="marketDetailView" destination="Z5q-QC-MyV" id="AUo-mE-efA"/>
                         <outlet property="marketEditView" destination="Mkb-J9-g4A" id="qBt-A8-2wA"/>
+                        <outlet property="marketFoodTypeLbl" destination="whk-V3-WIC" id="m2m-7U-Dnl"/>
                         <outlet property="marketIDtextField" destination="Wn3-S3-Txe" id="rZv-ZO-Ogs"/>
                         <outlet property="marketImage" destination="dKr-sp-XiL" id="TZn-8A-1ui"/>
                         <outlet property="marketNameLbl" destination="OMG-6Q-MEA" id="xh0-8U-7nr"/>
@@ -3481,7 +3483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRB-0Q-mbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2659" y="6051"/>
+            <point key="canvasLocation" x="2615" y="6048"/>
         </scene>
         <!--Edit Market View Controller-->
         <scene sceneID="9sJ-hH-OXW">
@@ -3503,6 +3505,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backBtnTapped:" destination="AwG-5m-hmD" eventType="touchUpInside" id="wWf-Uv-au3"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Market" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haf-wn-aUC">
                                         <rect key="frame" x="44.999999999999993" y="28" width="104.33333333333331" height="24"/>

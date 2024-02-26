@@ -17,6 +17,9 @@ class TopNavView: UIView{
     }
 }
 
+
+
+// MARK: - comment (custom view with nib files):-
 //final class TopNavView: UIView {
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)
