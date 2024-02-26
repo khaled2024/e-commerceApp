@@ -14,8 +14,9 @@ class ChatRoomViewController: UIViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var messageView: UIView!
+    
     static let identifier = String(describing: ChatRoomViewController.self)
-    var user: CostumerModel!
+    var user: CostumerModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpData()
@@ -43,9 +44,10 @@ class ChatRoomViewController: UIViewController {
         messageTableView.allowsSelection = false
     }
     func setUpData(){
-        self.userName.text = user.name
-        self.userImage.image = UIImage(named: user.costumerImage)
-        
+        if let userName = user?.name,let userImage = user?.costumerImage{
+            self.userName.text = userName
+            self.userImage.image = UIImage(named: userImage)
+        }
     }
     // btn tapped :-
     @IBAction func dismissBtn(_ sender: UIButton) {
