@@ -2502,13 +2502,100 @@
                     <view key="view" contentMode="scaleToFill" id="dsX-YU-4kR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZTA-t9-VMI">
+                                <rect key="frame" x="10" y="159" width="373" height="639"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bUD-fR-54k">
+                                    <size key="itemSize" width="195" height="221"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DriverCollectionViewCell" id="Kn3-HJ-c9K" customClass="DriverCollectionViewCell" customModule="e_commerce" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6JR-wh-a0E">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="180" height="200"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vns-JR-t4c" customClass="TopNavView" customModule="e_commerce" customModuleProvider="target">
+                                <rect key="frame" x="10" y="59" width="373" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNB-50-M0J">
+                                        <rect key="frame" x="0.0" y="22.666666666666671" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="3z9-E3-cd9"/>
+                                            <constraint firstAttribute="height" constant="35" id="vGT-Th-zrW"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="dismissBtnTapped:" destination="KGO-T4-goU" eventType="touchUpInside" id="MKF-O1-T14"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drivers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ee-ar-P8p">
+                                        <rect key="frame" x="40.000000000000007" y="28" width="65.666666666666686" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F39-RA-RIs">
+                                        <rect key="frame" x="253" y="22.666666666666671" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.94509804249999996" green="0.61176472900000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ARp-Sy-XEZ"/>
+                                            <constraint firstAttribute="width" constant="110" id="HaM-uJ-qhn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add a Driver">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="13"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addDriverBtnTapped:" destination="KGO-T4-goU" eventType="touchUpInside" id="iB2-1q-1KY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ZNB-50-M0J" firstAttribute="leading" secondItem="vns-JR-t4c" secondAttribute="leading" id="44D-dQ-NGj"/>
+                                    <constraint firstItem="F39-RA-RIs" firstAttribute="centerY" secondItem="vns-JR-t4c" secondAttribute="centerY" id="6Xx-n7-2Zu"/>
+                                    <constraint firstAttribute="trailing" secondItem="F39-RA-RIs" secondAttribute="trailing" constant="10" id="Nih-L0-Xz5"/>
+                                    <constraint firstItem="ZNB-50-M0J" firstAttribute="centerY" secondItem="vns-JR-t4c" secondAttribute="centerY" id="WdD-BI-x2g"/>
+                                    <constraint firstAttribute="height" constant="80" id="laI-ZN-6Tc"/>
+                                    <constraint firstItem="1Ee-ar-P8p" firstAttribute="centerY" secondItem="ZNB-50-M0J" secondAttribute="centerY" id="sve-XF-GYS"/>
+                                    <constraint firstItem="1Ee-ar-P8p" firstAttribute="leading" secondItem="ZNB-50-M0J" secondAttribute="trailing" constant="5" id="vDf-5o-tvp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZyF-wW-LUw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZyF-wW-LUw" firstAttribute="trailing" secondItem="ZTA-t9-VMI" secondAttribute="trailing" constant="10" id="C63-XA-3Cx"/>
+                            <constraint firstItem="ZyF-wW-LUw" firstAttribute="bottom" secondItem="ZTA-t9-VMI" secondAttribute="bottom" constant="20" id="Deg-2m-CIl"/>
+                            <constraint firstItem="vns-JR-t4c" firstAttribute="top" secondItem="ZyF-wW-LUw" secondAttribute="top" id="Rf5-N4-rOe"/>
+                            <constraint firstItem="vns-JR-t4c" firstAttribute="leading" secondItem="dsX-YU-4kR" secondAttribute="leading" constant="10" id="XWL-2q-NNb"/>
+                            <constraint firstItem="ZyF-wW-LUw" firstAttribute="trailing" secondItem="vns-JR-t4c" secondAttribute="trailing" constant="10" id="f5E-GK-BfH"/>
+                            <constraint firstItem="ZTA-t9-VMI" firstAttribute="top" secondItem="vns-JR-t4c" secondAttribute="bottom" constant="20" id="owm-5i-MVh"/>
+                            <constraint firstItem="ZTA-t9-VMI" firstAttribute="leading" secondItem="ZyF-wW-LUw" secondAttribute="leading" constant="10" id="pqd-B7-9Kk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addDriverBtn" destination="F39-RA-RIs" id="hGw-KH-AJ7"/>
+                        <outlet property="driverTopNavView" destination="vns-JR-t4c" id="K2V-sW-yTK"/>
+                        <outlet property="driversCollectionView" destination="ZTA-t9-VMI" id="xge-wE-8VT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMg-3L-2bK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3378" y="3687"/>
+            <point key="canvasLocation" x="3377.8625954198474" y="3686.6197183098593"/>
         </scene>
         <!--Chat Room View Controller-->
         <scene sceneID="trG-SA-gAr">
@@ -2625,7 +2712,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYI-aj-6VQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1893.8931297709923" y="4347.8873239436625"/>
+            <point key="canvasLocation" x="5905" y="3687"/>
         </scene>
         <!--Market Details View Controller-->
         <scene sceneID="sjc-aB-cQF">

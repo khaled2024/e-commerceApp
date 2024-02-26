@@ -63,6 +63,9 @@
 		EAB2B6172B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B6162B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift */; };
 		EACFEE302B656469008AE44C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFEE2F2B656469008AE44C /* SearchViewController.swift */; };
 		EACFEE322B65888D008AE44C /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFEE312B65888D008AE44C /* TrackViewController.swift */; };
+		EAD2F5B22B8CB059004A58EE /* DriverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2F5B02B8CB059004A58EE /* DriverCollectionViewCell.swift */; };
+		EAD2F5B32B8CB059004A58EE /* DriverCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD2F5B12B8CB059004A58EE /* DriverCollectionViewCell.xib */; };
+		EAD2F5B52B8CBB24004A58EE /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2F5B42B8CBB24004A58EE /* DriverModel.swift */; };
 		EAE8416D2B888E65006E2742 /* extensions+UiNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8416C2B888E65006E2742 /* extensions+UiNavController.swift */; };
 		EAE8416F2B88918A006E2742 /* AdminTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8416E2B88918A006E2742 /* AdminTabBarController.swift */; };
 		EAE841712B8891F4006E2742 /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE841702B8891F4006E2742 /* AdminHomeViewController.swift */; };
@@ -138,6 +141,9 @@
 		EAB2B6162B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		EACFEE2F2B656469008AE44C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EACFEE312B65888D008AE44C /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		EAD2F5B02B8CB059004A58EE /* DriverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCollectionViewCell.swift; sourceTree = "<group>"; };
+		EAD2F5B12B8CB059004A58EE /* DriverCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverCollectionViewCell.xib; sourceTree = "<group>"; };
+		EAD2F5B42B8CBB24004A58EE /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
 		EAE8416C2B888E65006E2742 /* extensions+UiNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extensions+UiNavController.swift"; sourceTree = "<group>"; };
 		EAE8416E2B88918A006E2742 /* AdminTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabBarController.swift; sourceTree = "<group>"; };
 		EAE841702B8891F4006E2742 /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
@@ -365,6 +371,7 @@
 				EA9CCB512B8A4FE900733C4F /* MarketModel.swift */,
 				EA9CCB4F2B8A4FE900733C4F /* Models.swift */,
 				EA8A7A9C2B8B3EA900CCC677 /* MessageModel.swift */,
+				EAD2F5B42B8CBB24004A58EE /* DriverModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -455,6 +462,15 @@
 			path = Admin;
 			sourceTree = "<group>";
 		};
+		EAD2F5AF2B8CB03F004A58EE /* driversCell */ = {
+			isa = PBXGroup;
+			children = (
+				EAD2F5B02B8CB059004A58EE /* DriverCollectionViewCell.swift */,
+				EAD2F5B12B8CB059004A58EE /* DriverCollectionViewCell.xib */,
+			);
+			path = driversCell;
+			sourceTree = "<group>";
+		};
 		EAE841762B889A1C006E2742 /* HomeAdmin */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +500,7 @@
 		EAE841782B88BBD4006E2742 /* AdminCells */ = {
 			isa = PBXGroup;
 			children = (
+				EAD2F5AF2B8CB03F004A58EE /* driversCell */,
 				EAE841822B890B6D006E2742 /* MarketCell */,
 				EAE841812B890B42006E2742 /* CostumerTableViewCell */,
 				EA8A7A8D2B8B386000CCC677 /* userChatRoomTableCell */,
@@ -600,6 +617,7 @@
 				EA2ECFA32B643F6900DF2C31 /* FavouriteCollectionViewCell.xib in Resources */,
 				EAE841802B88CAE4006E2742 /* CostumerTableViewCell.xib in Resources */,
 				EA78A5F42B60559D00790B12 /* Assets.xcassets in Resources */,
+				EAD2F5B32B8CB059004A58EE /* DriverCollectionViewCell.xib in Resources */,
 				EA78A6012B605A5A00790B12 /* BannerCollectionViewCell.xib in Resources */,
 				EA78A5F22B60559D00790B12 /* Main.storyboard in Resources */,
 				EA9E8E922B61B03500A250B0 /* RestaurantsCollectionViewCell.xib in Resources */,
@@ -654,6 +672,7 @@
 				EA2439242B63A66A00ACD5BE /* extensions.swift in Sources */,
 				EA2ECFA22B643F6900DF2C31 /* FavouriteCollectionViewCell.swift in Sources */,
 				EA9CCB382B89D58A00733C4F /* LoadingViewController.swift in Sources */,
+				EAD2F5B22B8CB059004A58EE /* DriverCollectionViewCell.swift in Sources */,
 				EA9CCB3A2B89DC7400733C4F /* StorageManager.swift in Sources */,
 				EA5E7F932B6310510045C6D7 /* CartTableViewCell.swift in Sources */,
 				EA4BF1AB2B63DB7700743F3F /* OrdersTableViewCell.swift in Sources */,
@@ -661,6 +680,7 @@
 				EA8A7A972B8B3C5400CCC677 /* Extension+UitableView.swift in Sources */,
 				EA8A7A902B8B389300CCC677 /* UserChatRoomTableViewCell.swift in Sources */,
 				EA2439222B63A0DA00ACD5BE /* ProductDetailViewController.swift in Sources */,
+				EAD2F5B52B8CBB24004A58EE /* DriverModel.swift in Sources */,
 				EA8A7AB82B8B9A6C00CCC677 /* MarketOrdersViewController.swift in Sources */,
 				EAE8416F2B88918A006E2742 /* AdminTabBarController.swift in Sources */,
 				EAE8416D2B888E65006E2742 /* extensions+UiNavController.swift in Sources */,

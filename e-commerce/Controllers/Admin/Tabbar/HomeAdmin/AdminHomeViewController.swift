@@ -11,14 +11,19 @@ class AdminHomeViewController: UIViewController {
     @IBOutlet weak var adminDetailsView: UIView!
     @IBOutlet weak var dashboardView: UIView!
     @IBOutlet weak var analyticsView: UIView!
+    
     @IBOutlet weak var usersBtn: UIButton!
     @IBOutlet weak var usersView: UIView!
+    
     @IBOutlet weak var marketBtn: UIButton!
     @IBOutlet weak var marketView: UIView!
+    
     @IBOutlet weak var driversBtn: UIButton!
     @IBOutlet weak var driversView: UIView!
+    
     @IBOutlet weak var ordersBtn: UIButton!
     @IBOutlet weak var ordersView: UIView!
+    
     @IBOutlet weak var customerSupportBtn: UIButton!
     let navManager = NavigationManager()
     override func viewDidLoad() {
@@ -56,7 +61,7 @@ class AdminHomeViewController: UIViewController {
         
     }
     @IBAction func driversBtnTapped(_ sender: UIButton) {
-        navManager.pushOnly(screen: .drivers, nav: navigationController)
+        navManager.push(screen: .drivers, nav: navigationController)
         
     }
     @IBAction func marketBtnTapped(_ sender: UIButton) {
