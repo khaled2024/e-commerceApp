@@ -90,7 +90,8 @@ class NavigationManager{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: SubscriptionsViewController.identifier)
         case .blockMarketVC:
-            break
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: BlockMarketViewController.identifier)
         case .driverDetail:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: DriverDetailsViewController.identifier)

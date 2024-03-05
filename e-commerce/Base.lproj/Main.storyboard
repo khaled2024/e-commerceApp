@@ -2892,6 +2892,70 @@
             </objects>
             <point key="canvasLocation" x="6994.6564885496182" y="4331.6901408450703"/>
         </scene>
+        <!--Block Market View Controller-->
+        <scene sceneID="M3l-qs-1jn">
+            <objects>
+                <viewController storyboardIdentifier="BlockMarketViewController" id="lMq-ol-ZP2" customClass="BlockMarketViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YLP-sQ-Dcq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWm-pn-f4z">
+                                <rect key="frame" x="15" y="74" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="0YU-Yk-xcL"/>
+                                    <constraint firstAttribute="height" constant="35" id="6aj-BA-MCL"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="backBtnTapped:" destination="V6E-oO-5rX" eventType="touchUpInside" id="0TT-n6-aKi"/>
+                                    <action selector="backBtnTapped:" destination="lMq-ol-ZP2" eventType="touchUpInside" id="l2y-SZ-YZQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block Markets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uk-L6-Qau">
+                                <rect key="frame" x="55" y="79.666666666666671" width="130" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-PM-Tle">
+                                <rect key="frame" x="10" y="129" width="373" height="669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BlockMarketTableViewCell" id="gfz-mL-F5N" customClass="BlockMarketTableViewCell" customModule="e_commerce" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="373" height="47.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gfz-mL-F5N" id="sfc-hQ-x4O">
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="47.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xOY-se-qIF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1uk-L6-Qau" firstAttribute="centerY" secondItem="oWm-pn-f4z" secondAttribute="centerY" id="1TG-wN-T7E"/>
+                            <constraint firstItem="oWm-pn-f4z" firstAttribute="top" secondItem="xOY-se-qIF" secondAttribute="top" constant="15" id="8Qb-Tv-ahz"/>
+                            <constraint firstItem="1uk-L6-Qau" firstAttribute="leading" secondItem="oWm-pn-f4z" secondAttribute="trailing" constant="5" id="Rpb-Xk-jLD"/>
+                            <constraint firstItem="xOY-se-qIF" firstAttribute="bottom" secondItem="Jcf-PM-Tle" secondAttribute="bottom" constant="20" id="TZS-hv-Mt1"/>
+                            <constraint firstItem="xOY-se-qIF" firstAttribute="trailing" secondItem="Jcf-PM-Tle" secondAttribute="trailing" constant="10" id="b9Z-XZ-GSn"/>
+                            <constraint firstItem="oWm-pn-f4z" firstAttribute="leading" secondItem="xOY-se-qIF" secondAttribute="leading" constant="15" id="eQR-S7-CHR"/>
+                            <constraint firstItem="Jcf-PM-Tle" firstAttribute="leading" secondItem="xOY-se-qIF" secondAttribute="leading" constant="10" id="kh0-3o-Px4"/>
+                            <constraint firstItem="Jcf-PM-Tle" firstAttribute="top" secondItem="oWm-pn-f4z" secondAttribute="bottom" constant="20" id="y2K-fs-fRw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blockMarketTableView" destination="Jcf-PM-Tle" id="jRd-8b-ggT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jge-Lg-VpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6994.6564885496182" y="4983.8028169014087"/>
+        </scene>
         <!--Market Details View Controller-->
         <scene sceneID="sjc-aB-cQF">
             <objects>
@@ -4573,8 +4637,8 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
-        <image name="location" catalog="system" width="128" height="119"/>
         <image name="location" width="800" height="600"/>
+        <image name="location" catalog="system" width="128" height="119"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="marketCover" width="720" height="479"/>
         <image name="marketsDashboard" width="512" height="512"/>

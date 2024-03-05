@@ -51,9 +51,10 @@ extension DriversViewController: UICollectionViewDataSource,UICollectionViewDele
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        let driverDetailVC = navManager.instantiate(screen: .driverDetail)as! DriverDetailsViewController
-        navigationController?.pushViewController(driverDetailVC, animated: true)
-        driverDetailVC.driver = allDrivers[indexPath.row]
+        if let driverDetailVC = navManager.instantiate(screen: .driverDetail)as? DriverDetailsViewController{
+            navigationController?.pushViewController(driverDetailVC, animated: true)
+            driverDetailVC.driver = allDrivers[indexPath.row]
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width/2.1, height: 220)

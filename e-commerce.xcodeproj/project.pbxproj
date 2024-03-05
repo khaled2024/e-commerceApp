@@ -29,6 +29,9 @@
 		EA5F4F302B972A3B00475EF3 /* SubscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F2F2B972A3B00475EF3 /* SubscriptionsViewController.swift */; };
 		EA5F4F342B97305900475EF3 /* SubscriptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F322B97305900475EF3 /* SubscriptionsTableViewCell.swift */; };
 		EA5F4F352B97305900475EF3 /* SubscriptionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5F4F332B97305900475EF3 /* SubscriptionsTableViewCell.xib */; };
+		EA5F4F392B975FC900475EF3 /* BlockMarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F372B975FC900475EF3 /* BlockMarketTableViewCell.swift */; };
+		EA5F4F3A2B975FC900475EF3 /* BlockMarketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5F4F382B975FC900475EF3 /* BlockMarketTableViewCell.xib */; };
+		EA5F4F3C2B97620200475EF3 /* BlockMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F3B2B97620200475EF3 /* BlockMarketViewController.swift */; };
 		EA6AE0942B62694400AE45DB /* bestProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */; };
 		EA6AE0952B62694400AE45DB /* bestProductsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */; };
 		EA6AE09B2B62AEE100AE45DB /* ResturantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */; };
@@ -113,6 +116,9 @@
 		EA5F4F2F2B972A3B00475EF3 /* SubscriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsViewController.swift; sourceTree = "<group>"; };
 		EA5F4F322B97305900475EF3 /* SubscriptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsTableViewCell.swift; sourceTree = "<group>"; };
 		EA5F4F332B97305900475EF3 /* SubscriptionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionsTableViewCell.xib; sourceTree = "<group>"; };
+		EA5F4F372B975FC900475EF3 /* BlockMarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMarketTableViewCell.swift; sourceTree = "<group>"; };
+		EA5F4F382B975FC900475EF3 /* BlockMarketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlockMarketTableViewCell.xib; sourceTree = "<group>"; };
+		EA5F4F3B2B97620200475EF3 /* BlockMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMarketViewController.swift; sourceTree = "<group>"; };
 		EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bestProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bestProductsCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetailViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +286,7 @@
 				EA8A7AA92B8B5E2600CCC677 /* MoreViewController.swift */,
 				EA02C9F62B97286200C039F5 /* SettingViewController.swift */,
 				EA5F4F2F2B972A3B00475EF3 /* SubscriptionsViewController.swift */,
+				EA5F4F3B2B97620200475EF3 /* BlockMarketViewController.swift */,
 			);
 			path = moreAdmin;
 			sourceTree = "<group>";
@@ -318,6 +325,15 @@
 				EA5F4F332B97305900475EF3 /* SubscriptionsTableViewCell.xib */,
 			);
 			path = SubscriptionsCell;
+			sourceTree = "<group>";
+		};
+		EA5F4F362B975F8D00475EF3 /* BlockMarketCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA5F4F372B975FC900475EF3 /* BlockMarketTableViewCell.swift */,
+				EA5F4F382B975FC900475EF3 /* BlockMarketTableViewCell.xib */,
+			);
+			path = BlockMarketCell;
 			sourceTree = "<group>";
 		};
 		EA6AE0912B62690800AE45DB /* BestProducts */ = {
@@ -544,6 +560,7 @@
 				EA8A7A8D2B8B386000CCC677 /* userChatRoomTableCell */,
 				EA02C9F12B971EBC00C039F5 /* MoreTableViewCell */,
 				EA5F4F312B97301A00475EF3 /* SubscriptionsCell */,
+				EA5F4F362B975F8D00475EF3 /* BlockMarketCell */,
 			);
 			path = AdminCells;
 			sourceTree = "<group>";
@@ -658,6 +675,7 @@
 				EAE841802B88CAE4006E2742 /* CostumerTableViewCell.xib in Resources */,
 				EA5F4F352B97305900475EF3 /* SubscriptionsTableViewCell.xib in Resources */,
 				EA78A5F42B60559D00790B12 /* Assets.xcassets in Resources */,
+				EA5F4F3A2B975FC900475EF3 /* BlockMarketTableViewCell.xib in Resources */,
 				EAD2F5B32B8CB059004A58EE /* DriverCollectionViewCell.xib in Resources */,
 				EA78A6012B605A5A00790B12 /* BannerCollectionViewCell.xib in Resources */,
 				EA78A5F22B60559D00790B12 /* Main.storyboard in Resources */,
@@ -705,6 +723,7 @@
 				EA8A7AA72B8B5BCF00CCC677 /* TopNavView.swift in Sources */,
 				EA8A7A9A2B8B3C5400CCC677 /* Extension+UiView.swift in Sources */,
 				EA78A5EF2B60559D00790B12 /* MainViewController.swift in Sources */,
+				EA5F4F3C2B97620200475EF3 /* BlockMarketViewController.swift in Sources */,
 				EA8881FF2B8823EF00A1B51A /* MainTabBarController.swift in Sources */,
 				EA5F4F302B972A3B00475EF3 /* SubscriptionsViewController.swift in Sources */,
 				EA9CCB3E2B89F94100733C4F /* DriversViewController.swift in Sources */,
@@ -720,6 +739,7 @@
 				EAD2F5B22B8CB059004A58EE /* DriverCollectionViewCell.swift in Sources */,
 				EA9CCB3A2B89DC7400733C4F /* StorageManager.swift in Sources */,
 				EA5E7F932B6310510045C6D7 /* CartTableViewCell.swift in Sources */,
+				EA5F4F392B975FC900475EF3 /* BlockMarketTableViewCell.swift in Sources */,
 				EA4BF1AB2B63DB7700743F3F /* OrdersTableViewCell.swift in Sources */,
 				EAE8417F2B88CAE4006E2742 /* CostumerTableViewCell.swift in Sources */,
 				EA8A7A972B8B3C5400CCC677 /* Extension+UitableView.swift in Sources */,

@@ -8,9 +8,7 @@
 import UIKit
 
 class MoreViewController: UIViewController {
-    
     // MARK: - Outlets
-    
     @IBOutlet weak var moreTableView: UITableView!
     let navManager = NavigationManager()
     override func viewDidLoad() {
@@ -22,7 +20,6 @@ class MoreViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         // Do any additional setup after loading the view.
     }
-    
 }
 // MARK: - MoreTableViewCell
 extension MoreViewController: UITableViewDelegate,UITableViewDataSource{
@@ -56,8 +53,8 @@ extension MoreViewController: UITableViewDelegate,UITableViewDataSource{
         else if indexPath.row == 2{
             navManager.push(screen: .subscriptionsVC, nav: navigationController)
         }else{
+            navManager.push(screen: .blockMarketVC, nav: navigationController)
             print("Block Market Tapped")
         }
     }
-    
 }
