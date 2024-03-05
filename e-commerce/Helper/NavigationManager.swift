@@ -20,6 +20,10 @@ class NavigationManager{
         case editMarket
         case marketOrders
         case chatRoom
+        case driverDetail
+        case settingVC
+        case subscriptionsVC
+        case blockMarketVC
     }
     enum PushScreenToParse {
         case marketVC
@@ -27,6 +31,7 @@ class NavigationManager{
         case CostumerServicesVC
         case chatRoom
         case marketOrders
+        case driverDetail
     }
     // MARK: - instantiate controler from storyboard and push it in view when we need to parse some data :-
     func instantiate(screen: PushScreenToParse)-> UIViewController{
@@ -47,6 +52,9 @@ class NavigationManager{
         case .marketOrders:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: "MarketOrdersViewController")
+        case .driverDetail:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: DriverDetailsViewController.identifier)
         }
         return viewController
     }
@@ -75,6 +83,17 @@ class NavigationManager{
         case .chatRoom:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: ChatRoomViewController.identifier)
+        case .settingVC:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: SettingViewController.identifier)
+        case .subscriptionsVC:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: SubscriptionsViewController.identifier)
+        case .blockMarketVC:
+            break
+        case .driverDetail:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: DriverDetailsViewController.identifier)
         }
         nav.pushViewController(viewController, animated: true)
     }
@@ -96,6 +115,14 @@ class NavigationManager{
             vc = MarketOrdersViewController()
         case .chatRoom:
             vc = ChatRoomViewController()
+        case .settingVC:
+            break
+        case .subscriptionsVC:
+            break
+        case .blockMarketVC:
+            break
+        case .driverDetail:
+            break
         }
         nav.pushViewController(vc, animated: true)
     }

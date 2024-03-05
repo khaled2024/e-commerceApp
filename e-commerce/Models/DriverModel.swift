@@ -19,14 +19,14 @@ struct DriverModel{
 }
 
 let allDrivers: [DriverModel] = [
-    .init(driverImage: UIImage(named: "sadPerson")!, driverName: "Khaled", driverLicense: .Expired),
-    .init(driverImage: UIImage(named: "sadPerson")!, driverName: "hussien", driverLicense: .NonExpired),
-    .init(driverImage: UIImage(named: "sadPerson")!, driverName: "Khaled", driverLicense: .Expired),
-    .init(driverImage: UIImage(named: "sadPerson")!, driverName: "Khaled", driverLicense: .Expired),
-    .init(driverImage: UIImage(named: "sadPerson")!, driverName: "hussien", driverLicense: .NonExpired),
-    .init(driverImage: UIImage(named: "sadPerson")!, driverName: "Khaled", driverLicense: .Expired),
-    .init(driverImage: UIImage(named: "sadPerson")!, driverName: "hussien", driverLicense: .NonExpired),
-    .init(driverImage: UIImage(named: "sadPerson")!, driverName: "hussien", driverLicense: .NonExpired),
+    .init(driverImage: UIImage(named: "driverImage2")!, driverName: "Khaled", driverLicense: .Expired),
+    .init(driverImage: UIImage(named: "driverImage")!, driverName: "hussien", driverLicense: .NonExpired),
+    .init(driverImage: UIImage(named: "driverImage")!, driverName: "Khaled", driverLicense: .Expired),
+    .init(driverImage: UIImage(named: "driverImage2")!, driverName: "Khaled", driverLicense: .Expired),
+    .init(driverImage: UIImage(named: "driverImage")!, driverName: "hussien", driverLicense: .NonExpired),
+    .init(driverImage: UIImage(named: "driverImage")!, driverName: "Khaled", driverLicense: .Expired),
+    .init(driverImage: UIImage(named: "driverImage2")!, driverName: "hussien", driverLicense: .NonExpired),
+    .init(driverImage: UIImage(named: "driverImage2")!, driverName: "hussien", driverLicense: .NonExpired),
     
 
 

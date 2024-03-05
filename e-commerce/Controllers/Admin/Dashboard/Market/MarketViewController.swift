@@ -8,7 +8,6 @@
 import UIKit
 
 class MarketViewController: UIViewController {
-    
     @IBOutlet weak var marketSegmentControll: UISegmentedControl!
     @IBOutlet weak var marketCollectionView: UICollectionView!
     @IBOutlet weak var addMarketBtn: UIButton!

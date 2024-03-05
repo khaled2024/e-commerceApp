@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C393C34C492BC0D700319162 /* Pods_e_commerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3355D14F0F1A4E0CD5579FF /* Pods_e_commerce.framework */; };
+		EA02C9EE2B9710F400C039F5 /* AddDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02C9ED2B9710F400C039F5 /* AddDriverViewController.swift */; };
+		EA02C9F02B97110300C039F5 /* DriverDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02C9EF2B97110300C039F5 /* DriverDetailsViewController.swift */; };
+		EA02C9F32B971EDB00C039F5 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02C9F22B971EDB00C039F5 /* MoreTableViewCell.swift */; };
+		EA02C9F52B971F7800C039F5 /* MoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02C9F42B971F7800C039F5 /* MoreModel.swift */; };
+		EA02C9F72B97286200C039F5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02C9F62B97286200C039F5 /* SettingViewController.swift */; };
 		EA2439222B63A0DA00ACD5BE /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */; };
 		EA2439242B63A66A00ACD5BE /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2439232B63A66A00ACD5BE /* extensions.swift */; };
 		EA2ECF9C2B63E14E00DF2C31 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECF9B2B63E14E00DF2C31 /* OrderViewController.swift */; };
@@ -21,6 +26,9 @@
 		EA5E7F8F2B630F2F0045C6D7 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E7F8E2B630F2F0045C6D7 /* CartViewController.swift */; };
 		EA5E7F932B6310510045C6D7 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E7F912B6310510045C6D7 /* CartTableViewCell.swift */; };
 		EA5E7F942B6310510045C6D7 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5E7F922B6310510045C6D7 /* CartTableViewCell.xib */; };
+		EA5F4F302B972A3B00475EF3 /* SubscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F2F2B972A3B00475EF3 /* SubscriptionsViewController.swift */; };
+		EA5F4F342B97305900475EF3 /* SubscriptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F322B97305900475EF3 /* SubscriptionsTableViewCell.swift */; };
+		EA5F4F352B97305900475EF3 /* SubscriptionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5F4F332B97305900475EF3 /* SubscriptionsTableViewCell.xib */; };
 		EA6AE0942B62694400AE45DB /* bestProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */; };
 		EA6AE0952B62694400AE45DB /* bestProductsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */; };
 		EA6AE09B2B62AEE100AE45DB /* ResturantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */; };
@@ -84,6 +92,11 @@
 		115995DC1A5829155968989F /* Pods-e-commerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-commerce.debug.xcconfig"; path = "Target Support Files/Pods-e-commerce/Pods-e-commerce.debug.xcconfig"; sourceTree = "<group>"; };
 		502C74A3159D6B65B285C69C /* Pods-e-commerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-commerce.release.xcconfig"; path = "Target Support Files/Pods-e-commerce/Pods-e-commerce.release.xcconfig"; sourceTree = "<group>"; };
 		C3355D14F0F1A4E0CD5579FF /* Pods_e_commerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_commerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA02C9ED2B9710F400C039F5 /* AddDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDriverViewController.swift; sourceTree = "<group>"; };
+		EA02C9EF2B97110300C039F5 /* DriverDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsViewController.swift; sourceTree = "<group>"; };
+		EA02C9F22B971EDB00C039F5 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
+		EA02C9F42B971F7800C039F5 /* MoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreModel.swift; sourceTree = "<group>"; };
+		EA02C9F62B97286200C039F5 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		EA2439232B63A66A00ACD5BE /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		EA2ECF9B2B63E14E00DF2C31 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +110,9 @@
 		EA5E7F8E2B630F2F0045C6D7 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		EA5E7F912B6310510045C6D7 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		EA5E7F922B6310510045C6D7 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		EA5F4F2F2B972A3B00475EF3 /* SubscriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsViewController.swift; sourceTree = "<group>"; };
+		EA5F4F322B97305900475EF3 /* SubscriptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsTableViewCell.swift; sourceTree = "<group>"; };
+		EA5F4F332B97305900475EF3 /* SubscriptionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionsTableViewCell.xib; sourceTree = "<group>"; };
 		EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bestProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bestProductsCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetailViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +203,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA02C9F12B971EBC00C039F5 /* MoreTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA02C9F22B971EDB00C039F5 /* MoreTableViewCell.swift */,
+			);
+			path = MoreTableViewCell;
+			sourceTree = "<group>";
+		};
 		EA2ECF9F2B643F4200DF2C31 /* FavouriteCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				EA9CCB3D2B89F94100733C4F /* DriversViewController.swift */,
+				EA02C9EF2B97110300C039F5 /* DriverDetailsViewController.swift */,
+				EA02C9ED2B9710F400C039F5 /* AddDriverViewController.swift */,
 			);
 			path = Drivers;
 			sourceTree = "<group>";
@@ -252,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				EA8A7AA92B8B5E2600CCC677 /* MoreViewController.swift */,
+				EA02C9F62B97286200C039F5 /* SettingViewController.swift */,
+				EA5F4F2F2B972A3B00475EF3 /* SubscriptionsViewController.swift */,
 			);
 			path = moreAdmin;
 			sourceTree = "<group>";
@@ -281,6 +309,15 @@
 				EA5E7F922B6310510045C6D7 /* CartTableViewCell.xib */,
 			);
 			path = CartCell;
+			sourceTree = "<group>";
+		};
+		EA5F4F312B97301A00475EF3 /* SubscriptionsCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA5F4F322B97305900475EF3 /* SubscriptionsTableViewCell.swift */,
+				EA5F4F332B97305900475EF3 /* SubscriptionsTableViewCell.xib */,
+			);
+			path = SubscriptionsCell;
 			sourceTree = "<group>";
 		};
 		EA6AE0912B62690800AE45DB /* BestProducts */ = {
@@ -372,6 +409,7 @@
 				EA9CCB4F2B8A4FE900733C4F /* Models.swift */,
 				EA8A7A9C2B8B3EA900CCC677 /* MessageModel.swift */,
 				EAD2F5B42B8CBB24004A58EE /* DriverModel.swift */,
+				EA02C9F42B971F7800C039F5 /* MoreModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -504,6 +542,8 @@
 				EAE841822B890B6D006E2742 /* MarketCell */,
 				EAE841812B890B42006E2742 /* CostumerTableViewCell */,
 				EA8A7A8D2B8B386000CCC677 /* userChatRoomTableCell */,
+				EA02C9F12B971EBC00C039F5 /* MoreTableViewCell */,
+				EA5F4F312B97301A00475EF3 /* SubscriptionsCell */,
 			);
 			path = AdminCells;
 			sourceTree = "<group>";
@@ -616,6 +656,7 @@
 				EA5E7F942B6310510045C6D7 /* CartTableViewCell.xib in Resources */,
 				EA2ECFA32B643F6900DF2C31 /* FavouriteCollectionViewCell.xib in Resources */,
 				EAE841802B88CAE4006E2742 /* CostumerTableViewCell.xib in Resources */,
+				EA5F4F352B97305900475EF3 /* SubscriptionsTableViewCell.xib in Resources */,
 				EA78A5F42B60559D00790B12 /* Assets.xcassets in Resources */,
 				EAD2F5B32B8CB059004A58EE /* DriverCollectionViewCell.xib in Resources */,
 				EA78A6012B605A5A00790B12 /* BannerCollectionViewCell.xib in Resources */,
@@ -658,16 +699,20 @@
 			files = (
 				EAF6440C2B894481006BDADE /* NavigationManager.swift in Sources */,
 				EA8A7AAA2B8B5E2600CCC677 /* MoreViewController.swift in Sources */,
+				EA5F4F342B97305900475EF3 /* SubscriptionsTableViewCell.swift in Sources */,
 				EA4BF1A62B63B63700743F3F /* IngredientsTableViewCell.swift in Sources */,
+				EA02C9F02B97110300C039F5 /* DriverDetailsViewController.swift in Sources */,
 				EA8A7AA72B8B5BCF00CCC677 /* TopNavView.swift in Sources */,
 				EA8A7A9A2B8B3C5400CCC677 /* Extension+UiView.swift in Sources */,
 				EA78A5EF2B60559D00790B12 /* MainViewController.swift in Sources */,
 				EA8881FF2B8823EF00A1B51A /* MainTabBarController.swift in Sources */,
+				EA5F4F302B972A3B00475EF3 /* SubscriptionsViewController.swift in Sources */,
 				EA9CCB3E2B89F94100733C4F /* DriversViewController.swift in Sources */,
 				EA9E8E912B61B03500A250B0 /* RestaurantsCollectionViewCell.swift in Sources */,
 				EAE8418D2B891D40006E2742 /* MarketDetailsViewController.swift in Sources */,
 				EA78A5EB2B60559D00790B12 /* AppDelegate.swift in Sources */,
 				EAB2B6152B86A74800A7D419 /* OnboardingViewController.swift in Sources */,
+				EA02C9F52B971F7800C039F5 /* MoreModel.swift in Sources */,
 				EA2ECF9E2B643F3200DF2C31 /* FavouriteViewController.swift in Sources */,
 				EA2439242B63A66A00ACD5BE /* extensions.swift in Sources */,
 				EA2ECFA22B643F6900DF2C31 /* FavouriteCollectionViewCell.swift in Sources */,
@@ -689,6 +734,7 @@
 				EAE8418F2B891D63006E2742 /* EditMarketViewController.swift in Sources */,
 				EACFEE302B656469008AE44C /* SearchViewController.swift in Sources */,
 				EAB2B6122B86A55800A7D419 /* SecondMainViewController.swift in Sources */,
+				EA02C9F72B97286200C039F5 /* SettingViewController.swift in Sources */,
 				EA2ECF9C2B63E14E00DF2C31 /* OrderViewController.swift in Sources */,
 				EA8A7A992B8B3C5400CCC677 /* Extension+UiimageView.swift in Sources */,
 				EA78A6002B605A5A00790B12 /* BannerCollectionViewCell.swift in Sources */,
@@ -700,6 +746,7 @@
 				EAE841752B88991E006E2742 /* MarketViewController.swift in Sources */,
 				EA6AE09B2B62AEE100AE45DB /* ResturantDetailViewController.swift in Sources */,
 				EACFEE322B65888D008AE44C /* TrackViewController.swift in Sources */,
+				EA02C9EE2B9710F400C039F5 /* AddDriverViewController.swift in Sources */,
 				EA9CCB402B8A011900733C4F /* ChatRoomViewController.swift in Sources */,
 				EA5E7F8F2B630F2F0045C6D7 /* CartViewController.swift in Sources */,
 				EAE841712B8891F4006E2742 /* AdminHomeViewController.swift in Sources */,
@@ -708,6 +755,7 @@
 				EA8A7A982B8B3C5400CCC677 /* Extension+UitextField.swift in Sources */,
 				EA8A7A9D2B8B3EA900CCC677 /* MessageModel.swift in Sources */,
 				EA9E8E882B6182B600A250B0 /* CategoryCollectionViewCell.swift in Sources */,
+				EA02C9F32B971EDB00C039F5 /* MoreTableViewCell.swift in Sources */,
 				EAE8417A2B88C15A006E2742 /* CostumerServicesViewController.swift in Sources */,
 				EA9E8E842B6180A300A250B0 /* CategoryTableViewCell.swift in Sources */,
 				EA9CCB532B8A4FEA00733C4F /* CostumerModel.swift in Sources */,

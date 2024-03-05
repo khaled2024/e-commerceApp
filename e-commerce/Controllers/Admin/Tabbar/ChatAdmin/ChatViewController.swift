@@ -44,6 +44,7 @@ class ChatViewController: UIViewController {
     }
     @IBAction func segmentTapped(_ sender: UISegmentedControl) {
         chatTableView.reloadData()
+        print("Tapped")
     }
     
 }

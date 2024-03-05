@@ -8,13 +8,13 @@
 import UIKit
 
 class DriversViewController: UIViewController {
-
+    
     @IBOutlet weak var driversCollectionView: UICollectionView!
     @IBOutlet weak var driverTopNavView: TopNavView!
     
     @IBOutlet weak var addDriverBtn: UIButton!
     static let identifier = String(describing: DriversViewController.self)
-    
+    let navManager = NavigationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -28,6 +28,9 @@ class DriversViewController: UIViewController {
     }
     @IBAction func addDriverBtnTapped(_ sender: UIButton) {
         print("Add driver")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let addDriverVC = storyboard.instantiateViewController(withIdentifier: "AddDriverViewController")as! AddDriverViewController
+        self.navigationController?.pushViewController(addDriverVC, animated: true)
     }
     
     @IBAction func dismissBtnTapped(_ sender: UIButton) {
@@ -42,9 +45,15 @@ extension DriversViewController: UICollectionViewDataSource,UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DriverCollectionViewCell.identifier, for: indexPath)as! DriverCollectionViewCell
-//        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        //        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         cell.config(driver: allDrivers[indexPath.row])
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let driverDetailVC = navManager.instantiate(screen: .driverDetail)as! DriverDetailsViewController
+        navigationController?.pushViewController(driverDetailVC, animated: true)
+        driverDetailVC.driver = allDrivers[indexPath.row]
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width/2.1, height: 220)
