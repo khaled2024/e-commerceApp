@@ -336,6 +336,13 @@
 			path = BlockMarketCell;
 			sourceTree = "<group>";
 		};
+		EA5F4F3D2B99138A00475EF3 /* Market */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Market;
+			sourceTree = "<group>";
+		};
 		EA6AE0912B62690800AE45DB /* BestProducts */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +367,7 @@
 				EAB2B6182B86AE5000A7D419 /* Onboarding */,
 				EAB2B6132B86A72800A7D419 /* User */,
 				EAC75B672B8817140023CD97 /* Admin */,
+				EA5F4F3D2B99138A00475EF3 /* Market */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
