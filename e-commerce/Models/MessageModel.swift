@@ -15,15 +15,15 @@ struct MessageModel {
     let messageText: String
     let type: MessageType
 }
-let messages = [
-    MessageModel(messageText: "Hello khaled", type: .inComing),
+var messages = [
+    MessageModel(messageText: "Hello khaled", type: .outComing),
     MessageModel(messageText: "hi", type: .outComing),
     MessageModel(messageText: "Hello khaled Hello khaled Hello khaled Hello khaled Hello khaled", type: .inComing),
     MessageModel(messageText: "Hello khaled", type: .outComing),
     MessageModel(messageText: "Hello khaled", type: .outComing),
     MessageModel(messageText: "how are you ?", type: .inComing),
     MessageModel(messageText: "fine it is okay :-", type: .inComing),
-    MessageModel(messageText: "Hello khaled", type: .outComing)
+    MessageModel(messageText: "Hello khaled", type: .inComing)
     
     
 ]

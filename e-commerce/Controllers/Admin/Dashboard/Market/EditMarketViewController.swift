@@ -60,7 +60,6 @@ class EditMarketViewController: UIViewController {
         
     }
     // MARK: - BtnTapped
-    
     @IBAction func cancleBtnTapped(_ sender: UIButton) {
     }
     @IBAction func saveBtnTapped(_ sender: UIButton) {
