@@ -32,6 +32,13 @@
 		EA5F4F392B975FC900475EF3 /* BlockMarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F372B975FC900475EF3 /* BlockMarketTableViewCell.swift */; };
 		EA5F4F3A2B975FC900475EF3 /* BlockMarketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5F4F382B975FC900475EF3 /* BlockMarketTableViewCell.xib */; };
 		EA5F4F3C2B97620200475EF3 /* BlockMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F3B2B97620200475EF3 /* BlockMarketViewController.swift */; };
+		EA5F4F412B99152500475EF3 /* MarketHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F402B99152500475EF3 /* MarketHomeViewController.swift */; };
+		EA5F4F432B99163000475EF3 /* CurrentOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F422B99163000475EF3 /* CurrentOrderViewController.swift */; };
+		EA5F4F452B99164500475EF3 /* MarketMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F442B99164500475EF3 /* MarketMoreViewController.swift */; };
+		EA5F4F4B2B9916D100475EF3 /* MarketTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F4A2B9916D100475EF3 /* MarketTabbar.swift */; };
+		EA5F4F4D2B99177800475EF3 /* MarketSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F4C2B99177800475EF3 /* MarketSettingViewController.swift */; };
+		EA5F4F4F2B9917AB00475EF3 /* MarketProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F4E2B9917AB00475EF3 /* MarketProfileViewController.swift */; };
+		EA5F4F512B9917CC00475EF3 /* MarketAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F502B9917CC00475EF3 /* MarketAnnouncementViewController.swift */; };
 		EA6AE0942B62694400AE45DB /* bestProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */; };
 		EA6AE0952B62694400AE45DB /* bestProductsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */; };
 		EA6AE09B2B62AEE100AE45DB /* ResturantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */; };
@@ -119,6 +126,13 @@
 		EA5F4F372B975FC900475EF3 /* BlockMarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMarketTableViewCell.swift; sourceTree = "<group>"; };
 		EA5F4F382B975FC900475EF3 /* BlockMarketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlockMarketTableViewCell.xib; sourceTree = "<group>"; };
 		EA5F4F3B2B97620200475EF3 /* BlockMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMarketViewController.swift; sourceTree = "<group>"; };
+		EA5F4F402B99152500475EF3 /* MarketHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketHomeViewController.swift; sourceTree = "<group>"; };
+		EA5F4F422B99163000475EF3 /* CurrentOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentOrderViewController.swift; sourceTree = "<group>"; };
+		EA5F4F442B99164500475EF3 /* MarketMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketMoreViewController.swift; sourceTree = "<group>"; };
+		EA5F4F4A2B9916D100475EF3 /* MarketTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTabbar.swift; sourceTree = "<group>"; };
+		EA5F4F4C2B99177800475EF3 /* MarketSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSettingViewController.swift; sourceTree = "<group>"; };
+		EA5F4F4E2B9917AB00475EF3 /* MarketProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketProfileViewController.swift; sourceTree = "<group>"; };
+		EA5F4F502B9917CC00475EF3 /* MarketAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketAnnouncementViewController.swift; sourceTree = "<group>"; };
 		EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bestProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bestProductsCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetailViewController.swift; sourceTree = "<group>"; };
@@ -339,8 +353,95 @@
 		EA5F4F3D2B99138A00475EF3 /* Market */ = {
 			isa = PBXGroup;
 			children = (
+				EA5F4F3F2B99150600475EF3 /* Tabbar */,
+				EA5F4F3E2B9914D200475EF3 /* Dashboard */,
 			);
 			path = Market;
+			sourceTree = "<group>";
+		};
+		EA5F4F3E2B9914D200475EF3 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EA5F4F532B99186200475EF3 /* Add meal */,
+				EA5F4F522B99182200475EF3 /* Add Announcement */,
+				EA5F4F542B99189100475EF3 /* Drivers */,
+				EA5F4F562B9918F500475EF3 /* Meals */,
+				EA5F4F552B9918DE00475EF3 /* Orders */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		EA5F4F3F2B99150600475EF3 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				EA5F4F462B99164E00475EF3 /* MarketHome */,
+				EA5F4F482B99166300475EF3 /* MarketCurrentOrder */,
+				EA5F4F492B99167200475EF3 /* MarketMore */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		EA5F4F462B99164E00475EF3 /* MarketHome */ = {
+			isa = PBXGroup;
+			children = (
+				EA5F4F4A2B9916D100475EF3 /* MarketTabbar.swift */,
+				EA5F4F402B99152500475EF3 /* MarketHomeViewController.swift */,
+			);
+			path = MarketHome;
+			sourceTree = "<group>";
+		};
+		EA5F4F482B99166300475EF3 /* MarketCurrentOrder */ = {
+			isa = PBXGroup;
+			children = (
+				EA5F4F422B99163000475EF3 /* CurrentOrderViewController.swift */,
+			);
+			path = MarketCurrentOrder;
+			sourceTree = "<group>";
+		};
+		EA5F4F492B99167200475EF3 /* MarketMore */ = {
+			isa = PBXGroup;
+			children = (
+				EA5F4F442B99164500475EF3 /* MarketMoreViewController.swift */,
+				EA5F4F4C2B99177800475EF3 /* MarketSettingViewController.swift */,
+				EA5F4F4E2B9917AB00475EF3 /* MarketProfileViewController.swift */,
+				EA5F4F502B9917CC00475EF3 /* MarketAnnouncementViewController.swift */,
+			);
+			path = MarketMore;
+			sourceTree = "<group>";
+		};
+		EA5F4F522B99182200475EF3 /* Add Announcement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Add Announcement";
+			sourceTree = "<group>";
+		};
+		EA5F4F532B99186200475EF3 /* Add meal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Add meal";
+			sourceTree = "<group>";
+		};
+		EA5F4F542B99189100475EF3 /* Drivers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Drivers;
+			sourceTree = "<group>";
+		};
+		EA5F4F552B9918DE00475EF3 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		EA5F4F562B9918F500475EF3 /* Meals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Meals;
 			sourceTree = "<group>";
 		};
 		EA6AE0912B62690800AE45DB /* BestProducts */ = {
@@ -736,6 +837,7 @@
 				EA5F4F302B972A3B00475EF3 /* SubscriptionsViewController.swift in Sources */,
 				EA9CCB3E2B89F94100733C4F /* DriversViewController.swift in Sources */,
 				EA9E8E912B61B03500A250B0 /* RestaurantsCollectionViewCell.swift in Sources */,
+				EA5F4F452B99164500475EF3 /* MarketMoreViewController.swift in Sources */,
 				EAE8418D2B891D40006E2742 /* MarketDetailsViewController.swift in Sources */,
 				EA78A5EB2B60559D00790B12 /* AppDelegate.swift in Sources */,
 				EAB2B6152B86A74800A7D419 /* OnboardingViewController.swift in Sources */,
@@ -749,8 +851,11 @@
 				EA5E7F932B6310510045C6D7 /* CartTableViewCell.swift in Sources */,
 				EA5F4F392B975FC900475EF3 /* BlockMarketTableViewCell.swift in Sources */,
 				EA4BF1AB2B63DB7700743F3F /* OrdersTableViewCell.swift in Sources */,
+				EA5F4F412B99152500475EF3 /* MarketHomeViewController.swift in Sources */,
+				EA5F4F512B9917CC00475EF3 /* MarketAnnouncementViewController.swift in Sources */,
 				EAE8417F2B88CAE4006E2742 /* CostumerTableViewCell.swift in Sources */,
 				EA8A7A972B8B3C5400CCC677 /* Extension+UitableView.swift in Sources */,
+				EA5F4F4D2B99177800475EF3 /* MarketSettingViewController.swift in Sources */,
 				EA8A7A902B8B389300CCC677 /* UserChatRoomTableViewCell.swift in Sources */,
 				EA2439222B63A0DA00ACD5BE /* ProductDetailViewController.swift in Sources */,
 				EAD2F5B52B8CBB24004A58EE /* DriverModel.swift in Sources */,
@@ -762,9 +867,11 @@
 				EAE8418F2B891D63006E2742 /* EditMarketViewController.swift in Sources */,
 				EACFEE302B656469008AE44C /* SearchViewController.swift in Sources */,
 				EAB2B6122B86A55800A7D419 /* SecondMainViewController.swift in Sources */,
+				EA5F4F4B2B9916D100475EF3 /* MarketTabbar.swift in Sources */,
 				EA02C9F72B97286200C039F5 /* SettingViewController.swift in Sources */,
 				EA2ECF9C2B63E14E00DF2C31 /* OrderViewController.swift in Sources */,
 				EA8A7A992B8B3C5400CCC677 /* Extension+UiimageView.swift in Sources */,
+				EA5F4F4F2B9917AB00475EF3 /* MarketProfileViewController.swift in Sources */,
 				EA78A6002B605A5A00790B12 /* BannerCollectionViewCell.swift in Sources */,
 				EA6AE0942B62694400AE45DB /* bestProductsCollectionViewCell.swift in Sources */,
 				EAE841872B890D36006E2742 /* MarketCollectionViewCell.swift in Sources */,
@@ -776,6 +883,7 @@
 				EACFEE322B65888D008AE44C /* TrackViewController.swift in Sources */,
 				EA02C9EE2B9710F400C039F5 /* AddDriverViewController.swift in Sources */,
 				EA9CCB402B8A011900733C4F /* ChatRoomViewController.swift in Sources */,
+				EA5F4F432B99163000475EF3 /* CurrentOrderViewController.swift in Sources */,
 				EA5E7F8F2B630F2F0045C6D7 /* CartViewController.swift in Sources */,
 				EAE841712B8891F4006E2742 /* AdminHomeViewController.swift in Sources */,
 				EA9CCB522B8A4FEA00733C4F /* Models.swift in Sources */,
