@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i1Q-Sk-UnD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N9l-cs-VPQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -2496,10 +2496,10 @@
             </objects>
             <point key="canvasLocation" x="2612.9770992366412" y="3687.323943661972"/>
         </scene>
-        <!--Drivers View Controller-->
+        <!--Admin Drivers View Controller-->
         <scene sceneID="Zhr-H4-zvX">
             <objects>
-                <viewController storyboardIdentifier="DriversViewController" id="KGO-T4-goU" customClass="DriversViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminDriversViewController" id="KGO-T4-goU" customClass="AdminDriversViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dsX-YU-4kR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2715,10 +2715,10 @@
             </objects>
             <point key="canvasLocation" x="5905" y="3687"/>
         </scene>
-        <!--Setting View Controller-->
+        <!--Admin Setting View Controller-->
         <scene sceneID="Yyh-Nx-hmg">
             <objects>
-                <viewController storyboardIdentifier="SettingViewController" id="V6E-oO-5rX" customClass="SettingViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminSettingViewController" id="V6E-oO-5rX" customClass="AdminSettingViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="caB-fJ-ACe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2809,10 +2809,10 @@
             </objects>
             <point key="canvasLocation" x="6995" y="3668"/>
         </scene>
-        <!--Subscriptions View Controller-->
+        <!--Admin Subscriptions View Controller-->
         <scene sceneID="yql-Mg-k2i">
             <objects>
-                <viewController storyboardIdentifier="SubscriptionsViewController" id="e2v-Rs-BQo" customClass="SubscriptionsViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminSubscriptionsViewController" id="e2v-Rs-BQo" customClass="AdminSubscriptionsViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w11-RP-15e">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2892,10 +2892,10 @@
             </objects>
             <point key="canvasLocation" x="6994.6564885496182" y="4331.6901408450703"/>
         </scene>
-        <!--Block Market View Controller-->
+        <!--Admin Block Market View Controller-->
         <scene sceneID="M3l-qs-1jn">
             <objects>
-                <viewController storyboardIdentifier="BlockMarketViewController" id="lMq-ol-ZP2" customClass="BlockMarketViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminBlockMarketViewController" id="lMq-ol-ZP2" customClass="AdminBlockMarketViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YLP-sQ-Dcq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2956,10 +2956,10 @@
             </objects>
             <point key="canvasLocation" x="6994.6564885496182" y="4983.8028169014087"/>
         </scene>
-        <!--Market Details View Controller-->
+        <!--Admin Market Details View Controller-->
         <scene sceneID="sjc-aB-cQF">
             <objects>
-                <viewController storyboardIdentifier="MarketDetailsViewController" id="w4b-bM-Ed8" customClass="MarketDetailsViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminMarketDetailsViewController" id="w4b-bM-Ed8" customClass="AdminMarketDetailsViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fut-Wa-I74">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3661,13 +3661,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9X-c6-wo8">
-                                        <rect key="frame" x="50" y="15.666666666666671" width="119" height="24"/>
+                                        <rect key="frame" x="45" y="15.666666666666671" width="119" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfP-SP-efA">
-                                        <rect key="frame" x="10" y="10" width="35" height="35"/>
+                                        <rect key="frame" x="5" y="10" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="xTE-wu-fgt"/>
                                             <constraint firstAttribute="height" constant="35" id="z5g-jk-nPa"/>
@@ -3690,7 +3690,7 @@
                                     <constraint firstItem="v9X-c6-wo8" firstAttribute="centerY" secondItem="ZfP-SP-efA" secondAttribute="centerY" id="lbM-1F-xdS"/>
                                     <constraint firstAttribute="height" constant="220" id="qLR-qY-G33"/>
                                     <constraint firstItem="ZfP-SP-efA" firstAttribute="top" secondItem="ZR1-jS-ZKu" secondAttribute="top" constant="10" id="qTr-rd-NMu"/>
-                                    <constraint firstItem="ZfP-SP-efA" firstAttribute="leading" secondItem="ZR1-jS-ZKu" secondAttribute="leading" constant="10" id="ruR-oK-wwP"/>
+                                    <constraint firstItem="ZfP-SP-efA" firstAttribute="leading" secondItem="ZR1-jS-ZKu" secondAttribute="leading" constant="5" id="ruR-oK-wwP"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNX-yp-PJS">
@@ -4274,10 +4274,10 @@
             </objects>
             <point key="canvasLocation" x="3376.3358778625952" y="4382.3943661971834"/>
         </scene>
-        <!--Driver Details View Controller-->
+        <!--Admin Driver Details View Controller-->
         <scene sceneID="dBc-Xo-qhL">
             <objects>
-                <viewController storyboardIdentifier="DriverDetailsViewController" id="qM0-BR-1v5" customClass="DriverDetailsViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminDriverDetailsViewController" id="qM0-BR-1v5" customClass="AdminDriverDetailsViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yB1-ky-zMS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4307,13 +4307,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbZ-as-iZ4">
-                                        <rect key="frame" x="50" y="15.666666666666671" width="119" height="24"/>
+                                        <rect key="frame" x="40" y="15.666666666666671" width="119" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLe-Zc-qOb">
-                                        <rect key="frame" x="10" y="10" width="35" height="35"/>
+                                        <rect key="frame" x="0.0" y="10" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="Utq-1D-V2L"/>
                                             <constraint firstAttribute="height" constant="35" id="r7R-Zo-mPN"/>
@@ -4336,7 +4336,7 @@
                                     <constraint firstItem="EbZ-as-iZ4" firstAttribute="centerY" secondItem="rLe-Zc-qOb" secondAttribute="centerY" id="WE8-3U-QhH"/>
                                     <constraint firstAttribute="bottom" secondItem="IvV-V7-oWR" secondAttribute="bottom" constant="20" id="XYO-00-Sb5"/>
                                     <constraint firstItem="rLe-Zc-qOb" firstAttribute="top" secondItem="4Jv-KX-iYs" secondAttribute="top" constant="10" id="csb-iD-Kg3"/>
-                                    <constraint firstItem="rLe-Zc-qOb" firstAttribute="leading" secondItem="4Jv-KX-iYs" secondAttribute="leading" constant="10" id="hls-66-bYg"/>
+                                    <constraint firstItem="rLe-Zc-qOb" firstAttribute="leading" secondItem="4Jv-KX-iYs" secondAttribute="leading" id="hls-66-bYg"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URT-sr-0O6">
@@ -4938,10 +4938,10 @@
             </objects>
             <point key="canvasLocation" x="5906" y="2282"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--Admin Chat View Controller-->
         <scene sceneID="Leq-9d-Jcb">
             <objects>
-                <viewController storyboardIdentifier="ChatViewController" id="OCt-K2-9wC" customClass="ChatViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminChatViewController" id="OCt-K2-9wC" customClass="AdminChatViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JpH-ge-QG0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5061,10 +5061,10 @@
             </objects>
             <point key="canvasLocation" x="6995" y="2282"/>
         </scene>
-        <!--More View Controller-->
+        <!--Admin More View Controller-->
         <scene sceneID="cf6-3T-6Te">
             <objects>
-                <viewController storyboardIdentifier="MoreViewController" id="Ed7-1g-npj" customClass="MoreViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminMoreViewController" id="Ed7-1g-npj" customClass="AdminMoreViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xpe-6X-b15">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5209,10 +5209,10 @@
             </objects>
             <point key="canvasLocation" x="2610" y="7964"/>
         </scene>
-        <!--Market Orders View Controller-->
+        <!--Admin Market Orders View Controller-->
         <scene sceneID="RXx-JS-P1E">
             <objects>
-                <viewController storyboardIdentifier="MarketOrdersViewController" id="gVq-4d-bhB" customClass="MarketOrdersViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminMarketOrdersViewController" id="gVq-4d-bhB" customClass="AdminMarketOrdersViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V24-5i-p2w">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5236,10 +5236,10 @@
             </objects>
             <point key="canvasLocation" x="2615" y="6048"/>
         </scene>
-        <!--Edit Market View Controller-->
+        <!--Admin Edit Market View Controller-->
         <scene sceneID="9sJ-hH-OXW">
             <objects>
-                <viewController storyboardIdentifier="EditMarketViewController" id="AwG-5m-hmD" customClass="EditMarketViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminEditMarketViewController" id="AwG-5m-hmD" customClass="AdminEditMarketViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sm7-rX-daH">
                         <rect key="frame" x="0.0" y="0.0" width="394" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -6418,6 +6418,100 @@
             </objects>
             <point key="canvasLocation" x="1114" y="8761"/>
         </scene>
+        <!--Market Setting View Controller-->
+        <scene sceneID="Hiu-aV-tb8">
+            <objects>
+                <viewController storyboardIdentifier="MarketSettingViewController" id="4Jq-Da-CMj" customClass="MarketSettingViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bn-hn-Wlb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3D-EJ-2VI">
+                                <rect key="frame" x="15" y="74" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="E5b-7y-0cu"/>
+                                    <constraint firstAttribute="width" constant="35" id="Waw-iG-PWD"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="bacBtnTapped:" destination="4Jq-Da-CMj" eventType="touchUpInside" id="F8c-iG-JWY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5x5-ud-MtW">
+                                <rect key="frame" x="54.999999999999993" y="79.666666666666671" width="66.333333333333314" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ni-vR-HZ5">
+                                <rect key="frame" x="10" y="124" width="373" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnE-hz-tb9">
+                                        <rect key="frame" x="20.000000000000004" y="20" width="53.333333333333343" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Languages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a83-Rl-Duw">
+                                        <rect key="frame" x="20.000000000000007" y="76.666666666666657" width="90.666666666666686" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Utc-ou-5C6">
+                                        <rect key="frame" x="304" y="15.333333333333343" width="51" height="31"/>
+                                    </switch>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccd-FK-QEp">
+                                        <rect key="frame" x="303" y="70.333333333333343" width="50" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="NpK-U7-sib"/>
+                                            <constraint firstAttribute="width" constant="50" id="j3G-I2-njT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <menu key="menu" id="zSn-Nq-tpb">
+                                            <children>
+                                                <command title="Item 1" id="Xrq-TF-kVt"/>
+                                                <command title="Item 2" id="iDp-3c-tA3"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="EN">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="a83-Rl-Duw" firstAttribute="top" secondItem="OnE-hz-tb9" secondAttribute="bottom" constant="35" id="0NY-hw-Zp6"/>
+                                    <constraint firstItem="OnE-hz-tb9" firstAttribute="top" secondItem="3ni-vR-HZ5" secondAttribute="top" constant="20" id="QC4-jw-cSw"/>
+                                    <constraint firstItem="OnE-hz-tb9" firstAttribute="leading" secondItem="3ni-vR-HZ5" secondAttribute="leading" constant="20" id="Wf1-3W-m14"/>
+                                    <constraint firstItem="Utc-ou-5C6" firstAttribute="centerY" secondItem="OnE-hz-tb9" secondAttribute="centerY" id="XCa-Vd-45A"/>
+                                    <constraint firstItem="Ccd-FK-QEp" firstAttribute="centerY" secondItem="a83-Rl-Duw" secondAttribute="centerY" id="ZEF-9u-k5k"/>
+                                    <constraint firstAttribute="trailing" secondItem="Utc-ou-5C6" secondAttribute="trailing" constant="20" id="doE-Lw-zoe"/>
+                                    <constraint firstItem="Ccd-FK-QEp" firstAttribute="trailing" secondItem="Utc-ou-5C6" secondAttribute="trailing" id="jzG-aO-diL"/>
+                                    <constraint firstAttribute="height" constant="150" id="nLU-cr-ffu"/>
+                                    <constraint firstItem="a83-Rl-Duw" firstAttribute="leading" secondItem="OnE-hz-tb9" secondAttribute="leading" id="yGQ-KJ-gsM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="26q-0V-gh4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R3D-EJ-2VI" firstAttribute="leading" secondItem="26q-0V-gh4" secondAttribute="leading" constant="15" id="0YY-ta-Fzf"/>
+                            <constraint firstItem="3ni-vR-HZ5" firstAttribute="leading" secondItem="26q-0V-gh4" secondAttribute="leading" constant="10" id="Dev-e0-KBS"/>
+                            <constraint firstItem="R3D-EJ-2VI" firstAttribute="top" secondItem="26q-0V-gh4" secondAttribute="top" constant="15" id="d9F-Ci-Laa"/>
+                            <constraint firstItem="5x5-ud-MtW" firstAttribute="leading" secondItem="R3D-EJ-2VI" secondAttribute="trailing" constant="5" id="gRL-GN-XFV"/>
+                            <constraint firstItem="3ni-vR-HZ5" firstAttribute="top" secondItem="R3D-EJ-2VI" secondAttribute="bottom" constant="15" id="mN7-71-Z7V"/>
+                            <constraint firstItem="5x5-ud-MtW" firstAttribute="centerY" secondItem="R3D-EJ-2VI" secondAttribute="centerY" id="pht-5c-F7o"/>
+                            <constraint firstItem="26q-0V-gh4" firstAttribute="trailing" secondItem="3ni-vR-HZ5" secondAttribute="trailing" constant="10" id="yeP-Vj-J3a"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RC6-2m-nhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4004" y="9466"/>
+        </scene>
     </scenes>
     <resources>
         <image name="VegetablesImage" width="320" height="480"/>
@@ -6450,8 +6544,8 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
-        <image name="location" catalog="system" width="128" height="119"/>
         <image name="location" width="800" height="600"/>
+        <image name="location" catalog="system" width="128" height="119"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="marketCover" width="720" height="479"/>
         <image name="marketsDashboard" width="512" height="512"/>

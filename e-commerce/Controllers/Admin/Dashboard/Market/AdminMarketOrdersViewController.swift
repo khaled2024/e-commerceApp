@@ -1,5 +1,5 @@
 //
-//  MarketOrdersViewController.swift
+//  AdminMarketOrdersViewController.swift
 //  e-commerce
 //
 //  Created by KhaleD HuSsien on 25/02/2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MarketOrdersViewController: UIViewController {
+class AdminMarketOrdersViewController: UIViewController {
     
     
     var marketTitle: String!

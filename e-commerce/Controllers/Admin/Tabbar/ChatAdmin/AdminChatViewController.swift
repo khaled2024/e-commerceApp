@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class AdminChatViewController: UIViewController {
     @IBOutlet weak var chatView: UIView!
     @IBOutlet weak var badgeView: UIView!
     @IBOutlet weak var segmentController: UISegmentedControl!
     @IBOutlet weak var chatTableView: UITableView!
-    static let identifier = String(describing: ChatViewController.self)
+    static let identifier = String(describing: AdminChatViewController.self)
     private let navManager = NavigationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ class ChatViewController: UIViewController {
     
 }
 // (UITableViewDelegate) , (UITableViewDataSource)
-extension ChatViewController: UITableViewDelegate,UITableViewDataSource{
+extension AdminChatViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if segmentController.selectedSegmentIndex == 0{
             return marketUsers.count
@@ -72,7 +72,7 @@ extension ChatViewController: UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let chatRoomVC = navManager.instantiate(screen: .chatRoom)as! ChatRoomViewController
+        let chatRoomVC = navManager.instantiate(screen: .adminChatRoom)as! ChatRoomViewController
         switch segmentController.selectedSegmentIndex{
         case 0:
             let marketUser = marketUsers[indexPath.row]

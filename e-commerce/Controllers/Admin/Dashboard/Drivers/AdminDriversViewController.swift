@@ -7,13 +7,13 @@
 
 import UIKit
 
-class DriversViewController: UIViewController {
+class AdminDriversViewController: UIViewController {
     
     @IBOutlet weak var driversCollectionView: UICollectionView!
     @IBOutlet weak var driverTopNavView: TopNavView!
     
     @IBOutlet weak var addDriverBtn: UIButton!
-    static let identifier = String(describing: DriversViewController.self)
+    static let identifier = String(describing: AdminDriversViewController.self)
     let navManager = NavigationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class DriversViewController: UIViewController {
     }
 }
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
-extension DriversViewController: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
+extension AdminDriversViewController: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return allDrivers.count
     }
@@ -51,7 +51,7 @@ extension DriversViewController: UICollectionViewDataSource,UICollectionViewDele
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        if let driverDetailVC = navManager.instantiate(screen: .driverDetail)as? DriverDetailsViewController{
+        if let driverDetailVC = navManager.instantiate(screen: .adminDriverDetail)as? AdminDriverDetailsViewController{
             navigationController?.pushViewController(driverDetailVC, animated: true)
             driverDetailVC.driver = allDrivers[indexPath.row]
         }

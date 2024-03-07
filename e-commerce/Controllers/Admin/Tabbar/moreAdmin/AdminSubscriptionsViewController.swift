@@ -7,11 +7,11 @@
 
 import UIKit
 
-class SubscriptionsViewController: UIViewController {
+class AdminSubscriptionsViewController: UIViewController {
 
     @IBOutlet weak var SubscriptionsTableView: UITableView!
     @IBOutlet weak var segmentController: UISegmentedControl!
-    static let identifier = "SubscriptionsViewController"
+    static let identifier = "AdminSubscriptionsViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ class SubscriptionsViewController: UIViewController {
     }
 }
 // MARK: - UITableViewDelegate,UITableViewDataSource
-extension SubscriptionsViewController: UITableViewDelegate,UITableViewDataSource{
+extension AdminSubscriptionsViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }

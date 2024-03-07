@@ -1,5 +1,5 @@
 //
-//  MarketDetailsViewController.swift
+//  AdminMarketDetailsViewController.swift
 //  e-commerce
 //
 //  Created by KhaleD HuSsien on 23/02/2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MarketDetailsViewController: UIViewController {
+class AdminMarketDetailsViewController: UIViewController {
     // outlets
     @IBOutlet weak var blockBtn: UIButton!
     @IBOutlet weak var marketNameLbl: UILabel!
@@ -41,7 +41,7 @@ class MarketDetailsViewController: UIViewController {
     // variables :-
     var navManager = NavigationManager()
     var market: MarketModel!
-    static let identifier = String(describing: MarketDetailsViewController.self)
+    static let identifier = String(describing: AdminMarketDetailsViewController.self)
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpdesign()
@@ -96,7 +96,7 @@ class MarketDetailsViewController: UIViewController {
     
     @IBAction func marketOrdersBtnTapped(_ sender: UIButton) {
         print("orders of market")
-        navManager.push(screen: .marketOrders, nav: navigationController)
+        navManager.push(screen: .adminMarketOrders, nav: navigationController)
     }
     
     @IBAction func marketUsersBtnTapped(_ sender: UIButton) {
@@ -105,7 +105,7 @@ class MarketDetailsViewController: UIViewController {
     
     @IBAction func editMarketBtnTapped(_ sender: UIButton) {
         print("edit market :-")
-        navManager.push(screen: .editMarket, nav: navigationController)
+        navManager.push(screen: .adminEditMarket, nav: navigationController)
     }
     
 }

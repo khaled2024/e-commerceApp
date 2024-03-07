@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DriverDetailsViewController: UIViewController {
+class AdminDriverDetailsViewController: UIViewController {
     
     @IBOutlet weak var imageeditBtn: UIButton!
     @IBOutlet weak var driverImage: UIImageView!
@@ -36,7 +36,7 @@ class DriverDetailsViewController: UIViewController {
     @IBOutlet weak var monthTF: UITextField!
     @IBOutlet weak var birthdayTF: UITextField!
     
-    static let identifier = "DriverDetailsViewController"
+    static let identifier = "AdminDriverDetailsViewController"
     var driver: DriverModel?
     // MARK: -  life cycle :-
     override func viewDidLoad() {

@@ -7,9 +7,9 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
+class AdminSettingViewController: UIViewController {
 
-    static let identifier = "SettingViewController"
+    static let identifier = "AdminSettingViewController"
     override func viewDidLoad() {
         super.viewDidLoad()
 

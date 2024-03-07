@@ -1,5 +1,5 @@
 //
-//  EditMarketViewController.swift
+//  AdminEditMarketViewController.swift
 //  e-commerce
 //
 //  Created by KhaleD HuSsien on 23/02/2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditMarketViewController: UIViewController {
+class AdminEditMarketViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var imageMarket: UIImageView!
     @IBOutlet weak var editCoverimage: UIButton!

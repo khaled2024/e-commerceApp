@@ -42,7 +42,7 @@ extension MarketMoreViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0{
-            navManager.push(screen: .settingVC, nav: navigationController)
+            navManager.push(screen: .marketSetting, nav: navigationController)
         }else if indexPath.row == 1{
             print("Profile Tapped")
         }

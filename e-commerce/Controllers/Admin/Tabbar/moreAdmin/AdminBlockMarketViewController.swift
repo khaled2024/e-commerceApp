@@ -7,8 +7,8 @@
 
 import UIKit
 
-class BlockMarketViewController: UIViewController {
-    static let identifier = "BlockMarketViewController"
+class AdminBlockMarketViewController: UIViewController {
+    static let identifier = "AdminBlockMarketViewController"
     @IBOutlet weak var blockMarketTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class BlockMarketViewController: UIViewController {
     }
 }
 // MARK: - extensions
-extension BlockMarketViewController: UITableViewDelegate,UITableViewDataSource{
+extension AdminBlockMarketViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 8
     }

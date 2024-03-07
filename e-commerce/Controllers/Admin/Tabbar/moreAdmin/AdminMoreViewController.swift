@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoreViewController: UIViewController {
+class AdminMoreViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var moreTableView: UITableView!
     let navManager = NavigationManager()
@@ -22,7 +22,7 @@ class MoreViewController: UIViewController {
     }
 }
 // MARK: - MoreTableViewCell
-extension MoreViewController: UITableViewDelegate,UITableViewDataSource{
+extension AdminMoreViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return moreModels.count
     }
@@ -46,14 +46,14 @@ extension MoreViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0{
-            navManager.push(screen: .settingVC, nav: navigationController)
+            navManager.push(screen: .adminSettingVC, nav: navigationController)
         }else if indexPath.row == 1{
             print("Notifications Tapped")
         }
         else if indexPath.row == 2{
-            navManager.push(screen: .subscriptionsVC, nav: navigationController)
+            navManager.push(screen: .adminSubscriptionsVC, nav: navigationController)
         }else{
-            navManager.push(screen: .blockMarketVC, nav: navigationController)
+            navManager.push(screen: .adminBlockMarketVC, nav: navigationController)
             print("Block Market Tapped")
         }
     }

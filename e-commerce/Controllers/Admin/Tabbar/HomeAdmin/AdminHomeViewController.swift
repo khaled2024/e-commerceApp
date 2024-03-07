@@ -61,12 +61,12 @@ class AdminHomeViewController: UIViewController {
         
     }
     @IBAction func driversBtnTapped(_ sender: UIButton) {
-        navManager.push(screen: .drivers, nav: navigationController)
+        navManager.push(screen: .adminDrivers, nav: navigationController)
         
     }
     @IBAction func marketBtnTapped(_ sender: UIButton) {
         print("Push Market Screen")
-       navManager.push(screen: .marketVC, nav: navigationController)
+       navManager.push(screen: .adminMarketVC, nav: navigationController)
     }
     @IBAction func CostumerServicesBtnTapped(_ sender: UIButton) {
         print("CostumerServicesTapped")

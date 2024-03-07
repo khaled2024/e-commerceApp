@@ -8,125 +8,138 @@
 
 import UIKit
 class NavigationManager{
+    // MARK: - For Onboarding Screens
     enum Screen {
         case onboarding
         case mainApp
     }
-    enum PushScreenOnly {
-        case marketVC
-        case marketDetail
+    // MARK: - For Push Screen
+    enum PushScreens {
+        // Admin Screens
+        case adminMarketVC
+        case adminMarketDetail
         case CostumerServicesVC
-        case drivers
-        case editMarket
-        case marketOrders
-        case chatRoom
-        case driverDetail
-        case settingVC
-        case subscriptionsVC
-        case blockMarketVC
+        case adminDrivers
+        case adminEditMarket
+        case adminMarketOrders
+        case adminChatRoom
+        case adminDriverDetail
+        case adminSettingVC
+        case adminSubscriptionsVC
+        case adminBlockMarketVC
+        // Market Screens
+        case marketSetting
     }
-    enum PushScreenToParse {
-        case marketVC
-        case marketDetail
+    enum InstantiateScreens {
+        // admin screens
+        case adminMarketVC
+        case adminMarketDetail
         case CostumerServicesVC
-        case chatRoom
-        case marketOrders
-        case driverDetail
+        case adminChatRoom
+        case adminMarketOrders
+        case adminDriverDetail
     }
-    // MARK: - instantiate controler from storyboard and push it in view when we need to parse some data :-
-    func instantiate(screen: PushScreenToParse)-> UIViewController{
+    // MARK: - instantiate controler from storyboard and push or present it in view when we need to parse some data :-
+    func instantiate(screen: InstantiateScreens)-> UIViewController{
         var viewController: UIViewController!
         switch screen {
-        case .marketDetail:
+        case .adminMarketDetail:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: MarketDetailsViewController.identifier)
-        case .marketVC:
+            viewController = storyboard.instantiateViewController(withIdentifier: AdminMarketDetailsViewController.identifier)
+        case .adminMarketVC:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: "MarketViewController")
+            viewController = storyboard.instantiateViewController(withIdentifier: MarketViewController.identifier)
         case .CostumerServicesVC:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: "CostumerServicesViewController")
-        case .chatRoom:
+        case .adminChatRoom:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: ChatRoomViewController.identifier)
-        case .marketOrders:
+        case .adminMarketOrders:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: "MarketOrdersViewController")
-        case .driverDetail:
+            viewController = storyboard.instantiateViewController(withIdentifier: "AdminMarketOrdersViewController")
+        case .adminDriverDetail:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: DriverDetailsViewController.identifier)
+            viewController = storyboard.instantiateViewController(withIdentifier: AdminDriverDetailsViewController.identifier)
         }
         return viewController
     }
     // MARK: - Push controller with our parsing data :-
-    func push(screen: PushScreenOnly,nav: UINavigationController!){
+    func push(screen: PushScreens,nav: UINavigationController!){
         var viewController: UIViewController!
         switch screen {
-        case .marketDetail:
+            /// For Admin screens:-
+        case .adminMarketDetail:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: MarketDetailsViewController.identifier)
-        case .marketVC:
+            viewController = storyboard.instantiateViewController(withIdentifier: AdminMarketDetailsViewController.identifier)
+        case .adminMarketVC:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: "MarketViewController")
+            viewController = storyboard.instantiateViewController(withIdentifier: MarketViewController.identifier)
         case .CostumerServicesVC:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: "CostumerServicesViewController")
-        case .drivers:
+        case .adminDrivers:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: DriversViewController.identifier)
-        case .editMarket:
+            viewController = storyboard.instantiateViewController(withIdentifier: AdminDriversViewController.identifier)
+        case .adminEditMarket:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: "EditMarketViewController")
-        case .marketOrders:
+            viewController = storyboard.instantiateViewController(withIdentifier: "AdminEditMarketViewController")
+        case .adminMarketOrders:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: "MarketOrdersViewController")
-        case .chatRoom:
+            viewController = storyboard.instantiateViewController(withIdentifier: "AdminMarketOrdersViewController")
+        case .adminChatRoom:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: ChatRoomViewController.identifier)
-        case .settingVC:
+        case .adminSettingVC:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: SettingViewController.identifier)
-        case .subscriptionsVC:
+            viewController = storyboard.instantiateViewController(withIdentifier: AdminSettingViewController.identifier)
+        case .adminSubscriptionsVC:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: SubscriptionsViewController.identifier)
-        case .blockMarketVC:
+            viewController = storyboard.instantiateViewController(withIdentifier: AdminSubscriptionsViewController.identifier)
+        case .adminBlockMarketVC:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: BlockMarketViewController.identifier)
-        case .driverDetail:
+            viewController = storyboard.instantiateViewController(withIdentifier: AdminBlockMarketViewController.identifier)
+        case .adminDriverDetail:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            viewController = storyboard.instantiateViewController(withIdentifier: DriverDetailsViewController.identifier)
+            viewController = storyboard.instantiateViewController(withIdentifier: AdminDriverDetailsViewController.identifier)
+            /// For Admin screens:-
+        case .marketSetting:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: MarketSettingViewController.identifier)
         }
         nav.pushViewController(viewController, animated: true)
     }
     
-    func pushOnly(screen: PushScreenOnly,nav: UINavigationController!){
-        var vc: UIViewController!
-        switch screen {
-        case .marketVC:
-            vc = MarketViewController()
-        case .marketDetail:
-            vc = MarketDetailsViewController()
-        case .CostumerServicesVC:
-            vc = CostumerServicesViewController()
-        case .drivers:
-            vc = DriversViewController()
-        case .editMarket:
-            vc = EditMarketViewController()
-        case .marketOrders:
-            vc = MarketOrdersViewController()
-        case .chatRoom:
-            vc = ChatRoomViewController()
-        case .settingVC:
-            break
-        case .subscriptionsVC:
-            break
-        case .blockMarketVC:
-            break
-        case .driverDetail:
-            break
-        }
-        nav.pushViewController(vc, animated: true)
-    }
+//    func pushOnly(screen: PushScreenOnly,nav: UINavigationController!){
+//        var vc: UIViewController!
+//        switch screen {
+//        case .marketVC:
+//            vc = MarketViewController()
+//        case .marketDetail:
+//            vc = MarketDetailsViewController()
+//        case .CostumerServicesVC:
+//            vc = CostumerServicesViewController()
+//        case .drivers:
+//            vc = DriversViewController()
+//        case .editMarket:
+//            vc = EditMarketViewController()
+//        case .marketOrders:
+//            vc = AdminMarketOrdersViewController()
+//        case .chatRoom:
+//            vc = ChatRoomViewController()
+//        case .settingVC:
+//            break
+//        case .subscriptionsVC:
+//            break
+//        case .blockMarketVC:
+//            break
+//        case .driverDetail:
+//            break
+//        case .marketSetting:
+//            <#code#>
+//        }
+//        nav.pushViewController(vc, animated: true)
+//    }
     
     func show(screen: Screen, incontroller: UIViewController){
         var viewController: UIViewController!
