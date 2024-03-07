@@ -8,22 +8,64 @@
 import UIKit
 
 class MarketHomeViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var addMealsView: UIView!
+    @IBOutlet weak var addAnnouncementView: UIView!
+    @IBOutlet weak var ordersDashboardView: UIView!
+    @IBOutlet weak var mealsDashboardView: UIView!
+    @IBOutlet weak var driversDashboardView: UIView!
+    @IBOutlet weak var usersDashboardView: UIView!
+    @IBOutlet weak var dashboardView: UIView!
+    @IBOutlet weak var analyticsView: UIView!
+    @IBOutlet weak var abonnementLabel: UILabel!
+    @IBOutlet weak var marketStatusView: UIView!
+    @IBOutlet weak var marketStatus: UILabel!
+    @IBOutlet weak var marketName: UILabel!
+    @IBOutlet weak var marketImage: UIImageView!
+    @IBOutlet weak var MarketTopNavView: UIView!
+    // MARK: -  Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setDesign()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    // MARK: - Functions
+    func setDesign(){
+        marketImage.makeCircle()
+        marketStatusView.layer.cornerRadius = marketStatusView.frame.height/2
+        MarketTopNavView.setCorners()
+        analyticsView.setCorners()
+        dashboardView.setCorners()
+        addAnnouncementView.layer.cornerRadius = 10
+        addMealsView.layer.cornerRadius = 10
+        usersDashboardView.setCorners()
+        driversDashboardView.setCorners()
+        mealsDashboardView.setCorners()
+        ordersDashboardView.setCorners()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Btn Tapped
+    @IBAction func usersDashboardBtnTapped(_ sender: UIButton) {
+        print("users of market")
     }
-    */
-
+    @IBAction func addAnnouncementBtnTapped(_ sender: UIButton) {
+        print("Add Announcement")
+    }
+    @IBAction func addmealsBtnTapped(_ sender: UIButton) {
+        print("Add Meal")
+    }
+    @IBAction func driversDashboardBtnTapped(_ sender: UIButton) {
+        print("drivers of market")
+    }
+    @IBAction func mealsDashboardBtnTapped(_ sender: UIButton) {
+        print("meals of market")
+    }
+    @IBAction func ordersDashboardBtnTapped(_ sender: UIButton) {
+        print("orders of market")
+    }
 }
