@@ -22,6 +22,7 @@ class MoreTableViewCell: UITableViewCell {
         moreView.setCorners()
     }
     func config(with model: MoreModel){
+        self.badgeView.isHidden = true
         self.badgeLabel.text = String(model.bagdeNumber)
         self.moreimage.image = UIImage(systemName: model.image)
         self.morelable.text = model.title
