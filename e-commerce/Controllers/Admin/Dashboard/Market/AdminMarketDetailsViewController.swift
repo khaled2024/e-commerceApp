@@ -70,7 +70,7 @@ class AdminMarketDetailsViewController: UIViewController {
     }
     func setUpOutlets(){
         marketEditView.setCorners()
-        editMarketBtn.setUpShadow(color: .darkGray)
+        editMarketBtn.setUpShadow(color:.black,opacity: 0.5)
         marketImage.makeCircle()
         marketIDtextField.setCorners()
         marketIDtextField.layer.masksToBounds = true
@@ -96,7 +96,11 @@ class AdminMarketDetailsViewController: UIViewController {
     
     @IBAction func marketOrdersBtnTapped(_ sender: UIButton) {
         print("orders of market")
-        navManager.push(screen: .adminMarketOrders, nav: navigationController)
+        let adminMarketOrdersVC = navManager.instantiate(screen: .adminMarketOrders)as! AdminMarketOrdersViewController
+        if let marketNameTitle = marketNameLbl.text{
+            adminMarketOrdersVC.marketTitle = "\(marketNameTitle) Orders"
+        }
+        navigationController?.pushViewController(adminMarketOrdersVC, animated: true)
     }
     
     @IBAction func marketUsersBtnTapped(_ sender: UIButton) {

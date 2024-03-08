@@ -29,6 +29,7 @@ class NavigationManager{
         case adminBlockMarketVC
         // Market Screens
         case marketSetting
+        case marketOrdersDashboard
     }
     enum InstantiateScreens {
         // admin screens
@@ -102,10 +103,13 @@ class NavigationManager{
         case .adminDriverDetail:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: AdminDriverDetailsViewController.identifier)
-            /// For Admin screens:-
+            /// For Market screens:-
         case .marketSetting:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: MarketSettingViewController.identifier)
+        case .marketOrdersDashboard:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: MarketOrdersViewController.identifier)
         }
         nav.pushViewController(viewController, animated: true)
     }

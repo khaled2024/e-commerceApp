@@ -24,6 +24,8 @@ class MarketHomeViewController: UIViewController {
     @IBOutlet weak var marketName: UILabel!
     @IBOutlet weak var marketImage: UIImageView!
     @IBOutlet weak var MarketTopNavView: UIView!
+    
+    let navManager = NavigationManager()
     // MARK: -  Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,5 +69,7 @@ class MarketHomeViewController: UIViewController {
     }
     @IBAction func ordersDashboardBtnTapped(_ sender: UIButton) {
         print("orders of market")
+        navManager.push(screen: .marketOrdersDashboard, nav: navigationController)
+        
     }
 }

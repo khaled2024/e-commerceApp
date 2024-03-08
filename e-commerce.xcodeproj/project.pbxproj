@@ -15,6 +15,10 @@
 		EA02C9F72B97286200C039F5 /* AdminSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02C9F62B97286200C039F5 /* AdminSettingViewController.swift */; };
 		EA2439222B63A0DA00ACD5BE /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */; };
 		EA2439242B63A66A00ACD5BE /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2439232B63A66A00ACD5BE /* extensions.swift */; };
+		EA2BEF682B9AFAF800ECB58F /* MarketOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2BEF662B9AFAF800ECB58F /* MarketOrderTableViewCell.swift */; };
+		EA2BEF692B9AFAF800ECB58F /* MarketOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2BEF672B9AFAF800ECB58F /* MarketOrderTableViewCell.xib */; };
+		EA2BEF6B2B9AFCAD00ECB58F /* MarketOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2BEF6A2B9AFCAD00ECB58F /* MarketOrdersViewController.swift */; };
+		EA2BEF6D2B9B093E00ECB58F /* MarketOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2BEF6C2B9B093E00ECB58F /* MarketOrderModel.swift */; };
 		EA2ECF9C2B63E14E00DF2C31 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECF9B2B63E14E00DF2C31 /* OrderViewController.swift */; };
 		EA2ECF9E2B643F3200DF2C31 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */; };
 		EA2ECFA22B643F6900DF2C31 /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECFA02B643F6900DF2C31 /* FavouriteCollectionViewCell.swift */; };
@@ -109,6 +113,10 @@
 		EA02C9F62B97286200C039F5 /* AdminSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSettingViewController.swift; sourceTree = "<group>"; };
 		EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		EA2439232B63A66A00ACD5BE /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		EA2BEF662B9AFAF800ECB58F /* MarketOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketOrderTableViewCell.swift; sourceTree = "<group>"; };
+		EA2BEF672B9AFAF800ECB58F /* MarketOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketOrderTableViewCell.xib; sourceTree = "<group>"; };
+		EA2BEF6A2B9AFCAD00ECB58F /* MarketOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketOrdersViewController.swift; sourceTree = "<group>"; };
+		EA2BEF6C2B9B093E00ECB58F /* MarketOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketOrderModel.swift; sourceTree = "<group>"; };
 		EA2ECF9B2B63E14E00DF2C31 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		EA2ECFA02B643F6900DF2C31 /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -229,6 +237,23 @@
 				EA02C9F22B971EDB00C039F5 /* MoreTableViewCell.swift */,
 			);
 			path = MoreTableViewCell;
+			sourceTree = "<group>";
+		};
+		EA2BEF642B9AFAA700ECB58F /* MarketCells */ = {
+			isa = PBXGroup;
+			children = (
+				EA2BEF652B9AFAC900ECB58F /* MarketOrdersCell */,
+			);
+			path = MarketCells;
+			sourceTree = "<group>";
+		};
+		EA2BEF652B9AFAC900ECB58F /* MarketOrdersCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA2BEF662B9AFAF800ECB58F /* MarketOrderTableViewCell.swift */,
+				EA2BEF672B9AFAF800ECB58F /* MarketOrderTableViewCell.xib */,
+			);
+			path = MarketOrdersCell;
 			sourceTree = "<group>";
 		};
 		EA2ECF9F2B643F4200DF2C31 /* FavouriteCell */ = {
@@ -433,6 +458,7 @@
 		EA5F4F552B9918DE00475EF3 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
+				EA2BEF6A2B9AFCAD00ECB58F /* MarketOrdersViewController.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -458,6 +484,7 @@
 			children = (
 				EAE841772B88B902006E2742 /* UsersCells */,
 				EAE841782B88BBD4006E2742 /* AdminCells */,
+				EA2BEF642B9AFAA700ECB58F /* MarketCells */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -535,6 +562,7 @@
 				EA8A7A9C2B8B3EA900CCC677 /* MessageModel.swift */,
 				EAD2F5B42B8CBB24004A58EE /* DriverModel.swift */,
 				EA02C9F42B971F7800C039F5 /* MoreModel.swift */,
+				EA2BEF6C2B9B093E00ECB58F /* MarketOrderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -776,6 +804,7 @@
 				EA78A5F72B60559D00790B12 /* LaunchScreen.storyboard in Resources */,
 				EAE841882B890D36006E2742 /* MarketCollectionViewCell.xib in Resources */,
 				EA8A7A912B8B389300CCC677 /* UserChatRoomTableViewCell.xib in Resources */,
+				EA2BEF692B9AFAF800ECB58F /* MarketOrderTableViewCell.xib in Resources */,
 				EA9E8E892B6182B600A250B0 /* CategoryCollectionViewCell.xib in Resources */,
 				EA4BF1A72B63B63700743F3F /* IngredientsTableViewCell.xib in Resources */,
 				EA6AE0952B62694400AE45DB /* bestProductsCollectionViewCell.xib in Resources */,
@@ -876,8 +905,10 @@
 				EA6AE0942B62694400AE45DB /* bestProductsCollectionViewCell.swift in Sources */,
 				EAE841872B890D36006E2742 /* MarketCollectionViewCell.swift in Sources */,
 				EA9CCB3C2B89EE7700733C4F /* extension+UiViewContoller.swift in Sources */,
+				EA2BEF682B9AFAF800ECB58F /* MarketOrderTableViewCell.swift in Sources */,
 				EA9CCB542B8A4FEA00733C4F /* MarketModel.swift in Sources */,
 				EA78A5ED2B60559D00790B12 /* SceneDelegate.swift in Sources */,
+				EA2BEF6B2B9AFCAD00ECB58F /* MarketOrdersViewController.swift in Sources */,
 				EAE841752B88991E006E2742 /* MarketViewController.swift in Sources */,
 				EA6AE09B2B62AEE100AE45DB /* ResturantDetailViewController.swift in Sources */,
 				EACFEE322B65888D008AE44C /* TrackViewController.swift in Sources */,
@@ -892,6 +923,7 @@
 				EA8A7A9D2B8B3EA900CCC677 /* MessageModel.swift in Sources */,
 				EA9E8E882B6182B600A250B0 /* CategoryCollectionViewCell.swift in Sources */,
 				EA02C9F32B971EDB00C039F5 /* MoreTableViewCell.swift in Sources */,
+				EA2BEF6D2B9B093E00ECB58F /* MarketOrderModel.swift in Sources */,
 				EAE8417A2B88C15A006E2742 /* CostumerServicesViewController.swift in Sources */,
 				EA9E8E842B6180A300A250B0 /* CategoryTableViewCell.swift in Sources */,
 				EA9CCB532B8A4FEA00733C4F /* CostumerModel.swift in Sources */,
