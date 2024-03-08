@@ -31,6 +31,7 @@ class NavigationManager{
         case marketSetting
         case marketOrdersDashboard
         case marketDriversDashboard
+        case marketMealsDashboard
     }
     enum InstantiateScreens {
         // admin screens
@@ -40,6 +41,8 @@ class NavigationManager{
         case adminChatRoom
         case adminMarketOrders
         case adminDriverDetail
+        // Market Screens
+        case marketMealsDashboard
     }
     // MARK: - instantiate controler from storyboard and push or present it in view when we need to parse some data :-
     func instantiate(screen: InstantiateScreens)-> UIViewController{
@@ -63,6 +66,9 @@ class NavigationManager{
         case .adminDriverDetail:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: AdminDriverDetailsViewController.identifier)
+        case .marketMealsDashboard:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: MarketMealsViewController.identifier)
         }
         return viewController
     }
@@ -114,6 +120,9 @@ class NavigationManager{
         case .marketDriversDashboard:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: MarketDriversViewController.identifier)
+        case .marketMealsDashboard:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: MarketMealsViewController.identifier)
         }
         nav.pushViewController(viewController, animated: true)
     }

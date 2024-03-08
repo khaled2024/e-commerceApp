@@ -86,6 +86,7 @@
 		EAB2B6172B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B6162B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift */; };
 		EACFEE302B656469008AE44C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFEE2F2B656469008AE44C /* SearchViewController.swift */; };
 		EACFEE322B65888D008AE44C /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFEE312B65888D008AE44C /* TrackViewController.swift */; };
+		EAD2A3422B9BB9E800FF25B2 /* MarketMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2A3412B9BB9E800FF25B2 /* MarketMealsViewController.swift */; };
 		EAD2F5B22B8CB059004A58EE /* DriverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2F5B02B8CB059004A58EE /* DriverCollectionViewCell.swift */; };
 		EAD2F5B32B8CB059004A58EE /* DriverCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD2F5B12B8CB059004A58EE /* DriverCollectionViewCell.xib */; };
 		EAD2F5B52B8CBB24004A58EE /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2F5B42B8CBB24004A58EE /* DriverModel.swift */; };
@@ -187,6 +188,7 @@
 		EAB2B6162B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		EACFEE2F2B656469008AE44C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EACFEE312B65888D008AE44C /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		EAD2A3412B9BB9E800FF25B2 /* MarketMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketMealsViewController.swift; sourceTree = "<group>"; };
 		EAD2F5B02B8CB059004A58EE /* DriverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAD2F5B12B8CB059004A58EE /* DriverCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverCollectionViewCell.xib; sourceTree = "<group>"; };
 		EAD2F5B42B8CBB24004A58EE /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 		EA5F4F562B9918F500475EF3 /* Meals */ = {
 			isa = PBXGroup;
 			children = (
+				EAD2A3412B9BB9E800FF25B2 /* MarketMealsViewController.swift */,
 			);
 			path = Meals;
 			sourceTree = "<group>";
@@ -883,6 +886,7 @@
 				EA9CCB3A2B89DC7400733C4F /* StorageManager.swift in Sources */,
 				EA5E7F932B6310510045C6D7 /* CartTableViewCell.swift in Sources */,
 				EA5F4F392B975FC900475EF3 /* BlockMarketTableViewCell.swift in Sources */,
+				EAD2A3422B9BB9E800FF25B2 /* MarketMealsViewController.swift in Sources */,
 				EA4BF1AB2B63DB7700743F3F /* OrdersTableViewCell.swift in Sources */,
 				EA5F4F412B99152500475EF3 /* MarketHomeViewController.swift in Sources */,
 				EA5F4F512B9917CC00475EF3 /* MarketAnnouncementViewController.swift in Sources */,
