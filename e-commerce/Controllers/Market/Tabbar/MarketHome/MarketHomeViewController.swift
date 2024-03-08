@@ -63,6 +63,7 @@ class MarketHomeViewController: UIViewController {
     }
     @IBAction func driversDashboardBtnTapped(_ sender: UIButton) {
         print("drivers of market")
+        navManager.push(screen: .marketDriversDashboard, nav: navigationController)
     }
     @IBAction func mealsDashboardBtnTapped(_ sender: UIButton) {
         print("meals of market")

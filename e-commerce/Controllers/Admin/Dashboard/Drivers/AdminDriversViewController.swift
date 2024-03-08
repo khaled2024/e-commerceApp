@@ -46,7 +46,7 @@ extension AdminDriversViewController: UICollectionViewDataSource,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DriverCollectionViewCell.identifier, for: indexPath)as! DriverCollectionViewCell
         //        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        cell.config(driver: allDrivers[indexPath.row])
+        cell.configForAdmin(driver: allDrivers[indexPath.row])
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

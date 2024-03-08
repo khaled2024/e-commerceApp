@@ -19,6 +19,7 @@
 		EA2BEF692B9AFAF800ECB58F /* MarketOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2BEF672B9AFAF800ECB58F /* MarketOrderTableViewCell.xib */; };
 		EA2BEF6B2B9AFCAD00ECB58F /* MarketOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2BEF6A2B9AFCAD00ECB58F /* MarketOrdersViewController.swift */; };
 		EA2BEF6D2B9B093E00ECB58F /* MarketOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2BEF6C2B9B093E00ECB58F /* MarketOrderModel.swift */; };
+		EA2BEF6F2B9B66B900ECB58F /* MarketDriversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2BEF6E2B9B66B900ECB58F /* MarketDriversViewController.swift */; };
 		EA2ECF9C2B63E14E00DF2C31 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECF9B2B63E14E00DF2C31 /* OrderViewController.swift */; };
 		EA2ECF9E2B643F3200DF2C31 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */; };
 		EA2ECFA22B643F6900DF2C31 /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECFA02B643F6900DF2C31 /* FavouriteCollectionViewCell.swift */; };
@@ -117,6 +118,7 @@
 		EA2BEF672B9AFAF800ECB58F /* MarketOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketOrderTableViewCell.xib; sourceTree = "<group>"; };
 		EA2BEF6A2B9AFCAD00ECB58F /* MarketOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketOrdersViewController.swift; sourceTree = "<group>"; };
 		EA2BEF6C2B9B093E00ECB58F /* MarketOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketOrderModel.swift; sourceTree = "<group>"; };
+		EA2BEF6E2B9B66B900ECB58F /* MarketDriversViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDriversViewController.swift; sourceTree = "<group>"; };
 		EA2ECF9B2B63E14E00DF2C31 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		EA2ECFA02B643F6900DF2C31 /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 		EA5F4F542B99189100475EF3 /* Drivers */ = {
 			isa = PBXGroup;
 			children = (
+				EA2BEF6E2B9B66B900ECB58F /* MarketDriversViewController.swift */,
 			);
 			path = Drivers;
 			sourceTree = "<group>";
@@ -862,6 +865,7 @@
 				EA8A7A9A2B8B3C5400CCC677 /* Extension+UiView.swift in Sources */,
 				EA78A5EF2B60559D00790B12 /* MainViewController.swift in Sources */,
 				EA5F4F3C2B97620200475EF3 /* AdminBlockMarketViewController.swift in Sources */,
+				EA2BEF6F2B9B66B900ECB58F /* MarketDriversViewController.swift in Sources */,
 				EA8881FF2B8823EF00A1B51A /* MainTabBarController.swift in Sources */,
 				EA5F4F302B972A3B00475EF3 /* AdminSubscriptionsViewController.swift in Sources */,
 				EA9CCB3E2B89F94100733C4F /* AdminDriversViewController.swift in Sources */,

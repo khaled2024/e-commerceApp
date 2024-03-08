@@ -30,6 +30,7 @@ class NavigationManager{
         // Market Screens
         case marketSetting
         case marketOrdersDashboard
+        case marketDriversDashboard
     }
     enum InstantiateScreens {
         // admin screens
@@ -110,6 +111,9 @@ class NavigationManager{
         case .marketOrdersDashboard:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: MarketOrdersViewController.identifier)
+        case .marketDriversDashboard:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            viewController = storyboard.instantiateViewController(withIdentifier: MarketDriversViewController.identifier)
         }
         nav.pushViewController(viewController, animated: true)
     }

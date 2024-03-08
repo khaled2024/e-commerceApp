@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N9l-cs-VPQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i1Q-Sk-UnD">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -6789,6 +6789,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5w-qW-yes" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1143" y="9336"/>
+        </scene>
+        <!--Market Drivers View Controller-->
+        <scene sceneID="u0A-8D-GUY">
+            <objects>
+                <viewController storyboardIdentifier="MarketDriversViewController" id="kSh-kf-51G" customClass="MarketDriversViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SRa-oc-0kS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drivers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgU-M3-bMt">
+                                <rect key="frame" x="65" y="74.666666666666671" width="66" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Eb-1b-4c3">
+                                <rect key="frame" x="20" y="69" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="BzL-L3-5RG"/>
+                                    <constraint firstAttribute="width" constant="35" id="liW-Aa-C9Y"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="backBtnTapped:" destination="kSh-kf-51G" eventType="touchUpInside" id="uoL-SY-9f4"/>
+                                    <action selector="backBtnTapped:" destination="ICL-7A-t6P" eventType="touchUpInside" id="w5B-kb-VUg"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jKL-b5-DxB">
+                                <rect key="frame" x="0.0" y="199" width="393" height="629"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ygz-Fa-IfR">
+                                    <size key="itemSize" width="180" height="207"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V3b-NR-ejS">
+                                        <rect key="frame" x="0.0" y="10" width="190" height="207"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VLf-mj-j0K">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="207"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="190" height="207"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bxh-09-WY9">
+                                <rect key="frame" x="29.333333333333343" y="129" width="334.33333333333326" height="51"/>
+                                <color key="backgroundColor" red="0.87843137979999997" green="0.87843137979999997" blue="0.87843137979999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dd7-Qq-D1U"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Online"/>
+                                    <segment title="Offline"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.94509804249999996" green="0.61176472900000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rM3-PU-df8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Eb-1b-4c3" firstAttribute="leading" secondItem="rM3-PU-df8" secondAttribute="leading" constant="20" id="2MR-hq-Hfk"/>
+                            <constraint firstItem="3Eb-1b-4c3" firstAttribute="top" secondItem="rM3-PU-df8" secondAttribute="top" constant="10" id="I5i-wm-a0D"/>
+                            <constraint firstItem="Bxh-09-WY9" firstAttribute="centerX" secondItem="rM3-PU-df8" secondAttribute="centerX" id="OPL-dC-56l"/>
+                            <constraint firstItem="jKL-b5-DxB" firstAttribute="trailing" secondItem="rM3-PU-df8" secondAttribute="trailing" id="PtB-p1-QAa"/>
+                            <constraint firstItem="jKL-b5-DxB" firstAttribute="top" secondItem="Bxh-09-WY9" secondAttribute="bottom" constant="20" id="VOg-ec-Zpg"/>
+                            <constraint firstItem="rgU-M3-bMt" firstAttribute="centerY" secondItem="3Eb-1b-4c3" secondAttribute="centerY" id="clu-IP-syO"/>
+                            <constraint firstItem="Bxh-09-WY9" firstAttribute="top" secondItem="3Eb-1b-4c3" secondAttribute="bottom" constant="25" id="dti-Il-zym"/>
+                            <constraint firstItem="jKL-b5-DxB" firstAttribute="leading" secondItem="rM3-PU-df8" secondAttribute="leading" id="me8-wN-Hca"/>
+                            <constraint firstItem="rgU-M3-bMt" firstAttribute="leading" secondItem="3Eb-1b-4c3" secondAttribute="trailing" constant="10" id="nKn-mC-K6E"/>
+                            <constraint firstItem="Bxh-09-WY9" firstAttribute="width" secondItem="SRa-oc-0kS" secondAttribute="width" multiplier="0.85" id="sBg-C0-w0A"/>
+                            <constraint firstItem="jKL-b5-DxB" firstAttribute="bottom" secondItem="rM3-PU-df8" secondAttribute="bottom" constant="10" id="uJZ-ZR-rgQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="driversStatusSegmentController" destination="Bxh-09-WY9" id="8oj-Cr-hWH"/>
+                        <outlet property="marketDriversCollectionView" destination="jKL-b5-DxB" id="TtA-D5-wpb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dge-M0-90K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142.7480916030534" y="10004.929577464789"/>
         </scene>
     </scenes>
     <resources>

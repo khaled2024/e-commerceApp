@@ -8,7 +8,13 @@
 import UIKit
 
 class DriverCollectionViewCell: UICollectionViewCell {
+    // for market drivers
+    @IBOutlet weak var marketDriversStatusView: UIView!
+    @IBOutlet weak var marketDriversLabel: UILabel!
+    @IBOutlet weak var viewForDriverMarkets: UIView!
+    // for admin drivers
     @IBOutlet weak var driverLicense: UILabel!
+    @IBOutlet weak var expireImage: UIImageView!
     
     @IBOutlet weak var driverImage: UIImageView!
     @IBOutlet weak var driverName: UILabel!
@@ -21,9 +27,11 @@ class DriverCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         driverView.setUpLayerForCell()
         driverImage.makeCircle()
+        marketDriversStatusView.layer.cornerRadius = marketDriversStatusView.frame.height/2
         
     }
-    func config(driver: DriverModel){
+    func configForAdmin(driver: DriverModel){
+        self.viewForDriverMarkets.isHidden = true
         self.driverImage.image = driver.driverImage
         self.driverName.text = driver.driverName
         if driver.driverLicense == .Expired{
@@ -32,6 +40,20 @@ class DriverCollectionViewCell: UICollectionViewCell {
         }else{
             self.driverLicense.textColor = .darkGray
             self.driverLicense.text = driver.driverLicense.rawValue
+        }
+    }
+    func configForMarket(driver: DriverModel){
+        self.driverImage.image = driver.driverImage
+        self.driverName.text = driver.driverName
+        self.driverLicense.isHidden = true
+        self.expireImage.isHidden = true
+        self.marketDriversLabel.text = driver.marketDriverStatus.rawValue
+        if driver.marketDriverStatus == .Offline{
+            self.marketDriversStatusView.backgroundColor = .systemRed
+            self.marketDriversLabel.textColor = .systemRed
+        }else{
+            self.marketDriversStatusView.backgroundColor = .systemGreen
+            self.marketDriversLabel.textColor = .systemGreen
         }
     }
 
