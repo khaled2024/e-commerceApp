@@ -8,18 +8,20 @@
 import UIKit
 import MapKit
 class CurrentOrderViewController: UIViewController {
+    // MARK: - Outlets
     @IBOutlet weak var currentOrderTopView: UIView!
-    
     @IBOutlet weak var currentOrderImage: UIImageView!
     @IBOutlet weak var orderRecevingBtn: UIButton!
     @IBOutlet weak var locationMapView: MKMapView!
     @IBOutlet weak var oderDetailsView: UIView!
     @IBOutlet weak var orderName: UILabel!
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setNav()
         setDesign()
     }
+    // MARK: - Functions
     func setDesign(){
         currentOrderTopView.setCorners()
         oderDetailsView.setCorners()
@@ -34,6 +36,7 @@ class CurrentOrderViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         navigationController?.setNavigationItemBackground(hidden: true)
     }
+    // MARK: - Actions
     @IBAction func orderRecevingBtnTapped(_ sender: UIButton) {
         print("Order Receving :(")
     }
