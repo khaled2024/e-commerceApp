@@ -18,7 +18,7 @@ class MarketMealsViewController: UIViewController {
     @IBOutlet weak var marketNamLabel: UILabel!
     @IBOutlet weak var marketMealCollectionView: UICollectionView!
     @IBOutlet weak var marketMealsTopView: UIView!
-    static let identifier = "MarketMealsViewController"
+    static let identifier = String(describing: MarketMealsViewController.self)
     override func viewDidLoad() {
         super.viewDidLoad()
         setDesign()

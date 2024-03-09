@@ -11,9 +11,6 @@ enum PayMethods: String {
     case cash = "Cash"
     case masterCard = "Master Card"
 }
-
-
-
 struct MarketOrderModel {
     let id: String
     let name: String

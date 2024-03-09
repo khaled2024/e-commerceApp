@@ -11,7 +11,6 @@ class StorageManager {
     enum Key: String{
         case onboardingSeen
     }
-    
     func isOnboardingSeen()-> Bool{
         UserDefaults.standard.bool(forKey: Key.onboardingSeen.rawValue)
     }
@@ -20,6 +19,5 @@ class StorageManager {
     }
     func resetOnboardingSeen(){
         UserDefaults.standard.set(false, forKey: Key.onboardingSeen.rawValue)
-
     }
 }

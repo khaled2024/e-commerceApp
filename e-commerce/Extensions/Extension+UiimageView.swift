@@ -7,8 +7,13 @@
 
 import UIKit
 
-var imageCache = NSCache<AnyObject,AnyObject>()
 
+extension UIImageView{
+    func makeCircle(){
+        self.layer.cornerRadius = self.frame.height/2
+    }
+}
+var imageCache = NSCache<AnyObject,AnyObject>()
 extension UIImageView{
     func loadDataUsingCacheWithUrlString(urlString: String){
 //        self.image = UIImage(named: "user")

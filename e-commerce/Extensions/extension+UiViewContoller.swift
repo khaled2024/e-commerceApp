@@ -9,6 +9,6 @@ import UIKit
 //static let identifier = String(describing: MarketDetailsViewController.self)
 extension UIViewController{
     func  identifier()-> String{
-        return String(describing: UIViewController.self)
+        return String(describing: self.self)
     }
 }

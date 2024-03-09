@@ -1,11 +1,7 @@
-//
 //  Extension+UiLable.swift
-//  RoomChatApp
-//
 //  Created by KhaleD HuSsien on 16/09/2022.
 //
 
-import Foundation
 import UIKit
 extension UILabel {
     func addCharacterSpacing(kernValue: Double = 2) {

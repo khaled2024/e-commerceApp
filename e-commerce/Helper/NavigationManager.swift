@@ -75,89 +75,44 @@ class NavigationManager{
     // MARK: - Push controller with our parsing data :-
     func push(screen: PushScreens,nav: UINavigationController!){
         var viewController: UIViewController!
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         switch screen {
             /// For Admin screens:-
         case .adminMarketDetail:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: AdminMarketDetailsViewController.identifier)
         case .adminMarketVC:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: MarketViewController.identifier)
         case .CostumerServicesVC:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: "CostumerServicesViewController")
         case .adminDrivers:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: AdminDriversViewController.identifier)
         case .adminEditMarket:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: "AdminEditMarketViewController")
         case .adminMarketOrders:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: "AdminMarketOrdersViewController")
         case .adminChatRoom:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: ChatRoomViewController.identifier)
         case .adminSettingVC:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: AdminSettingViewController.identifier)
         case .adminSubscriptionsVC:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: AdminSubscriptionsViewController.identifier)
         case .adminBlockMarketVC:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: AdminBlockMarketViewController.identifier)
         case .adminDriverDetail:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: AdminDriverDetailsViewController.identifier)
             /// For Market screens:-
         case .marketSetting:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: MarketSettingViewController.identifier)
         case .marketOrdersDashboard:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: MarketOrdersViewController.identifier)
         case .marketDriversDashboard:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: MarketDriversViewController.identifier)
         case .marketMealsDashboard:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: MarketMealsViewController.identifier)
         }
         nav.pushViewController(viewController, animated: true)
     }
-    
-//    func pushOnly(screen: PushScreenOnly,nav: UINavigationController!){
-//        var vc: UIViewController!
-//        switch screen {
-//        case .marketVC:
-//            vc = MarketViewController()
-//        case .marketDetail:
-//            vc = MarketDetailsViewController()
-//        case .CostumerServicesVC:
-//            vc = CostumerServicesViewController()
-//        case .drivers:
-//            vc = DriversViewController()
-//        case .editMarket:
-//            vc = EditMarketViewController()
-//        case .marketOrders:
-//            vc = AdminMarketOrdersViewController()
-//        case .chatRoom:
-//            vc = ChatRoomViewController()
-//        case .settingVC:
-//            break
-//        case .subscriptionsVC:
-//            break
-//        case .blockMarketVC:
-//            break
-//        case .driverDetail:
-//            break
-//        case .marketSetting:
-//            <#code#>
-//        }
-//        nav.pushViewController(vc, animated: true)
-//    }
-    
+    // MARK: - make the screen is the root vc of app
     func show(screen: Screen, incontroller: UIViewController){
         var viewController: UIViewController!
         switch screen {
@@ -174,7 +129,5 @@ class NavigationManager{
                               animations: nil,
                               completion: nil)
         }
-        
     }
-    
 }
