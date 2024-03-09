@@ -30,7 +30,6 @@ class MarketHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDesign()
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -50,7 +49,6 @@ class MarketHomeViewController: UIViewController {
         mealsDashboardView.setCorners()
         ordersDashboardView.setCorners()
     }
-    
     // MARK: - Btn Tapped
     @IBAction func usersDashboardBtnTapped(_ sender: UIButton) {
         print("users of market")
@@ -60,7 +58,7 @@ class MarketHomeViewController: UIViewController {
     }
     @IBAction func addmealsBtnTapped(_ sender: UIButton) {
         print("Add Meal")
-        
+        navManager.push(screen: .marketAddMealDashboard, nav: navigationController)
     }
     @IBAction func driversDashboardBtnTapped(_ sender: UIButton) {
         print("drivers of market")
@@ -73,6 +71,5 @@ class MarketHomeViewController: UIViewController {
     @IBAction func ordersDashboardBtnTapped(_ sender: UIButton) {
         print("orders of market")
         navManager.push(screen: .marketOrdersDashboard, nav: navigationController)
-        
     }
 }

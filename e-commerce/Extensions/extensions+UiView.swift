@@ -59,9 +59,9 @@ extension UIView{
         self.layer.cornerRadius = corner
     }
     // MARK: - make shadow
-    func setUpShadoww(){
+    func setUpShadoww(shadowColor: CGColor = UIColor.systemYellow.cgColor){
         self.layer.cornerRadius = 10
-        self.layer.shadowColor = UIColor.systemYellow.cgColor
+        self.layer.shadowColor = shadowColor
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
         self.backgroundColor = .white
         self.layer.shadowRadius = 5

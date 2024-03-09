@@ -32,6 +32,7 @@ class NavigationManager{
         case marketOrdersDashboard
         case marketDriversDashboard
         case marketMealsDashboard
+        case marketAddMealDashboard
     }
     enum InstantiateScreens {
         // admin screens
@@ -43,32 +44,29 @@ class NavigationManager{
         case adminDriverDetail
         // Market Screens
         case marketMealsDashboard
+        case marketAddMealDashboard
     }
     // MARK: - instantiate controler from storyboard and push or present it in view when we need to parse some data :-
     func instantiate(screen: InstantiateScreens)-> UIViewController{
         var viewController: UIViewController!
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         switch screen {
         case .adminMarketDetail:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: AdminMarketDetailsViewController.identifier)
         case .adminMarketVC:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: MarketViewController.identifier)
         case .CostumerServicesVC:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: "CostumerServicesViewController")
         case .adminChatRoom:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: ChatRoomViewController.identifier)
         case .adminMarketOrders:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: "AdminMarketOrdersViewController")
         case .adminDriverDetail:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: AdminDriverDetailsViewController.identifier)
         case .marketMealsDashboard:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             viewController = storyboard.instantiateViewController(withIdentifier: MarketMealsViewController.identifier)
+        case .marketAddMealDashboard:
+            viewController = storyboard.instantiateViewController(withIdentifier: AddMealViewController.identifier)
         }
         return viewController
     }
@@ -109,6 +107,8 @@ class NavigationManager{
             viewController = storyboard.instantiateViewController(withIdentifier: MarketDriversViewController.identifier)
         case .marketMealsDashboard:
             viewController = storyboard.instantiateViewController(withIdentifier: MarketMealsViewController.identifier)
+        case .marketAddMealDashboard:
+            viewController = storyboard.instantiateViewController(withIdentifier: AddMealViewController.identifier)
         }
         nav.pushViewController(viewController, animated: true)
     }

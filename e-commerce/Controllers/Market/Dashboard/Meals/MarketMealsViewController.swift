@@ -19,6 +19,7 @@ class MarketMealsViewController: UIViewController {
     @IBOutlet weak var marketMealCollectionView: UICollectionView!
     @IBOutlet weak var marketMealsTopView: UIView!
     static let identifier = String(describing: MarketMealsViewController.self)
+    let navManager = NavigationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         setDesign()
@@ -42,7 +43,8 @@ class MarketMealsViewController: UIViewController {
     }
     // MARK: - Actions
     @IBAction func addMealBtnTapped(_ sender: UIButton) {
-        print("Add meal Tapped :)")
+        print("Add Meal")
+        navManager.push(screen: .marketAddMealDashboard, nav: navigationController)
     }
     
 }

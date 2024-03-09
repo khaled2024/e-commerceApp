@@ -88,6 +88,7 @@
 		EACFEE322B65888D008AE44C /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFEE312B65888D008AE44C /* TrackViewController.swift */; };
 		EAD2A3422B9BB9E800FF25B2 /* MarketMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2A3412B9BB9E800FF25B2 /* MarketMealsViewController.swift */; };
 		EAD2A3442B9C41E100FF25B2 /* extension+UiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2A3432B9C41E100FF25B2 /* extension+UiButton.swift */; };
+		EAD2A3462B9C5FE200FF25B2 /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2A3452B9C5FE200FF25B2 /* AddMealViewController.swift */; };
 		EAD2F5B22B8CB059004A58EE /* DriverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2F5B02B8CB059004A58EE /* DriverCollectionViewCell.swift */; };
 		EAD2F5B32B8CB059004A58EE /* DriverCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD2F5B12B8CB059004A58EE /* DriverCollectionViewCell.xib */; };
 		EAD2F5B52B8CBB24004A58EE /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2F5B42B8CBB24004A58EE /* DriverModel.swift */; };
@@ -191,6 +192,7 @@
 		EACFEE312B65888D008AE44C /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
 		EAD2A3412B9BB9E800FF25B2 /* MarketMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketMealsViewController.swift; sourceTree = "<group>"; };
 		EAD2A3432B9C41E100FF25B2 /* extension+UiButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+UiButton.swift"; sourceTree = "<group>"; };
+		EAD2A3452B9C5FE200FF25B2 /* AddMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
 		EAD2F5B02B8CB059004A58EE /* DriverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAD2F5B12B8CB059004A58EE /* DriverCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverCollectionViewCell.xib; sourceTree = "<group>"; };
 		EAD2F5B42B8CBB24004A58EE /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 		EA5F4F532B99186200475EF3 /* Add meal */ = {
 			isa = PBXGroup;
 			children = (
+				EAD2A3452B9C5FE200FF25B2 /* AddMealViewController.swift */,
 			);
 			path = "Add meal";
 			sourceTree = "<group>";
@@ -937,6 +940,7 @@
 				EA02C9F32B971EDB00C039F5 /* MoreTableViewCell.swift in Sources */,
 				EA2BEF6D2B9B093E00ECB58F /* MarketOrderModel.swift in Sources */,
 				EAE8417A2B88C15A006E2742 /* CostumerServicesViewController.swift in Sources */,
+				EAD2A3462B9C5FE200FF25B2 /* AddMealViewController.swift in Sources */,
 				EA9E8E842B6180A300A250B0 /* CategoryTableViewCell.swift in Sources */,
 				EA9CCB532B8A4FEA00733C4F /* CostumerModel.swift in Sources */,
 			);
