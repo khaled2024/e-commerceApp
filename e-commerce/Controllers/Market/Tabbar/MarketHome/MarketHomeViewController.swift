@@ -55,6 +55,7 @@ class MarketHomeViewController: UIViewController {
     }
     @IBAction func addAnnouncementBtnTapped(_ sender: UIButton) {
         print("Add Announcement")
+        navManager.push(screen: .marketAddAnnouncement, nav: navigationController)
     }
     @IBAction func addmealsBtnTapped(_ sender: UIButton) {
         print("Add Meal")

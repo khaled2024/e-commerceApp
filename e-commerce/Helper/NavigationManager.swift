@@ -33,6 +33,9 @@ class NavigationManager{
         case marketDriversDashboard
         case marketMealsDashboard
         case marketAddMealDashboard
+        case marketProfile
+        case marketAddAnnouncement
+        case marketAnnouncement
     }
     enum InstantiateScreens {
         // admin screens
@@ -45,6 +48,7 @@ class NavigationManager{
         // Market Screens
         case marketMealsDashboard
         case marketAddMealDashboard
+        case marketProfile
     }
     // MARK: - instantiate controler from storyboard and push or present it in view when we need to parse some data :-
     func instantiate(screen: InstantiateScreens)-> UIViewController{
@@ -67,6 +71,8 @@ class NavigationManager{
             viewController = storyboard.instantiateViewController(withIdentifier: MarketMealsViewController.identifier)
         case .marketAddMealDashboard:
             viewController = storyboard.instantiateViewController(withIdentifier: AddMealViewController.identifier)
+        case .marketProfile:
+            viewController = storyboard.instantiateViewController(withIdentifier: MarketProfileViewController.identifier)
         }
         return viewController
     }
@@ -109,6 +115,12 @@ class NavigationManager{
             viewController = storyboard.instantiateViewController(withIdentifier: MarketMealsViewController.identifier)
         case .marketAddMealDashboard:
             viewController = storyboard.instantiateViewController(withIdentifier: AddMealViewController.identifier)
+        case .marketProfile:
+            viewController = storyboard.instantiateViewController(withIdentifier: MarketProfileViewController.identifier)
+        case .marketAddAnnouncement:
+            viewController = storyboard.instantiateViewController(withIdentifier: AddAnnouncementViewController.identifier)
+        case .marketAnnouncement:
+            viewController = storyboard.instantiateViewController(withIdentifier: MarketAnnouncementViewController.identifier)
         }
         nav.pushViewController(viewController, animated: true)
     }

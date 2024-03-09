@@ -45,11 +45,14 @@ extension MarketMoreViewController: UITableViewDelegate,UITableViewDataSource{
             navManager.push(screen: .marketSetting, nav: navigationController)
         }else if indexPath.row == 1{
             print("Profile Tapped")
+            let profileVC = navManager.instantiate(screen: .marketProfile)
+            navigationController?.pushViewController(profileVC, animated: true)
         }
         else if indexPath.row == 2{
             print("Statistics Tapped")
         }else{
             print("Announcement")
+            navManager.push(screen: .marketAnnouncement, nav: navigationController)
         }
     }
 }
