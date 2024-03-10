@@ -95,6 +95,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="hS4-v3-5Ee" secondAttribute="trailing" constant="10" id="LWP-mp-pnz"/>
                     <constraint firstItem="hS4-v3-5Ee" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="M2Q-qM-JsC"/>
@@ -120,6 +121,9 @@
         <image name="routing" width="26.666666030883789" height="26.666666030883789"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

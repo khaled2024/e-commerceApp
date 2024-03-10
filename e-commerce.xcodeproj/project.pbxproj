@@ -47,6 +47,8 @@
 		EA6AE0942B62694400AE45DB /* bestProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */; };
 		EA6AE0952B62694400AE45DB /* bestProductsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */; };
 		EA6AE09B2B62AEE100AE45DB /* ResturantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */; };
+		EA74BD9B2B9E778C007ADDE0 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA74BD9A2B9E778C007ADDE0 /* OrderDetailsViewController.swift */; };
+		EA74BD9D2B9E78DF007ADDE0 /* DriverOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA74BD9C2B9E78DF007ADDE0 /* DriverOrderModel.swift */; };
 		EA78A5EB2B60559D00790B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78A5EA2B60559D00790B12 /* AppDelegate.swift */; };
 		EA78A5ED2B60559D00790B12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78A5EC2B60559D00790B12 /* SceneDelegate.swift */; };
 		EA78A5EF2B60559D00790B12 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78A5EE2B60559D00790B12 /* MainViewController.swift */; };
@@ -156,6 +158,8 @@
 		EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bestProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bestProductsCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetailViewController.swift; sourceTree = "<group>"; };
+		EA74BD9A2B9E778C007ADDE0 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		EA74BD9C2B9E78DF007ADDE0 /* DriverOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverOrderModel.swift; sourceTree = "<group>"; };
 		EA78A5E72B60559D00790B12 /* e-commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA78A5EA2B60559D00790B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA78A5EC2B60559D00790B12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -591,6 +595,7 @@
 				EAD2F5B42B8CBB24004A58EE /* DriverModel.swift */,
 				EA02C9F42B971F7800C039F5 /* MoreModel.swift */,
 				EA2BEF6C2B9B093E00ECB58F /* MarketOrderModel.swift */,
+				EA74BD9C2B9E78DF007ADDE0 /* DriverOrderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -730,6 +735,7 @@
 			isa = PBXGroup;
 			children = (
 				EAD2A37E2B9E5B7A00FF25B2 /* DriverCurrentOrdersViewController.swift */,
+				EA74BD9A2B9E778C007ADDE0 /* OrderDetailsViewController.swift */,
 			);
 			name = DriverCurrentOrder;
 			sourceTree = "<group>";
@@ -967,6 +973,7 @@
 				EA02C9F52B971F7800C039F5 /* MoreModel.swift in Sources */,
 				EA2ECF9E2B643F3200DF2C31 /* FavouriteViewController.swift in Sources */,
 				EA2439242B63A66A00ACD5BE /* extensions+UiView.swift in Sources */,
+				EA74BD9D2B9E78DF007ADDE0 /* DriverOrderModel.swift in Sources */,
 				EA2ECFA22B643F6900DF2C31 /* FavouriteCollectionViewCell.swift in Sources */,
 				EA9CCB382B89D58A00733C4F /* LoadingViewController.swift in Sources */,
 				EAD2F5B22B8CB059004A58EE /* DriverCollectionViewCell.swift in Sources */,
@@ -991,6 +998,7 @@
 				EAE8418F2B891D63006E2742 /* AdminEditMarketViewController.swift in Sources */,
 				EACFEE302B656469008AE44C /* SearchViewController.swift in Sources */,
 				EAB2B6122B86A55800A7D419 /* SecondMainViewController.swift in Sources */,
+				EA74BD9B2B9E778C007ADDE0 /* OrderDetailsViewController.swift in Sources */,
 				EA5F4F4B2B9916D100475EF3 /* MarketTabbar.swift in Sources */,
 				EA02C9F72B97286200C039F5 /* AdminSettingViewController.swift in Sources */,
 				EA2ECF9C2B63E14E00DF2C31 /* OrderViewController.swift in Sources */,
