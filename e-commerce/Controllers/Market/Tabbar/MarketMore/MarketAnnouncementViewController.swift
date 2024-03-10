@@ -1,14 +1,9 @@
-//
+
 //  MarketAnnouncementViewController.swift
 //  e-commerce
-//
 //  Created by KhaleD HuSsien on 06/03/2024.
-//
-
 import UIKit
-
 class MarketAnnouncementViewController: UIViewController {
-    
     @IBOutlet weak var announcementTopView: UIView!
     @IBOutlet weak var announcementTableView: UITableView!
     static let identifier = String(describing: MarketAnnouncementViewController.self)
@@ -45,6 +40,4 @@ extension MarketAnnouncementViewController: UITableViewDelegate,UITableViewDataS
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 240
     }
-    
-    
 }
