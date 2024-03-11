@@ -44,6 +44,8 @@
 		EA5F4F4D2B99177800475EF3 /* MarketSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F4C2B99177800475EF3 /* MarketSettingViewController.swift */; };
 		EA5F4F4F2B9917AB00475EF3 /* MarketProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F4E2B9917AB00475EF3 /* MarketProfileViewController.swift */; };
 		EA5F4F512B9917CC00475EF3 /* MarketAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F502B9917CC00475EF3 /* MarketAnnouncementViewController.swift */; };
+		EA6745792B9F44D300179ADB /* DriverProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6745782B9F44D300179ADB /* DriverProfileViewController.swift */; };
+		EA67457B2B9F44EA00179ADB /* DriverSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67457A2B9F44EA00179ADB /* DriverSettingViewController.swift */; };
 		EA6AE0942B62694400AE45DB /* bestProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */; };
 		EA6AE0952B62694400AE45DB /* bestProductsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */; };
 		EA6AE09B2B62AEE100AE45DB /* ResturantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */; };
@@ -155,6 +157,8 @@
 		EA5F4F4C2B99177800475EF3 /* MarketSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSettingViewController.swift; sourceTree = "<group>"; };
 		EA5F4F4E2B9917AB00475EF3 /* MarketProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketProfileViewController.swift; sourceTree = "<group>"; };
 		EA5F4F502B9917CC00475EF3 /* MarketAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketAnnouncementViewController.swift; sourceTree = "<group>"; };
+		EA6745782B9F44D300179ADB /* DriverProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverProfileViewController.swift; sourceTree = "<group>"; };
+		EA67457A2B9F44EA00179ADB /* DriverSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverSettingViewController.swift; sourceTree = "<group>"; };
 		EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bestProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bestProductsCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetailViewController.swift; sourceTree = "<group>"; };
@@ -744,6 +748,8 @@
 			isa = PBXGroup;
 			children = (
 				EAD2A3802B9E5B8500FF25B2 /* DriverMoreViewController.swift */,
+				EA6745782B9F44D300179ADB /* DriverProfileViewController.swift */,
+				EA67457A2B9F44EA00179ADB /* DriverSettingViewController.swift */,
 			);
 			name = DriverMore;
 			sourceTree = "<group>";
@@ -964,6 +970,7 @@
 				EA8881FF2B8823EF00A1B51A /* MainTabBarController.swift in Sources */,
 				EA5F4F302B972A3B00475EF3 /* AdminSubscriptionsViewController.swift in Sources */,
 				EA9CCB3E2B89F94100733C4F /* AdminDriversViewController.swift in Sources */,
+				EA6745792B9F44D300179ADB /* DriverProfileViewController.swift in Sources */,
 				EA9E8E912B61B03500A250B0 /* RestaurantsCollectionViewCell.swift in Sources */,
 				EA5F4F452B99164500475EF3 /* MarketMoreViewController.swift in Sources */,
 				EAD2A3442B9C41E100FF25B2 /* extension+UiButton.swift in Sources */,
@@ -1035,6 +1042,7 @@
 				EA9E8E842B6180A300A250B0 /* CategoryTableViewCell.swift in Sources */,
 				EA9CCB532B8A4FEA00733C4F /* CostumerModel.swift in Sources */,
 				EAD2A3812B9E5B8500FF25B2 /* DriverMoreViewController.swift in Sources */,
+				EA67457B2B9F44EA00179ADB /* DriverSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
