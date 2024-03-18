@@ -7,12 +7,13 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    // Outlets and Variables :-
+    // MARK: - Outlets and Variables :-
     @IBOutlet weak var searchBtn: UIButton!
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var bannerPageController: UIPageControl!
+    // MARK: - Variables
     var footerView: UIView{
         let view = UIView()
         view.backgroundColor = .systemOrange
@@ -20,6 +21,7 @@ class MainViewController: UIViewController {
     }
     var timer: Timer?
     var currentCellIndex = 0
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpDelegate()
@@ -28,7 +30,7 @@ class MainViewController: UIViewController {
         startTimer()
         bannerPageController.numberOfPages = bannerImages.count
     }
-    // Functions
+    // MARK: - Functions
     func setUpDelegate(){
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self
@@ -61,6 +63,7 @@ class MainViewController: UIViewController {
         bannerPageController.currentPage = currentCellIndex
         
     }
+    // MARK: - Actions
     @IBAction func searchBtnTapped(_ sender: UIButton) {
         print("Search Tapped :-")
         let storyBoard = UIStoryboard(name: "Main", bundle: .none)
@@ -68,7 +71,7 @@ class MainViewController: UIViewController {
         self.present(searchVC, animated: true)
     }
 }
-// (CategoryTableViewCellDelegate)
+// MARK: - (CategoryTableViewCellDelegate)
 extension MainViewController: CategoryTableViewCellDelegate{
     func showResturantDetail(cell: CategoryTableViewCell, resturant: RestaurantModel) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -85,7 +88,7 @@ extension MainViewController: CategoryTableViewCellDelegate{
         
     }
 }
-// (UITableViewDelegate)
+// MARK: - (UITableViewDelegate)
 extension MainViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -160,7 +163,7 @@ extension MainViewController: UITableViewDelegate,UITableViewDataSource{
         return 0
     }
 }
-// Extensions (UICollectionViewDelegate)
+// MARK: - Extensions (UICollectionViewDelegate)
 extension MainViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         bannerImages.count
