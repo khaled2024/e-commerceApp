@@ -116,6 +116,10 @@
 		EAE8418F2B891D63006E2742 /* AdminEditMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8418E2B891D63006E2742 /* AdminEditMarketViewController.swift */; };
 		EAF24E532BA8843300297CE5 /* POPUPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF24E522BA8843300297CE5 /* POPUPVC.swift */; };
 		EAF24E572BA896AC00297CE5 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF24E562BA896AC00297CE5 /* HTTP.swift */; };
+		EAF24E592BA8D00E00297CE5 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF24E582BA8D00E00297CE5 /* EndPoint.swift */; };
+		EAF24E5B2BA8D1BD00297CE5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF24E5A2BA8D1BD00297CE5 /* Constants.swift */; };
+		EAF24E5E2BA8D2B000297CE5 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF24E5D2BA8D2B000297CE5 /* LoginData.swift */; };
+		EAF24E602BA8D50300297CE5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF24E5F2BA8D50300297CE5 /* APIService.swift */; };
 		EAF6440C2B894481006BDADE /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6440B2B894481006BDADE /* NavigationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -233,6 +237,10 @@
 		EAE8418E2B891D63006E2742 /* AdminEditMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEditMarketViewController.swift; sourceTree = "<group>"; };
 		EAF24E522BA8843300297CE5 /* POPUPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPUPVC.swift; sourceTree = "<group>"; };
 		EAF24E562BA896AC00297CE5 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		EAF24E582BA8D00E00297CE5 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		EAF24E5A2BA8D1BD00297CE5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EAF24E5D2BA8D2B000297CE5 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		EAF24E5F2BA8D50300297CE5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		EAF6440B2B894481006BDADE /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -561,6 +569,7 @@
 		EA78A5E92B60559D00790B12 /* e-commerce */ = {
 			isa = PBXGroup;
 			children = (
+				EAF24E5C2BA8D29700297CE5 /* NetworkingModels */,
 				EA78A5EA2B60559D00790B12 /* AppDelegate.swift */,
 				EA78A5EC2B60559D00790B12 /* SceneDelegate.swift */,
 				EAF24E542BA88BB900297CE5 /* Networking */,
@@ -849,8 +858,19 @@
 			isa = PBXGroup;
 			children = (
 				EAF24E562BA896AC00297CE5 /* HTTP.swift */,
+				EAF24E582BA8D00E00297CE5 /* EndPoint.swift */,
+				EAF24E5A2BA8D1BD00297CE5 /* Constants.swift */,
+				EAF24E5F2BA8D50300297CE5 /* APIService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		EAF24E5C2BA8D29700297CE5 /* NetworkingModels */ = {
+			isa = PBXGroup;
+			children = (
+				EAF24E5D2BA8D2B000297CE5 /* LoginData.swift */,
+			);
+			path = NetworkingModels;
 			sourceTree = "<group>";
 		};
 		EAF6440A2B89446F006BDADE /* Helper */ = {
@@ -990,6 +1010,7 @@
 				EA5F4F3C2B97620200475EF3 /* AdminBlockMarketViewController.swift in Sources */,
 				EA2BEF6F2B9B66B900ECB58F /* MarketDriversViewController.swift in Sources */,
 				EA8881FF2B8823EF00A1B51A /* MainTabBarController.swift in Sources */,
+				EAF24E5E2BA8D2B000297CE5 /* LoginData.swift in Sources */,
 				EA5F4F302B972A3B00475EF3 /* AdminSubscriptionsViewController.swift in Sources */,
 				EA9CCB3E2B89F94100733C4F /* AdminDriversViewController.swift in Sources */,
 				EA6745792B9F44D300179ADB /* DriverProfileViewController.swift in Sources */,
@@ -1003,6 +1024,7 @@
 				EA2ECF9E2B643F3200DF2C31 /* FavouriteViewController.swift in Sources */,
 				EA2439242B63A66A00ACD5BE /* extensions+UiView.swift in Sources */,
 				EA74BD9D2B9E78DF007ADDE0 /* DriverOrderModel.swift in Sources */,
+				EAF24E592BA8D00E00297CE5 /* EndPoint.swift in Sources */,
 				EA2ECFA22B643F6900DF2C31 /* FavouriteCollectionViewCell.swift in Sources */,
 				EA9CCB382B89D58A00733C4F /* LoadingViewController.swift in Sources */,
 				EAD2F5B22B8CB059004A58EE /* DriverCollectionViewCell.swift in Sources */,
@@ -1044,6 +1066,7 @@
 				EA78A5ED2B60559D00790B12 /* SceneDelegate.swift in Sources */,
 				EAD2A3782B9E598800FF25B2 /* DriverTabBar.swift in Sources */,
 				EA2BEF6B2B9AFCAD00ECB58F /* MarketOrdersViewController.swift in Sources */,
+				EAF24E5B2BA8D1BD00297CE5 /* Constants.swift in Sources */,
 				EAE841752B88991E006E2742 /* MarketViewController.swift in Sources */,
 				EA6AE09B2B62AEE100AE45DB /* ResturantDetailViewController.swift in Sources */,
 				EACFEE322B65888D008AE44C /* TrackViewController.swift in Sources */,
@@ -1062,6 +1085,7 @@
 				EA2BEF6D2B9B093E00ECB58F /* MarketOrderModel.swift in Sources */,
 				EAE8417A2B88C15A006E2742 /* CostumerServicesViewController.swift in Sources */,
 				EAD2A3462B9C5FE200FF25B2 /* AddMealViewController.swift in Sources */,
+				EAF24E602BA8D50300297CE5 /* APIService.swift in Sources */,
 				EAD2A3482B9D03F600FF25B2 /* AddAnnouncementViewController.swift in Sources */,
 				EA9E8E842B6180A300A250B0 /* CategoryTableViewCell.swift in Sources */,
 				EA9CCB532B8A4FEA00733C4F /* CostumerModel.swift in Sources */,

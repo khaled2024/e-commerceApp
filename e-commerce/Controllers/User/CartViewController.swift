@@ -23,12 +23,14 @@ class CartViewController: UIViewController {
         cartTableView.register(CartTableViewCell.uiNib(), forCellReuseIdentifier: CartTableViewCell.identifier)
         cartTableView.showsVerticalScrollIndicator = false
         cartTableView.separatorStyle = .none
+        login()
     }
    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         /// TEST
         testForPopUpView()
+        
         if showCart{
             // show cart view for user
         }else{
@@ -40,11 +42,21 @@ class CartViewController: UIViewController {
         }
     }
     // MARK: - Functions
-   
+    func login(){
+        let loginBody = loginBody(phone: "01147507444", password: "123456789")
+        guard let request = Endpoint.login(login: loginBody).request else {return}
+        APIService.shared.makeRequest(with: request, respModel: LoginData.self) { result, error in
+            if let error = error{
+                print("DEBUG PRINT: \(error)")
+            }
+            guard let result = result else{return}
+            print("DEBUG PRINT: \(result)")
+        }
+    }
+    
     func testForPopUpView(){
         self.cartTableView.isHidden = true
         self.priceCartView.isHidden = true
-        
     }
     func setUpDesign(){
         confirmBtn.layer.cornerRadius = 15

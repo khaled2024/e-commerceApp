@@ -8,20 +8,19 @@
 import Foundation
 
 enum HTTP {
+    // Methods
     enum Method: String {
         case get = "GET"
         case post = "POST"
+        case delete = "DELETE"
     }
-    
+    // Headers
     enum Headers {
         enum Key: String {
             case contentType = "content-type"
         }
-        enum value: String{
+        enum Value: String{
             case applicationJson = "application/json"
         }
     }
-    
-    
- 
 }
