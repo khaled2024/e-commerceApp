@@ -114,6 +114,8 @@
 		EAE841882B890D36006E2742 /* MarketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE841862B890D36006E2742 /* MarketCollectionViewCell.xib */; };
 		EAE8418D2B891D40006E2742 /* AdminMarketDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8418C2B891D40006E2742 /* AdminMarketDetailsViewController.swift */; };
 		EAE8418F2B891D63006E2742 /* AdminEditMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8418E2B891D63006E2742 /* AdminEditMarketViewController.swift */; };
+		EAF24E532BA8843300297CE5 /* POPUPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF24E522BA8843300297CE5 /* POPUPVC.swift */; };
+		EAF24E572BA896AC00297CE5 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF24E562BA896AC00297CE5 /* HTTP.swift */; };
 		EAF6440C2B894481006BDADE /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6440B2B894481006BDADE /* NavigationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -229,6 +231,8 @@
 		EAE841862B890D36006E2742 /* MarketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketCollectionViewCell.xib; sourceTree = "<group>"; };
 		EAE8418C2B891D40006E2742 /* AdminMarketDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMarketDetailsViewController.swift; sourceTree = "<group>"; };
 		EAE8418E2B891D63006E2742 /* AdminEditMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEditMarketViewController.swift; sourceTree = "<group>"; };
+		EAF24E522BA8843300297CE5 /* POPUPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPUPVC.swift; sourceTree = "<group>"; };
+		EAF24E562BA896AC00297CE5 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		EAF6440B2B894481006BDADE /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -559,6 +563,7 @@
 			children = (
 				EA78A5EA2B60559D00790B12 /* AppDelegate.swift */,
 				EA78A5EC2B60559D00790B12 /* SceneDelegate.swift */,
+				EAF24E542BA88BB900297CE5 /* Networking */,
 				EABC61972B78C590002F4B67 /* Extensions */,
 				EAF6440A2B89446F006BDADE /* Helper */,
 				EA9CCB552B8A4FEC00733C4F /* Models */,
@@ -832,9 +837,26 @@
 			path = Market;
 			sourceTree = "<group>";
 		};
+		EAF24E512BA883F400297CE5 /* PopupView */ = {
+			isa = PBXGroup;
+			children = (
+				EAF24E522BA8843300297CE5 /* POPUPVC.swift */,
+			);
+			path = PopupView;
+			sourceTree = "<group>";
+		};
+		EAF24E542BA88BB900297CE5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EAF24E562BA896AC00297CE5 /* HTTP.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		EAF6440A2B89446F006BDADE /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				EAF24E512BA883F400297CE5 /* PopupView */,
 				EA8A7A9E2B8B5A8B00CCC677 /* TopNavView */,
 				EAF6440B2B894481006BDADE /* NavigationManager.swift */,
 				EA9CCB392B89DC7300733C4F /* StorageManager.swift */,
@@ -985,6 +1007,7 @@
 				EA9CCB382B89D58A00733C4F /* LoadingViewController.swift in Sources */,
 				EAD2F5B22B8CB059004A58EE /* DriverCollectionViewCell.swift in Sources */,
 				EA9CCB3A2B89DC7400733C4F /* StorageManager.swift in Sources */,
+				EAF24E532BA8843300297CE5 /* POPUPVC.swift in Sources */,
 				EA5E7F932B6310510045C6D7 /* CartTableViewCell.swift in Sources */,
 				EA5F4F392B975FC900475EF3 /* BlockMarketTableViewCell.swift in Sources */,
 				EAD2A3422B9BB9E800FF25B2 /* MarketMealsViewController.swift in Sources */,
@@ -999,6 +1022,7 @@
 				EAD2F5B52B8CBB24004A58EE /* DriverModel.swift in Sources */,
 				EA8A7AB82B8B9A6C00CCC677 /* AdminMarketOrdersViewController.swift in Sources */,
 				EAE8416F2B88918A006E2742 /* AdminTabBarController.swift in Sources */,
+				EAF24E572BA896AC00297CE5 /* HTTP.swift in Sources */,
 				EAE8416D2B888E65006E2742 /* extensions+UiNavController.swift in Sources */,
 				EA8A7A9B2B8B3C5400CCC677 /* Extension+UiLable.swift in Sources */,
 				EAB2B6172B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift in Sources */,

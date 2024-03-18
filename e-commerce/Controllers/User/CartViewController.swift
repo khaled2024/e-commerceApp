@@ -13,6 +13,8 @@ class CartViewController: UIViewController {
     @IBOutlet weak var delivaryLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var cartTableView: UITableView!
+    @IBOutlet weak var priceCartView: UIView!
+    var showCart: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpDesign()
@@ -21,6 +23,28 @@ class CartViewController: UIViewController {
         cartTableView.register(CartTableViewCell.uiNib(), forCellReuseIdentifier: CartTableViewCell.identifier)
         cartTableView.showsVerticalScrollIndicator = false
         cartTableView.separatorStyle = .none
+    }
+   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        /// TEST
+        testForPopUpView()
+        if showCart{
+            // show cart view for user
+        }else{
+            // show pop up view with phone number:)
+            print("show pop up view with phone number:)")
+            let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: POPUPVC.identifier)as! POPUPVC
+            popUpVC.modalTransitionStyle = .crossDissolve
+            self.present(popUpVC, animated: true)
+        }
+    }
+    // MARK: - Functions
+   
+    func testForPopUpView(){
+        self.cartTableView.isHidden = true
+        self.priceCartView.isHidden = true
+        
     }
     func setUpDesign(){
         confirmBtn.layer.cornerRadius = 15

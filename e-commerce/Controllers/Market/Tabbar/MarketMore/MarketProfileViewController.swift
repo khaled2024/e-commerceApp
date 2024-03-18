@@ -58,5 +58,8 @@ class MarketProfileViewController: UIViewController {
     // MARK: - Actions
     @IBAction func editMarketPhoneNumberTapped(_ sender: UIButton) {
         print("Edit Market Number :)")
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: POPUPVC.identifier)as! POPUPVC
+        popUpVC.modalTransitionStyle = .crossDissolve
+        self.present(popUpVC, animated: true)
     }
 }
