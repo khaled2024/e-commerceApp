@@ -11,4 +11,5 @@ struct Constants {
     static let scheme = "https"
     static let baseURL = "fastorder1.com"
     static let port: Int? = nil
+    static let TokenBearer = "Bearer"
 }

@@ -14,8 +14,8 @@
             filePath = "e-commerce/Networking/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "makeRequest(with:respModel:completion:)"
             landmarkType = "7">
             <Locations>
@@ -64,6 +64,36 @@
                   endingLineNumber = "76"
                   offsetFromSymbolStart = "1032">
                </Location>
+               <Location
+                  uuid = "419658B9-E595-4174-A60E-621492D1F59B - cc5a8643bcfb63c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in e_commerce.APIService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(with: Foundation.URLRequest, respModel: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;e_commerce.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Networking/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "419658B9-E595-4174-A60E-621492D1F59B - cc5a8643bcfb63c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in e_commerce.APIService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(with: Foundation.URLRequest, respModel: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;e_commerce.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Networking/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "1032">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -77,8 +107,8 @@
             filePath = "e-commerce/Networking/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "makeRequest(with:respModel:completion:)"
             landmarkType = "7">
             <Locations>
@@ -112,53 +142,20 @@
                   endingLineNumber = "82"
                   offsetFromSymbolStart = "1464">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6BE4D421-CB78-4224-B34A-36A9DDF31629"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "e-commerce/Networking/APIService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "makePostRequest(phone:password:completion:)"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "6BE4D421-CB78-4224-B34A-36A9DDF31629 - 7691baef40220937"
+                  uuid = "78B90E7F-A4B8-4BA3-A589-C4E9B295CD8B - cc5a8643bcfb6083"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "e_commerce.APIService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(with: Foundation.URLRequest, respModel: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;e_commerce.APIError&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in e_commerce.APIService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(with: Foundation.URLRequest, respModel: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;e_commerce.APIError&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "e-commerce"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Networking/APIService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "172">
-               </Location>
-               <Location
-                  uuid = "6BE4D421-CB78-4224-B34A-36A9DDF31629 - 50e7267257763e90"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in e_commerce.APIService.makePostRequest(phone: Swift.String, password: Swift.String, completion: (Swift.Optional&lt;e_commerce.LoginData&gt;, Swift.Optional&lt;e_commerce.LoginError&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "e-commerce"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Networking/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "2280">
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "1464">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -166,49 +163,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C4AB2755-534F-48DD-8FC7-1E10C1D44948"
+            uuid = "FD516743-3856-4618-AD15-D04EABE14ED7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "e-commerce/Networking/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "makePostRequest(phone:password:completion:)"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "adminLogin(phone:password:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C4AB2755-534F-48DD-8FC7-1E10C1D44948 - 50e726725776305e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in e_commerce.APIService.makePostRequest(phone: Swift.String, password: Swift.String, completion: (Swift.Optional&lt;e_commerce.LoginData&gt;, Swift.Optional&lt;e_commerce.LoginError&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "e-commerce"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Networking/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "1728">
-               </Location>
-               <Location
-                  uuid = "C4AB2755-534F-48DD-8FC7-1E10C1D44948 - 50e726725776305e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in e_commerce.APIService.makePostRequest(phone: Swift.String, password: Swift.String, completion: (Swift.Optional&lt;e_commerce.LoginData&gt;, Swift.Optional&lt;e_commerce.LoginError&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "e-commerce"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Networking/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "2756">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

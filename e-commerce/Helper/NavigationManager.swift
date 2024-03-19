@@ -12,6 +12,7 @@ class NavigationManager{
     enum Screen {
         case onboarding
         case mainApp
+        case adminTabbar
     }
     // MARK: - For Push Screen
     enum PushScreens {
@@ -152,6 +153,8 @@ class NavigationManager{
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewController")
         case .mainApp:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController")
+        case .adminTabbar:
+            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: AdminTabBarController.identifier)
         }
         if let sceneDelegate = incontroller.view.window?.windowScene?.delegate as? SceneDelegate,let window = sceneDelegate.window{
             window.rootViewController = viewController

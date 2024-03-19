@@ -3,7 +3,6 @@
 //  e-commerce
 //
 //  Created by KhaleD HuSsien on 25/01/2024.
-//
 
 import UIKit
 class CartViewController: UIViewController {
@@ -14,18 +13,19 @@ class CartViewController: UIViewController {
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var cartTableView: UITableView!
     @IBOutlet weak var priceCartView: UIView!
-    var showCart: Bool = false
+    var isUserLogin: Bool = false
+    let navManager = NavigationManager()
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUp()
+        setUpDesign()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         /// TEST
         testForPopUpView()
-        if showCart{
-            // show cart view for user
+        if isUserLogin{
+            // show the cart view for user and dismiss the popup View
         }else{
             // show pop up view with phone number:)
             showLoginPopUpView()
@@ -33,23 +33,7 @@ class CartViewController: UIViewController {
     }
     // MARK: - Functions
     func getAdminTabbar(){
-        /// First Way
-//        let adminTabbar = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AdminTabBarController")as! AdminTabBarController
-//        // Create a UIWindow instance and set its root view controller
-//        adminTabbar.modalPresentationStyle = .fullScreen
-//        adminTabbar.modalTransitionStyle = .flipHorizontal
-//        self.present(adminTabbar, animated: true)
-        
-        /// Second Way
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let window = windowScene.windows.first {
-            // Now you have access to the window
-            let adminRootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AdminTabBarController")as! AdminTabBarController
-            adminRootVC.view.layoutIfNeeded()
-            adminRootVC.modalTransitionStyle = .flipHorizontal
-            window.rootViewController = adminRootVC
-            window.makeKeyAndVisible()
-        }
+        navManager.show(screen: .adminTabbar, incontroller: self)
     }
     func showLoginPopUpView(){
         print("show pop up view with phone number:)")
@@ -71,9 +55,9 @@ class CartViewController: UIViewController {
     }
     func testForPopUpView(){
         self.cartTableView.isHidden = true
-        self.priceCartView.isHidden = true
+//        self.priceCartView.isHidden = true
     }
-    private func setUp(){
+    private func setUpDesign(){
         cartTableView.delegate = self
         cartTableView.dataSource = self
         cartTableView.register(CartTableViewCell.uiNib(), forCellReuseIdentifier: CartTableViewCell.identifier)
@@ -102,6 +86,9 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource{
 // MARK: - POPUPVCDelegate
 extension CartViewController: POPUPVCDelegate{
     func parseData() {
-        getAdminTabbar()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: .init(block: { [weak self] in
+            self?.getAdminTabbar()
+        }))
+        
     }
 }

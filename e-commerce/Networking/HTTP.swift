@@ -18,6 +18,8 @@ enum HTTP {
     enum Headers {
         enum Key: String {
             case contentType = "content-type"
+            case accept = "Accept"
+            case Authorization = "Authorization"
         }
         enum Value: String{
             case applicationJson = "application/json"

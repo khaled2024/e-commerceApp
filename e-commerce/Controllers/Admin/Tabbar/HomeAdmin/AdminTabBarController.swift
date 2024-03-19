@@ -9,13 +9,10 @@ import UIKit
 
 class AdminTabBarController: UITabBarController {
 
+    static let identifier = String(describing: AdminTabBarController.self)
     @IBOutlet weak var adminTabbar: UITabBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         adminTabbar.setUpLayers()
-        
     }
-    
-    
-
 }

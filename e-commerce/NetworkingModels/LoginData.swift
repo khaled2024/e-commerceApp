@@ -17,7 +17,8 @@ struct LoginData: Codable {
 // MARK: - LoginModel
 struct LoginModel: Codable {
     let id: Int
-    let name, phone, address, type: String
+    let address: String?
+    let name, phone, type: String
     let status, createdAt, updatedAt, token: String
     
     enum CodingKeys: String, CodingKey {

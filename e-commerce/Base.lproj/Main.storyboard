@@ -712,8 +712,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$220.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vme-Sq-i2L">
-                                                <rect key="frame" x="151.33333333333331" y="4.6666666666666288" width="64.333333333333314" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vme-Sq-i2L">
+                                                <rect key="frame" x="194.66666666666663" y="4.6666666666666288" width="21" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -737,8 +737,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzf-oE-SHs">
-                                                <rect key="frame" x="163.66666666666669" y="4.6666666666666288" width="52" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzf-oE-SHs">
+                                                <rect key="frame" x="194.66666666666663" y="4.6666666666666288" width="21" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -769,8 +769,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$232.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebm-t1-79d">
-                                                <rect key="frame" x="150.66666666666669" y="4.6666666666666288" width="65" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebm-t1-79d">
+                                                <rect key="frame" x="194.66666666666663" y="4.6666666666666288" width="21" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -3847,7 +3847,7 @@
                                                         <rect key="frame" x="0.0" y="501" width="179" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ufJ-I5-3pZ">
-                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="TCE-2g-TAW"/>
@@ -3880,7 +3880,7 @@
                                                         <rect key="frame" x="189" y="501" width="184" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4cC-rg-x0A">
-                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="K26-sO-TfN"/>
@@ -4493,7 +4493,7 @@
                                                         <rect key="frame" x="0.0" y="595" width="179" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TRo-Eg-6Uu">
-                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="41a-Mu-u89"/>
@@ -4526,7 +4526,7 @@
                                                         <rect key="frame" x="189" y="595" width="184" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-Dr-oaU">
-                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="O1s-XF-W6S"/>
@@ -9378,7 +9378,7 @@
                                                         <rect key="frame" x="0.0" y="595" width="179" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hua-FX-yJy">
-                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="306-Bw-8nl"/>
@@ -9411,7 +9411,7 @@
                                                         <rect key="frame" x="189" y="595" width="184" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ogf-CK-t2v">
-                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="avd-p8-eMy"/>
@@ -9915,8 +9915,8 @@
                                                     <constraint firstAttribute="width" constant="25" id="TC4-fh-uXu"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHi-2O-HwL">
-                                                <rect key="frame" x="48" y="13.333333333333313" width="265.66666666666669" height="23.333333333333329"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHi-2O-HwL">
+                                                <rect key="frame" x="48" y="13" width="265.66666666666669" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -9986,8 +9986,10 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="EdR-oD-1Vu" id="m8w-sj-hZg"/>
-                        <outlet property="loginBtn" destination="x9M-0G-p8S" id="wKF-da-0iV"/>
+                        <outlet property="loginBtn" destination="x9M-0G-p8S" id="dGg-Hx-g6u"/>
+                        <outlet property="passwordLabel" destination="iW0-Tq-zjc" id="wKZ-PU-Rcx"/>
                         <outlet property="passwordTF" destination="eHi-2O-HwL" id="UMY-7S-ZEE"/>
+                        <outlet property="passwordView" destination="dAk-tG-o6X" id="z4D-6U-lDm"/>
                         <outlet property="phoneNumTF" destination="J4N-6x-Qwk" id="ntC-R4-v4V"/>
                     </connections>
                 </viewController>
