@@ -7,5 +7,6 @@ target 'e-commerce' do
 
   # Pods for e-commerce
 #pod 'lottie-ios'
+pod 'Alamofire'
 
 end

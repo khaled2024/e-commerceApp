@@ -11,7 +11,7 @@ struct LoginData: Codable {
     let status: String
     let error: Int
     let message: String
-    let data: LoginModel
+    let data: LoginModel?
 }
 
 // MARK: - LoginModel
@@ -22,12 +22,16 @@ struct LoginModel: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id, name, phone, address, type, status
-        case createdAt
-        case updatedAt
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
         case token
     }
 }
-
+struct LoginError: Codable{
+    let status: String
+    let error: Int
+    let message: String
+}
 
 
 struct loginBody: Codable{

@@ -6,8 +6,8 @@
 //
 
 import UIKit
-
 class CartViewController: UIViewController {
+    // MARK: - Outlets
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var totalItemLabel: UILabel!
     @IBOutlet weak var delivaryLabel: UILabel!
@@ -15,34 +15,50 @@ class CartViewController: UIViewController {
     @IBOutlet weak var cartTableView: UITableView!
     @IBOutlet weak var priceCartView: UIView!
     var showCart: Bool = false
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpDesign()
-        cartTableView.delegate = self
-        cartTableView.dataSource = self
-        cartTableView.register(CartTableViewCell.uiNib(), forCellReuseIdentifier: CartTableViewCell.identifier)
-        cartTableView.showsVerticalScrollIndicator = false
-        cartTableView.separatorStyle = .none
-        login()
+        setUp()
     }
-   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         /// TEST
         testForPopUpView()
-        
         if showCart{
             // show cart view for user
         }else{
             // show pop up view with phone number:)
-            print("show pop up view with phone number:)")
-            let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: POPUPVC.identifier)as! POPUPVC
-            popUpVC.modalTransitionStyle = .crossDissolve
-            self.present(popUpVC, animated: true)
+            showLoginPopUpView()
         }
     }
     // MARK: - Functions
-    func login(){
+    func getAdminTabbar(){
+        /// First Way
+//        let adminTabbar = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AdminTabBarController")as! AdminTabBarController
+//        // Create a UIWindow instance and set its root view controller
+//        adminTabbar.modalPresentationStyle = .fullScreen
+//        adminTabbar.modalTransitionStyle = .flipHorizontal
+//        self.present(adminTabbar, animated: true)
+        
+        /// Second Way
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let window = windowScene.windows.first {
+            // Now you have access to the window
+            let adminRootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AdminTabBarController")as! AdminTabBarController
+            adminRootVC.view.layoutIfNeeded()
+            adminRootVC.modalTransitionStyle = .flipHorizontal
+            window.rootViewController = adminRootVC
+            window.makeKeyAndVisible()
+        }
+    }
+    func showLoginPopUpView(){
+        print("show pop up view with phone number:)")
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: POPUPVC.identifier)as! POPUPVC
+        popUpVC.delegate = self
+        popUpVC.modalTransitionStyle = .crossDissolve
+        self.present(popUpVC, animated: true)
+    }
+    func loginWithCodable(){
         let loginBody = loginBody(phone: "01147507444", password: "123456789")
         guard let request = Endpoint.login(login: loginBody).request else {return}
         APIService.shared.makeRequest(with: request, respModel: LoginData.self) { result, error in
@@ -53,16 +69,20 @@ class CartViewController: UIViewController {
             print("DEBUG PRINT: \(result)")
         }
     }
-    
     func testForPopUpView(){
         self.cartTableView.isHidden = true
         self.priceCartView.isHidden = true
     }
-    func setUpDesign(){
+    private func setUp(){
+        cartTableView.delegate = self
+        cartTableView.dataSource = self
+        cartTableView.register(CartTableViewCell.uiNib(), forCellReuseIdentifier: CartTableViewCell.identifier)
+        cartTableView.showsVerticalScrollIndicator = false
+        cartTableView.separatorStyle = .none
         confirmBtn.layer.cornerRadius = 15
     }
 }
-// extensions
+// MARK: -  extensions
 extension CartViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -77,5 +97,11 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+}
+// MARK: - POPUPVCDelegate
+extension CartViewController: POPUPVCDelegate{
+    func parseData() {
+        getAdminTabbar()
     }
 }

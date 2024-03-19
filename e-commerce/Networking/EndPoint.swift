@@ -17,7 +17,6 @@ enum Endpoint {
         request.addValues(for: self)
         return request
     }
-    
     private var url: URL? {
         var components = URLComponents()
         components.scheme = Constants.scheme

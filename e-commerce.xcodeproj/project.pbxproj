@@ -80,6 +80,7 @@
 		EA9CCB522B8A4FEA00733C4F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9CCB4F2B8A4FE900733C4F /* Models.swift */; };
 		EA9CCB532B8A4FEA00733C4F /* CostumerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9CCB502B8A4FE900733C4F /* CostumerModel.swift */; };
 		EA9CCB542B8A4FEA00733C4F /* MarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9CCB512B8A4FE900733C4F /* MarketModel.swift */; };
+		EA9D14F72BA8FB180094F414 /* extension+UiAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D14F62BA8FB180094F414 /* extension+UiAlert.swift */; };
 		EA9E8E842B6180A300A250B0 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E8E832B6180A300A250B0 /* CategoryTableViewCell.swift */; };
 		EA9E8E882B6182B600A250B0 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E8E862B6182B600A250B0 /* CategoryCollectionViewCell.swift */; };
 		EA9E8E892B6182B600A250B0 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E8E872B6182B600A250B0 /* CategoryCollectionViewCell.xib */; };
@@ -201,6 +202,7 @@
 		EA9CCB4F2B8A4FE900733C4F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		EA9CCB502B8A4FE900733C4F /* CostumerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumerModel.swift; sourceTree = "<group>"; };
 		EA9CCB512B8A4FE900733C4F /* MarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketModel.swift; sourceTree = "<group>"; };
+		EA9D14F62BA8FB180094F414 /* extension+UiAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+UiAlert.swift"; sourceTree = "<group>"; };
 		EA9E8E832B6180A300A250B0 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		EA9E8E862B6182B600A250B0 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA9E8E872B6182B600A250B0 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -692,6 +694,7 @@
 				EA8A7A932B8B3C5400CCC677 /* Extension+UitextField.swift */,
 				EA8A7A952B8B3C5400CCC677 /* Extension+UiView.swift */,
 				EAD2A3432B9C41E100FF25B2 /* extension+UiButton.swift */,
+				EA9D14F62BA8FB180094F414 /* extension+UiAlert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -895,6 +898,7 @@
 				EA78A5E32B60559D00790B12 /* Sources */,
 				EA78A5E42B60559D00790B12 /* Frameworks */,
 				EA78A5E52B60559D00790B12 /* Resources */,
+				8E443F4A3F9CD846CD832AFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -990,6 +994,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8E443F4A3F9CD846CD832AFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-e-commerce/Pods-e-commerce-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-e-commerce/Pods-e-commerce-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-e-commerce/Pods-e-commerce-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1060,6 +1081,7 @@
 				EA78A6002B605A5A00790B12 /* BannerCollectionViewCell.swift in Sources */,
 				EA6AE0942B62694400AE45DB /* bestProductsCollectionViewCell.swift in Sources */,
 				EAE841872B890D36006E2742 /* MarketCollectionViewCell.swift in Sources */,
+				EA9D14F72BA8FB180094F414 /* extension+UiAlert.swift in Sources */,
 				EA9CCB3C2B89EE7700733C4F /* extension+UiViewContoller.swift in Sources */,
 				EA2BEF682B9AFAF800ECB58F /* MarketOrderTableViewCell.swift in Sources */,
 				EA9CCB542B8A4FEA00733C4F /* MarketModel.swift in Sources */,
@@ -1153,7 +1175,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1216,7 +1238,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1250,6 +1272,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1278,6 +1301,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
