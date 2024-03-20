@@ -19,7 +19,8 @@ struct LoginModel: Codable {
     let id: Int
     let address: String?
     let name, phone, type: String
-    let status, createdAt, updatedAt, token: String
+    let status, createdAt, updatedAt : String
+    let token: String?
     
     enum CodingKeys: String, CodingKey {
         case id, name, phone, address, type, status

@@ -20,8 +20,8 @@ class APIService {
     static let shared = APIService()
     private init(){}
     
-    // MARK: - Functions :-
-    // Login User
+    // MARK: - User :-
+    /// Login User
     func userLogin(phone: String,completion: @escaping (LoginData?,LoginError?,Error?)-> Void) {
         let parameters: [String: Any] = [
             "phone": phone
@@ -61,7 +61,50 @@ class APIService {
             }
         }
     }
-    // Login Admin
+    /// Register User
+    func userRegister(phone: String,name: String? = "user",completion: @escaping (LoginData?,LoginError?,Error?)-> Void) {
+        guard let name = name else{return}
+        let parameters: [String: Any] = [
+            "name" : name,
+            "phone": phone
+        ]
+        AF.request("https://" + Constants.baseURL + "/api/register",
+                   method: .post,
+                   parameters: parameters,
+                   encoding: JSONEncoding.default,
+                   headers: nil)
+        .validate(statusCode: 200..<300)
+        .responseJSON { (response) in
+            switch response.result {
+                // success result Handel (loginData & loginError)
+            case .success(_):
+                guard let data = response.data else{return}
+                do {
+                    let loginData = try JSONDecoder().decode(LoginData.self, from: data)
+                    completion(loginData, nil, nil)
+                } catch let error{
+                    print(error)
+                    completion(nil, nil, error)
+                }
+                // failure error when get > 300 like url
+            case .failure(let error):
+                let status = response.response?.statusCode  ?? 0
+                if status > 300{
+                    do {
+                        guard let data = response.data else{return}
+                        let loginError = try JSONDecoder().decode(LoginError.self, from: data)
+                        completion(nil, loginError, nil)
+                    } catch let error{
+                        print(error)
+                    }
+                }else{
+                    completion(nil,nil,error)
+                }
+            }
+        }
+    }
+    // MARK: - Admin
+    /// Login Admin
     func adminLogin(phone: String,password: String,completion: @escaping (LoginData?,LoginError?,Error?)-> Void) {
         let parameters: [String: Any] = [
             "phone" : phone,
@@ -99,6 +142,7 @@ class APIService {
         }
     }
     // Genaric
+    /// fetch
     func fetchDataWithToken<T: Decodable>(url: String,token: String,completion: @escaping (T?,Error?)-> Void){
         let headers: HTTPHeaders = [
             HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
@@ -121,6 +165,8 @@ class APIService {
             }
         }
     }
+    /// post
+    
     
     // MARK: - Func for Codable
     func makeRequest<T: Codable>(with request: URLRequest,respModel: T.Type,completion: @escaping (T?, APIError?) -> Void) {

@@ -52,11 +52,10 @@ class POPUPVC: UIViewController{
                 else if let  loginError = loginError{
                     print("loginError: \(loginError.message)")
                 }
-                // Getting Success Data :-
                 else{
                     if let loginData = loginData{
+                        // Getting Success Data :-
                         if loginData.status == "success"{
-                            print(loginData)
                             // if the type is Admin Call The Delegate Back and present Admin Tabbar (he is Admin)
                             if loginData.data?.type == "admin"{
                                 print("TYPE : Admin")
@@ -66,7 +65,11 @@ class POPUPVC: UIViewController{
                             // (he is User)
                             else if loginData.data?.type == "user"{
                                 guard let userData = loginData.data else{return}
+                                guard let token = userData.token else{return}
                                 self?.storageManager.saveUserLogging(true)
+                                guard let tokenData = token.data(using: .utf8)else{return}
+                                Keychain.save(key: Constants.KeyChain.token.rawValue, data: tokenData)
+                                print(tokenData)
                                 print("TYPE : User")
                                 print(userData)
                                 print("User logging is 'TRUE'")
@@ -74,17 +77,60 @@ class POPUPVC: UIViewController{
                                 self?.delegate?.showToastMessage(message: "Congratulations🥳")
                             }
                         }
+                        // // Getting failed Data :-
                         else{
                             print("loginData ERROR: \(loginData.message)")
                             // error with the password when Admin enter the phone the PasswordTF will appear
-                            self?.showToast(message: "\(loginData.message) ❌", font: .systemFont(ofSize: 15))
+                            self?.showToast(message: "\(loginData.message) ❌", font: .systemFont(ofSize: 16))
                             if loginData.error == 1{
-                                UIView.animate(withDuration: 2.0, delay: 0.5,options: .transitionCurlDown) {
+                                // here the password field is required
+                                UIView.animate(withDuration: 1.0, delay: 0.5,options: .transitionCurlDown) {
                                     self?.passwordLabel.isHidden = false
                                     self?.passwordView.isHidden = false
                                 }
+                            }else if loginData.error == 400{
+                                // first check phoneTF
+                                // User Not Registered
+                                guard let phone = self?.phoneNumTF.text,phone.count == 11 else{
+                                    print("phone must be 11 number")
+                                    return
+                                }
+                                print("error 400")
+                                self?.checkUserRegisterAndLogin()
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    func checkUserRegisterAndLogin(){
+        // register and login then store the user logging in boolean func
+        guard let phone = phoneNumTF.text,phone.count == 11 else{return}
+        APIService.shared.userRegister(phone: phone) { [weak self] registerData, registerError, error in
+            if let error = error{
+                self?.showToast(message: error.localizedDescription, font: .systemFont(ofSize: 16))
+                print(error)
+            }else if let registerError = registerError{
+                self?.showToast(message: registerError.message, font: .systemFont(ofSize: 16))
+            }else{
+                guard let registerData = registerData else{return}
+                guard let userData = registerData.data else{return}
+                // here login again after registeration
+                APIService.shared.userLogin(phone: phone) {[weak self] loginData, loginError, error in
+                    if let error = error{
+                        self?.showToast(message: error.localizedDescription, font: .systemFont(ofSize: 16))
+                        print(error)
+                    }else if let registerError = registerError{
+                        self?.showToast(message: registerError.message, font: .systemFont(ofSize: 16))
+                    }else{
+                        guard let loginData = loginData else{return}
+                        guard let userData = loginData.data else{return}
+                        print(userData)
+                        print("User logging is 'TRUE'")
+                        self?.dismiss(animated: true)
+                        self?.delegate?.showToastMessage(message: "Congratulations🥳")
+                        self?.storageManager.saveUserLogging(true)
                     }
                 }
             }

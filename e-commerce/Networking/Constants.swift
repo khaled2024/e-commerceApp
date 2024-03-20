@@ -12,4 +12,7 @@ struct Constants {
     static let baseURL = "fastorder1.com"
     static let port: Int? = nil
     static let TokenBearer = "Bearer"
+    enum KeyChain: String {
+        case token = "token"
+    }
 }

@@ -56,3 +56,23 @@ import Foundation
 //        orderVC.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 3)
 //
 //        viewControllers = [homeVC,cartVC,favoriteVC,orderVC]
+
+
+// Store data in Keychain
+//func saveUserDataToKeychain(username: String, password: String) {
+//    KeychainWrapper.standard.set(username, forKey: "usernameKey")
+//    KeychainWrapper.standard.set(password, forKey: "passwordKey")
+//}
+//
+//// Retrieve data from Keychain
+//func getUserDataFromKeychain() -> (String?, String?) {
+//    let username = KeychainWrapper.standard.string(forKey: "usernameKey")
+//    let password = KeychainWrapper.standard.string(forKey: "passwordKey")
+//    return (username, password)
+//}
+//
+//// Delete data from Keychain
+//func deleteUserDataFromKeychain() {
+//    KeychainWrapper.standard.removeObject(forKey: "usernameKey")
+//    KeychainWrapper.standard.removeObject(forKey: "passwordKey")
+//}

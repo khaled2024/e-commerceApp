@@ -46,6 +46,7 @@
 		EA5F4F512B9917CC00475EF3 /* MarketAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4F502B9917CC00475EF3 /* MarketAnnouncementViewController.swift */; };
 		EA6745792B9F44D300179ADB /* DriverProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6745782B9F44D300179ADB /* DriverProfileViewController.swift */; };
 		EA67457B2B9F44EA00179ADB /* DriverSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67457A2B9F44EA00179ADB /* DriverSettingViewController.swift */; };
+		EA6AAD842BAB35420054B464 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AAD832BAB35420054B464 /* Keychain.swift */; };
 		EA6AE0942B62694400AE45DB /* bestProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */; };
 		EA6AE0952B62694400AE45DB /* bestProductsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */; };
 		EA6AE09B2B62AEE100AE45DB /* ResturantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */; };
@@ -167,6 +168,7 @@
 		EA5F4F502B9917CC00475EF3 /* MarketAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketAnnouncementViewController.swift; sourceTree = "<group>"; };
 		EA6745782B9F44D300179ADB /* DriverProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverProfileViewController.swift; sourceTree = "<group>"; };
 		EA67457A2B9F44EA00179ADB /* DriverSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverSettingViewController.swift; sourceTree = "<group>"; };
+		EA6AAD832BAB35420054B464 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		EA6AE0922B62694400AE45DB /* bestProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bestProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA6AE0932B62694400AE45DB /* bestProductsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bestProductsCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetailViewController.swift; sourceTree = "<group>"; };
@@ -890,10 +892,11 @@
 		EAF6440A2B89446F006BDADE /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				EAF24E512BA883F400297CE5 /* PopupView */,
-				EA8A7A9E2B8B5A8B00CCC677 /* TopNavView */,
 				EAF6440B2B894481006BDADE /* NavigationManager.swift */,
 				EA9CCB392B89DC7300733C4F /* StorageManager.swift */,
+				EAF24E512BA883F400297CE5 /* PopupView */,
+				EA8A7A9E2B8B5A8B00CCC677 /* TopNavView */,
+				EA6AAD832BAB35420054B464 /* Keychain.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1103,6 +1106,7 @@
 				EAF24E5B2BA8D1BD00297CE5 /* Constants.swift in Sources */,
 				EAE841752B88991E006E2742 /* MarketViewController.swift in Sources */,
 				EA6AE09B2B62AEE100AE45DB /* ResturantDetailViewController.swift in Sources */,
+				EA6AAD842BAB35420054B464 /* Keychain.swift in Sources */,
 				EACFEE322B65888D008AE44C /* TrackViewController.swift in Sources */,
 				EA02C9EE2B9710F400C039F5 /* AddDriverViewController.swift in Sources */,
 				EA9CCB402B8A011900733C4F /* ChatRoomViewController.swift in Sources */,

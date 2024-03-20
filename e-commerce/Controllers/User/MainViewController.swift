@@ -29,8 +29,31 @@ class MainViewController: UIViewController {
         registerCells()
         startTimer()
         bannerPageController.numberOfPages = bannerImages.count
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getUserProfile()
     }
     // MARK: - Functions
+    
+    
+    
+    // MARK: - API Functions
+    func getUserProfile(){
+        guard let loadedToken = loadToken() else{return}
+        APIService.shared.fetchDataWithToken(url: "https://fastorder1.com/api/profile", token: loadedToken) { (profileData: LoginData?, error) in
+            guard let profileData = profileData,let userData = profileData.data,let userToken = userData.token else{return}
+            print(profileData)
+        }
+    }
+    func loadToken()-> String?{
+        if let loadedToken = Keychain.load(key: Constants.KeyChain.token.rawValue),let loadedTokenString = String(data: loadedToken, encoding: .utf8){
+            return loadedTokenString
+        }
+        return nil
+    }
+    // MARK: - Design Functions
     func setUpDelegate(){
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self

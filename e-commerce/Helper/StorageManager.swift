@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Security
 
 class StorageManager {
     let defaults = UserDefaults.standard
@@ -14,7 +15,7 @@ class StorageManager {
         case isUserLogin = "UserLogin"
         case isAdminLogin = "AdminLogin"
     }
-    // for
+    // MARK: - Loading & onboarding screen
     func isOnboardingSeen()-> Bool{
         UserDefaults.standard.bool(forKey: Key.onboardingSeen.rawValue)
     }
@@ -25,7 +26,7 @@ class StorageManager {
         UserDefaults.standard.set(false, forKey: Key.onboardingSeen.rawValue)
     }
     
-    // For User Login
+    // MARK: -  For User Login
     func saveUserLogging(_ isLogging: Bool){
         defaults.set(isLogging, forKey: Key.isUserLogin.rawValue)
     }
@@ -35,7 +36,7 @@ class StorageManager {
     func resetUserLogging(){
         defaults.set(false, forKey: Key.isUserLogin.rawValue)
     }
-    // For Admin Login
+    // MARK: -  For Admin Login
     func saveAdminLogging(_ isLogging: Bool){
         defaults.set(isLogging, forKey: Key.isAdminLogin.rawValue)
     }
@@ -45,4 +46,6 @@ class StorageManager {
     func resetAdminLogging(){
         defaults.set(false, forKey: Key.isAdminLogin.rawValue)
     }
+
+    
 }
