@@ -13,6 +13,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var cartTableView: UITableView!
     @IBOutlet weak var priceCartView: UIView!
+    // MARK: - Vars
     let navManager = NavigationManager()
     let storageManager = StorageManager()
     // MARK: - LifeCycle
@@ -27,6 +28,7 @@ class CartViewController: UIViewController {
         if storageManager.isUserLogging(){
             // show the cart view for user and dismiss the popup View
             print("USER is Logging 🥳")
+            self.showToast(message: "USER is Logging 🥳", font: .systemFont(ofSize: 16))
         }else{
             // show pop up view with phone number:)
             showLoginPopUpView()
@@ -38,25 +40,14 @@ class CartViewController: UIViewController {
     }
     func showLoginPopUpView(){
         print("show pop up view with phone number:)")
-        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: POPUPVC.identifier)as! POPUPVC
-        popUpVC.delegate = self
+        let popUpVC = navManager.instantiate(screen: .loginPopUp)as! POPUPVC
         popUpVC.modalTransitionStyle = .crossDissolve
+        popUpVC.delegate = self
         self.present(popUpVC, animated: true)
-    }
-    func loginWithCodable(){
-        let loginBody = loginBody(phone: "01147507444", password: "123456789")
-        guard let request = Endpoint.login(login: loginBody).request else {return}
-        APIService.shared.makeRequest(with: request, respModel: LoginData.self) { result, error in
-            if let error = error{
-                print("DEBUG PRINT: \(error)")
-            }
-            guard let result = result else{return}
-            print("DEBUG PRINT: \(result)")
-        }
     }
     func testForPopUpView(){
         self.cartTableView.isHidden = true
-//        self.priceCartView.isHidden = true
+//      self.priceCartView.isHidden = true
     }
     private func setUpDesign(){
         cartTableView.delegate = self
@@ -89,13 +80,9 @@ extension CartViewController: POPUPVCDelegate{
     func showToastMessage(message: String) {
         self.showToast(message: message, font: .systemFont(ofSize: 15))
     }
-    
-    
-    
     func showAdminTabbar() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: .init(block: { [weak self] in
             self?.getAdminTabbar()
         }))
-        
     }
 }

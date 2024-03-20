@@ -9,6 +9,7 @@ import UIKit
 
 class MainTabBarController: UITabBarController{
     
+    static let identifier = String(describing: MainViewController.self)
     @IBOutlet weak var userMainTabbar: UITabBar!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,17 +33,3 @@ extension MainTabBarController: UITabBarControllerDelegate{
         }
     }
 }
-
-// comments
-
-//        let homeVC = MainViewController()
-//        let cartVC = CartViewController()
-//        let favoriteVC = FavouriteViewController()
-//        let orderVC = OrderViewController()
-//
-//        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
-//        cartVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
-//        favoriteVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 2)
-//        orderVC.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 3)
-//
-//        viewControllers = [homeVC,cartVC,favoriteVC,orderVC]

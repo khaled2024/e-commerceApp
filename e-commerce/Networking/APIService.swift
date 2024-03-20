@@ -99,11 +99,10 @@ class APIService {
         }
     }
     // Genaric
-    func fetchData<T: Decodable>(url: String,completion: @escaping (T?,Error?)-> Void){
+    func fetchDataWithToken<T: Decodable>(url: String,token: String,completion: @escaping (T?,Error?)-> Void){
         let headers: HTTPHeaders = [
             HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
-            "Authorization":"\(Constants.TokenBearer) eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2Zhc3RvcmRlcjEuY29tL2FwaS9sb2dpbiIsImlhdCI6MTcxMDc3Mjk5NCwiZXhwIjoxNzQyMzA4OTk0LCJuYmYiOjE3MTA3NzI5OTQsImp0aSI6IlMwVnY3OUZJeFhhWm5IQ2oiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.1JVjHQ-6JQFCUv833eE7FnTK6or9T1IHrzkOWFaOtJs",
-            
+            HTTP.Headers.Key.authorization.rawValue:"\(Constants.TokenBearer)\(token)"
         ]
         AF.request(url,method: .get,encoding: JSONEncoding.default,headers: headers).responseJSON { (response) in
             

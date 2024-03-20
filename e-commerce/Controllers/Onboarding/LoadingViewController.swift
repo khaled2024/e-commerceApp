@@ -25,7 +25,12 @@ class LoadingViewController: UIViewController {
     private func showInitialScreen(){
         if isOnboardingSeen{
             // show main app
-            navManager.show(screen: .mainApp, incontroller: self)
+            if storageManager.isAdminLogging(){
+                // Admin Tabbar
+                navManager.show(screen: .adminTabbar, incontroller: self)
+            }else{
+                navManager.show(screen: .mainApp, incontroller: self)
+            }
         }else{
             // show onboarding
             navManager.show(screen: .onboarding, incontroller: self)

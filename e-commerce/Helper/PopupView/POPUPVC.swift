@@ -60,12 +60,13 @@ class POPUPVC: UIViewController{
                             // if the type is Admin Call The Delegate Back and present Admin Tabbar (he is Admin)
                             if loginData.data?.type == "admin"{
                                 print("TYPE : Admin")
+                                self?.storageManager.saveAdminLogging(true)
                                 self?.delegate?.showAdminTabbar()
                             }
                             // (he is User)
                             else if loginData.data?.type == "user"{
                                 guard let userData = loginData.data else{return}
-                                self?.storageManager.saveLogging(true)
+                                self?.storageManager.saveUserLogging(true)
                                 print("TYPE : User")
                                 print(userData)
                                 print("User logging is 'TRUE'")
@@ -76,16 +77,12 @@ class POPUPVC: UIViewController{
                         else{
                             print("loginData ERROR: \(loginData.message)")
                             // error with the password when Admin enter the phone the PasswordTF will appear
-                            self?.showToast(message: "\(loginData.message)❌", font: .systemFont(ofSize: 15))
+                            self?.showToast(message: "\(loginData.message) ❌", font: .systemFont(ofSize: 15))
                             if loginData.error == 1{
-                                // show the alert
-                                let alert = UIAlertController.showAlert(title: "ERROR❌", message: loginData.message)
-                                self?.present(alert, animated: true, completion: {
-                                    UIView.animate(withDuration: 2.0, delay: 0.5,options: .transitionCurlDown) {
-                                        self?.passwordLabel.isHidden = false
-                                        self?.passwordView.isHidden = false
-                                    }
-                                })
+                                UIView.animate(withDuration: 2.0, delay: 0.5,options: .transitionCurlDown) {
+                                    self?.passwordLabel.isHidden = false
+                                    self?.passwordView.isHidden = false
+                                }
                             }
                         }
                     }
@@ -110,6 +107,7 @@ class POPUPVC: UIViewController{
                         if type == "admin"{
                             print("admin Data \(adminData)")
                             self?.getAdminTabbar()
+                            self?.storageManager.saveAdminLogging(true)
                         }else{
                             self?.present(UIAlertController.showAlert(title: "ERROR❌", message: "Please enter valid admin phone number"), animated: true)
                             print("DEBUG PRINT: Here when the enterer enter password for user phone number")
@@ -149,6 +147,7 @@ class POPUPVC: UIViewController{
             self?.validateTextFields()
         }
     }
+    // for closing the PopUpView
     @IBAction func closeBtnTapped(_ sender: UIButton) {
         self.dismiss(animated: true)
     }

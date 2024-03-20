@@ -12,7 +12,9 @@ class StorageManager {
     enum Key: String{
         case onboardingSeen
         case isUserLogin = "UserLogin"
+        case isAdminLogin = "AdminLogin"
     }
+    // for
     func isOnboardingSeen()-> Bool{
         UserDefaults.standard.bool(forKey: Key.onboardingSeen.rawValue)
     }
@@ -22,14 +24,25 @@ class StorageManager {
     func resetOnboardingSeen(){
         UserDefaults.standard.set(false, forKey: Key.onboardingSeen.rawValue)
     }
+    
     // For User Login
-    func saveLogging(_ isLogging: Bool){
+    func saveUserLogging(_ isLogging: Bool){
         defaults.set(isLogging, forKey: Key.isUserLogin.rawValue)
     }
     func isUserLogging()-> Bool{
         defaults.bool(forKey: Key.isUserLogin.rawValue)
     }
-    func resetLogging(){
+    func resetUserLogging(){
         defaults.set(false, forKey: Key.isUserLogin.rawValue)
+    }
+    // For Admin Login
+    func saveAdminLogging(_ isLogging: Bool){
+        defaults.set(isLogging, forKey: Key.isAdminLogin.rawValue)
+    }
+    func isAdminLogging()-> Bool{
+        defaults.bool(forKey: Key.isAdminLogin.rawValue)
+    }
+    func resetAdminLogging(){
+        defaults.set(false, forKey: Key.isAdminLogin.rawValue)
     }
 }

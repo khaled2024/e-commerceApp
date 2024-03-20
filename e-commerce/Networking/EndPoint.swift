@@ -8,7 +8,6 @@
 import Foundation
 enum Endpoint {
     case login(url: String = "/api/login",login: loginBody)
-    
     var request: URLRequest? {
         guard let url = self.url else { return nil }
         var request = URLRequest(url: url)

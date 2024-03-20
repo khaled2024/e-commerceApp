@@ -8,12 +8,20 @@
 import UIKit
 
 class OrderViewController: UIViewController {
-
+    
     @IBOutlet weak var oderTableView: UITableView!
+    let storageManager = StorageManager()
+    let navManager = NavigationManager()
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkUserLogging()
+    }
+    // MARK: - Functions
     func setUpTableView(){
         oderTableView.delegate = self
         oderTableView.dataSource = self
@@ -22,8 +30,20 @@ class OrderViewController: UIViewController {
         oderTableView.showsVerticalScrollIndicator = false
         oderTableView.separatorStyle = .none
     }
+    func showLoginPopUp(){
+        let popUpVC = navManager.instantiate(screen: .loginPopUp)as! POPUPVC
+        popUpVC.modalTransitionStyle = .crossDissolve
+        self.present(popUpVC, animated: true)
+    }
+    func checkUserLogging(){
+        if storageManager.isUserLogging(){
+            self.showToast(message: "USER is Logging 🥳", font: .systemFont(ofSize: 16))
+        }else{
+            showLoginPopUp()
+        }
+    }
 }
-// extensions
+// MARK: - extensions
 extension OrderViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10

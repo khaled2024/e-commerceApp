@@ -13,6 +13,7 @@ class NavigationManager{
         case onboarding
         case mainApp
         case adminTabbar
+        case userTabbar
     }
     // MARK: - For Push Screen
     enum PushScreens {
@@ -43,6 +44,8 @@ class NavigationManager{
         case driverProfile
     }
     enum InstantiateScreens {
+        // User Screens
+        case loginPopUp
         // admin screens
         case adminMarketVC
         case adminMarketDetail
@@ -88,6 +91,8 @@ class NavigationManager{
             viewController = storyboard.instantiateViewController(withIdentifier: DriverSettingViewController.identifier)
         case .driverProfile:
             viewController = storyboard.instantiateViewController(withIdentifier: DriverProfileViewController.identifier)
+        case .loginPopUp:
+            viewController = storyboard.instantiateViewController(withIdentifier: POPUPVC.identifier)
         }
         return viewController
     }
@@ -156,6 +161,8 @@ class NavigationManager{
         case .adminTabbar:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: AdminTabBarController.identifier)
             viewController.modalTransitionStyle = .flipHorizontal
+        case .userTabbar:
+            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: MainTabBarController.identifier)
         }
         if let sceneDelegate = incontroller.view.window?.windowScene?.delegate as? SceneDelegate,let window = sceneDelegate.window{
             window.rootViewController = viewController
