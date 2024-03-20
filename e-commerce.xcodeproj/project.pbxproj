@@ -573,10 +573,10 @@
 		EA78A5E92B60559D00790B12 /* e-commerce */ = {
 			isa = PBXGroup;
 			children = (
-				EA9D14F82BA9EAAD0094F414 /* Comments */,
-				EAF24E5C2BA8D29700297CE5 /* NetworkingModels */,
 				EA78A5EA2B60559D00790B12 /* AppDelegate.swift */,
 				EA78A5EC2B60559D00790B12 /* SceneDelegate.swift */,
+				EA9D14F82BA9EAAD0094F414 /* Comments */,
+				EAF24E5C2BA8D29700297CE5 /* NetworkingModels */,
 				EAF24E542BA88BB900297CE5 /* Networking */,
 				EABC61972B78C590002F4B67 /* Extensions */,
 				EAF6440A2B89446F006BDADE /* Helper */,

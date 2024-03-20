@@ -8,7 +8,8 @@
 import UIKit
 // MARK: - Protocol
 protocol POPUPVCDelegate: AnyObject {
-    func parseData()
+    func showAdminTabbar()
+    func showToastMessage(message: String)
 }
 class POPUPVC: UIViewController{
     // MARK: - Outlets
@@ -22,6 +23,7 @@ class POPUPVC: UIViewController{
     static let identifier = String(describing: POPUPVC.self)
     weak var delegate: POPUPVCDelegate?
     let navManager = NavigationManager()
+    let storageManager = StorageManager()
     // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,30 +57,36 @@ class POPUPVC: UIViewController{
                     if let loginData = loginData{
                         if loginData.status == "success"{
                             print(loginData)
-                            // if the type is Admin Call The Delegate Back and present Admin Tabbar
+                            // if the type is Admin Call The Delegate Back and present Admin Tabbar (he is Admin)
                             if loginData.data?.type == "admin"{
                                 print("TYPE : Admin")
-                                self?.delegate?.parseData()
+                                self?.delegate?.showAdminTabbar()
                             }
+                            // (he is User)
                             else if loginData.data?.type == "user"{
                                 guard let userData = loginData.data else{return}
+                                self?.storageManager.saveLogging(true)
                                 print("TYPE : User")
                                 print(userData)
+                                print("User logging is 'TRUE'")
                                 self?.dismiss(animated: true)
+                                self?.delegate?.showToastMessage(message: "Congratulations🥳")
                             }
                         }
                         else{
                             print("loginData ERROR: \(loginData.message)")
                             // error with the password when Admin enter the phone the PasswordTF will appear
+                            self?.showToast(message: "\(loginData.message)❌", font: .systemFont(ofSize: 15))
                             if loginData.error == 1{
-                                let alert = UIAlertController.showAlert(title: "ERROR❌", message: loginData.message)
                                 // show the alert
-                                self?.present(alert, animated: true, completion: nil)
-                                // create the alert
-                                self?.passwordLabel.isHidden = false
-                                self?.passwordView.isHidden = false
+                                let alert = UIAlertController.showAlert(title: "ERROR❌", message: loginData.message)
+                                self?.present(alert, animated: true, completion: {
+                                    UIView.animate(withDuration: 2.0, delay: 0.5,options: .transitionCurlDown) {
+                                        self?.passwordLabel.isHidden = false
+                                        self?.passwordView.isHidden = false
+                                    }
+                                })
                             }
-                            
                         }
                     }
                 }
@@ -98,8 +106,16 @@ class POPUPVC: UIViewController{
                     switch loginData.status {
                     case "success":
                         guard let adminData = loginData.data else{return}
-                        print("admin Data \(adminData)")
-                        self?.getAdminTabbar()
+                        let type = adminData.type
+                        if type == "admin"{
+                            print("admin Data \(adminData)")
+                            self?.getAdminTabbar()
+                        }else{
+                            self?.present(UIAlertController.showAlert(title: "ERROR❌", message: "Please enter valid admin phone number"), animated: true)
+                            print("DEBUG PRINT: Here when the enterer enter password for user phone number")
+                            // TODO: can add else if type == user here and validate and cash the user data
+#warning("to me i can add else if type == user here and validate and cash the user data :)")
+                        }
                     case "failed":
                         let errorAlert = UIAlertController.showAlert(title: "ERROR❌", message: loginData.message)
                         self?.present(errorAlert, animated: true)
@@ -114,9 +130,11 @@ class POPUPVC: UIViewController{
     func getAdminTabbar(){
         navManager.show(screen: .adminTabbar, incontroller: self)
     }
-    // MARK: - Actions
-    @IBAction func loginBtnTapped(_ sender: UIButton) {
-        if passwordView.isHidden == false && passwordTF.text?.isEmpty == false{
+    func validateTextFields(){
+        if passwordTF.text == "" && passwordView.isHidden == false{
+            self.present(UIAlertController.showAlert(title: "ERROR❌", message: "Please enter a Password"), animated: true)
+        }
+        else if passwordView.isHidden == false && passwordTF.text?.isEmpty == false{
             // call admin login
             print("Call the Admin api login")
             checkAdminLogin()
@@ -124,5 +142,14 @@ class POPUPVC: UIViewController{
             print("Call the User api login")
             checkUserLogin()
         }
+    }
+    // MARK: - Actions
+    @IBAction func loginBtnTapped(_ sender: UIButton) {
+        sender.ForBtnBig { [weak self] in
+            self?.validateTextFields()
+        }
+    }
+    @IBAction func closeBtnTapped(_ sender: UIButton) {
+        self.dismiss(animated: true)
     }
 }

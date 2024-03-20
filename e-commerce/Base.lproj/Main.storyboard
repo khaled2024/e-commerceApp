@@ -3847,7 +3847,7 @@
                                                         <rect key="frame" x="0.0" y="501" width="179" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ufJ-I5-3pZ">
-                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="TCE-2g-TAW"/>
@@ -3880,7 +3880,7 @@
                                                         <rect key="frame" x="189" y="501" width="184" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4cC-rg-x0A">
-                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="K26-sO-TfN"/>
@@ -4493,7 +4493,7 @@
                                                         <rect key="frame" x="0.0" y="595" width="179" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TRo-Eg-6Uu">
-                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="41a-Mu-u89"/>
@@ -4526,7 +4526,7 @@
                                                         <rect key="frame" x="189" y="595" width="184" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-Dr-oaU">
-                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="O1s-XF-W6S"/>
@@ -9378,7 +9378,7 @@
                                                         <rect key="frame" x="0.0" y="595" width="179" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hua-FX-yJy">
-                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="306-Bw-8nl"/>
@@ -9411,7 +9411,7 @@
                                                         <rect key="frame" x="189" y="595" width="184" height="55"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ogf-CK-t2v">
-                                                                <rect key="frame" x="5" y="16" width="25" height="23.666666666666664"/>
+                                                                <rect key="frame" x="5" y="15.999999999999998" width="25" height="23.666666666666664"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="avd-p8-eMy"/>
@@ -9975,12 +9975,38 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6S-EO-6VE">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="276"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="closeBtnTapped:" destination="pB8-T3-aLH" eventType="touchUpInside" id="uKx-Nf-l79"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ic4-GN-jMU">
+                                <rect key="frame" x="0.0" y="576" width="393" height="276"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="closeBtnTapped:" destination="pB8-T3-aLH" eventType="touchUpInside" id="9eM-dt-rix"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ctQ-PI-xut"/>
                         <color key="backgroundColor" white="0.0" alpha="0.21642177152317882" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="f6S-EO-6VE" firstAttribute="top" secondItem="RSS-C5-VOn" secondAttribute="top" id="0h1-GB-vjG"/>
+                            <constraint firstItem="f6S-EO-6VE" firstAttribute="trailing" secondItem="ctQ-PI-xut" secondAttribute="trailing" id="437-MG-Mj9"/>
+                            <constraint firstItem="EdR-oD-1Vu" firstAttribute="top" secondItem="f6S-EO-6VE" secondAttribute="bottom" id="IQT-Eh-zd5"/>
                             <constraint firstItem="EdR-oD-1Vu" firstAttribute="width" secondItem="RSS-C5-VOn" secondAttribute="width" multiplier="0.9" id="JuN-IT-pjR"/>
+                            <constraint firstItem="ic4-GN-jMU" firstAttribute="leading" secondItem="ctQ-PI-xut" secondAttribute="leading" id="UyQ-W1-jrj"/>
+                            <constraint firstItem="ic4-GN-jMU" firstAttribute="trailing" secondItem="ctQ-PI-xut" secondAttribute="trailing" id="XLl-zk-3M1"/>
+                            <constraint firstItem="f6S-EO-6VE" firstAttribute="leading" secondItem="ctQ-PI-xut" secondAttribute="leading" id="g3z-z3-nfS"/>
                             <constraint firstItem="EdR-oD-1Vu" firstAttribute="centerY" secondItem="RSS-C5-VOn" secondAttribute="centerY" id="jNm-Wu-WlB"/>
+                            <constraint firstItem="ic4-GN-jMU" firstAttribute="top" secondItem="EdR-oD-1Vu" secondAttribute="bottom" id="jUa-vv-aZx"/>
+                            <constraint firstAttribute="bottom" secondItem="ic4-GN-jMU" secondAttribute="bottom" id="wMG-9a-J1E"/>
                             <constraint firstItem="EdR-oD-1Vu" firstAttribute="centerX" secondItem="RSS-C5-VOn" secondAttribute="centerX" id="yyg-fP-DVd"/>
                         </constraints>
                     </view>
@@ -9995,7 +10021,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSt-uC-ZNf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4902" y="625"/>
+            <point key="canvasLocation" x="4901.5267175572517" y="624.64788732394368"/>
         </scene>
     </scenes>
     <resources>

@@ -13,19 +13,20 @@ class CartViewController: UIViewController {
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var cartTableView: UITableView!
     @IBOutlet weak var priceCartView: UIView!
-    var isUserLogin: Bool = false
     let navManager = NavigationManager()
+    let storageManager = StorageManager()
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpDesign()
+        /// TEST
+        testForPopUpView()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        /// TEST
-        testForPopUpView()
-        if isUserLogin{
+        if storageManager.isUserLogging(){
             // show the cart view for user and dismiss the popup View
+            print("USER is Logging 🥳")
         }else{
             // show pop up view with phone number:)
             showLoginPopUpView()
@@ -85,7 +86,13 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource{
 }
 // MARK: - POPUPVCDelegate
 extension CartViewController: POPUPVCDelegate{
-    func parseData() {
+    func showToastMessage(message: String) {
+        self.showToast(message: message, font: .systemFont(ofSize: 15))
+    }
+    
+    
+    
+    func showAdminTabbar() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: .init(block: { [weak self] in
             self?.getAdminTabbar()
         }))
