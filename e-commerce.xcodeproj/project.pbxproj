@@ -15,6 +15,8 @@
 		EA02C9F72B97286200C039F5 /* AdminSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02C9F62B97286200C039F5 /* AdminSettingViewController.swift */; };
 		EA2439222B63A0DA00ACD5BE /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */; };
 		EA2439242B63A66A00ACD5BE /* extensions+UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2439232B63A66A00ACD5BE /* extensions+UiView.swift */; };
+		EA28301B2BAC81880026B119 /* UserCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28301A2BAC81880026B119 /* UserCartViewModel.swift */; };
+		EA28301D2BAC85A80026B119 /* PopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28301C2BAC85A80026B119 /* PopupViewModel.swift */; };
 		EA2BEF682B9AFAF800ECB58F /* MarketOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2BEF662B9AFAF800ECB58F /* MarketOrderTableViewCell.swift */; };
 		EA2BEF692B9AFAF800ECB58F /* MarketOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2BEF672B9AFAF800ECB58F /* MarketOrderTableViewCell.xib */; };
 		EA2BEF6B2B9AFCAD00ECB58F /* MarketOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2BEF6A2B9AFCAD00ECB58F /* MarketOrdersViewController.swift */; };
@@ -138,6 +140,8 @@
 		EA02C9F62B97286200C039F5 /* AdminSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSettingViewController.swift; sourceTree = "<group>"; };
 		EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		EA2439232B63A66A00ACD5BE /* extensions+UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extensions+UiView.swift"; sourceTree = "<group>"; };
+		EA28301A2BAC81880026B119 /* UserCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCartViewModel.swift; sourceTree = "<group>"; };
+		EA28301C2BAC85A80026B119 /* PopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewModel.swift; sourceTree = "<group>"; };
 		EA2BEF662B9AFAF800ECB58F /* MarketOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketOrderTableViewCell.swift; sourceTree = "<group>"; };
 		EA2BEF672B9AFAF800ECB58F /* MarketOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketOrderTableViewCell.xib; sourceTree = "<group>"; };
 		EA2BEF6A2B9AFCAD00ECB58F /* MarketOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketOrdersViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +291,97 @@
 				EA02C9F22B971EDB00C039F5 /* MoreTableViewCell.swift */,
 			);
 			path = MoreTableViewCell;
+			sourceTree = "<group>";
+		};
+		EA2830172BAC81100026B119 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EA28301A2BAC81880026B119 /* UserCartViewModel.swift */,
+				EA28301C2BAC85A80026B119 /* PopupViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EA2830192BAC81590026B119 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA8881FE2B8823EF00A1B51A /* MainTabBarController.swift */,
+				EA2830202BAC863F0026B119 /* MainVC */,
+				EA28301E2BAC861D0026B119 /* Cart */,
+				EA28301F2BAC86280026B119 /* Order */,
+				EA2830212BAC864D0026B119 /* Favourite */,
+				EA2830222BAC865B0026B119 /* ResturantDetail */,
+				EA2830232BAC86640026B119 /* ProductDetail */,
+				EA2830242BAC866E0026B119 /* SearchVC */,
+				EA2830252BAC86780026B119 /* TrackVC */,
+				EAF24E512BA883F400297CE5 /* PopupView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA28301E2BAC861D0026B119 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E7F8E2B630F2F0045C6D7 /* CartViewController.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		EA28301F2BAC86280026B119 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				EA2ECF9B2B63E14E00DF2C31 /* OrderViewController.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		EA2830202BAC863F0026B119 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				EA78A5EE2B60559D00790B12 /* MainViewController.swift */,
+				EAB2B6112B86A55800A7D419 /* SecondMainViewController.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		EA2830212BAC864D0026B119 /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
+		EA2830222BAC865B0026B119 /* ResturantDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */,
+			);
+			path = ResturantDetail;
+			sourceTree = "<group>";
+		};
+		EA2830232BAC86640026B119 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		EA2830242BAC866E0026B119 /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				EACFEE2F2B656469008AE44C /* SearchViewController.swift */,
+			);
+			path = SearchVC;
+			sourceTree = "<group>";
+		};
+		EA2830252BAC86780026B119 /* TrackVC */ = {
+			isa = PBXGroup;
+			children = (
+				EACFEE312B65888D008AE44C /* TrackViewController.swift */,
+			);
+			path = TrackVC;
 			sourceTree = "<group>";
 		};
 		EA2BEF642B9AFAA700ECB58F /* MarketCells */ = {
@@ -673,16 +768,8 @@
 		EAB2B6132B86A72800A7D419 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				EA8881FE2B8823EF00A1B51A /* MainTabBarController.swift */,
-				EA78A5EE2B60559D00790B12 /* MainViewController.swift */,
-				EAB2B6112B86A55800A7D419 /* SecondMainViewController.swift */,
-				EA5E7F8E2B630F2F0045C6D7 /* CartViewController.swift */,
-				EA2ECF9B2B63E14E00DF2C31 /* OrderViewController.swift */,
-				EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */,
-				EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */,
-				EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */,
-				EACFEE2F2B656469008AE44C /* SearchViewController.swift */,
-				EACFEE312B65888D008AE44C /* TrackViewController.swift */,
+				EA2830192BAC81590026B119 /* Views */,
+				EA2830172BAC81100026B119 /* ViewModels */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -897,9 +984,8 @@
 			children = (
 				EAF6440B2B894481006BDADE /* NavigationManager.swift */,
 				EA9CCB392B89DC7300733C4F /* StorageManager.swift */,
-				EAF24E512BA883F400297CE5 /* PopupView */,
-				EA8A7A9E2B8B5A8B00CCC677 /* TopNavView */,
 				EA6AAD832BAB35420054B464 /* Keychain.swift */,
+				EA8A7A9E2B8B5A8B00CCC677 /* TopNavView */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1046,6 +1132,7 @@
 				EAD2A37F2B9E5B7A00FF25B2 /* DriverCurrentOrdersViewController.swift in Sources */,
 				EA78A5EF2B60559D00790B12 /* MainViewController.swift in Sources */,
 				EA5F4F3C2B97620200475EF3 /* AdminBlockMarketViewController.swift in Sources */,
+				EA28301D2BAC85A80026B119 /* PopupViewModel.swift in Sources */,
 				EA2BEF6F2B9B66B900ECB58F /* MarketDriversViewController.swift in Sources */,
 				EA8881FF2B8823EF00A1B51A /* MainTabBarController.swift in Sources */,
 				EAF24E5E2BA8D2B000297CE5 /* LoginData.swift in Sources */,
@@ -1065,6 +1152,7 @@
 				EAF24E592BA8D00E00297CE5 /* EndPoint.swift in Sources */,
 				EA2ECFA22B643F6900DF2C31 /* FavouriteCollectionViewCell.swift in Sources */,
 				EA9CCB382B89D58A00733C4F /* LoadingViewController.swift in Sources */,
+				EA28301B2BAC81880026B119 /* UserCartViewModel.swift in Sources */,
 				EAD2F5B22B8CB059004A58EE /* DriverCollectionViewCell.swift in Sources */,
 				EA9CCB3A2B89DC7400733C4F /* StorageManager.swift in Sources */,
 				EAF24E532BA8843300297CE5 /* POPUPVC.swift in Sources */,

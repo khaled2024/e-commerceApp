@@ -22,8 +22,7 @@ class POPUPVC: UIViewController{
     // MARK: - Variables
     static let identifier = String(describing: POPUPVC.self)
     weak var delegate: POPUPVCDelegate?
-    let navManager = NavigationManager()
-    let storageManager = StorageManager()
+    var ViewModel = PopupViewModel()
     // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,14 +58,14 @@ class POPUPVC: UIViewController{
                             // if the type is Admin Call The Delegate Back and present Admin Tabbar (he is Admin)
                             if loginData.data?.type == "admin"{
                                 print("TYPE : Admin")
-                                self?.storageManager.saveAdminLogging(true)
+                                self?.ViewModel.storageManager.saveAdminLogging(true)
                                 self?.delegate?.showAdminTabbar()
                             }
                             // (he is User)
                             else if loginData.data?.type == "user"{
                                 guard let userData = loginData.data else{return}
                                 guard let token = userData.token else{return}
-                                self?.storageManager.saveUserLogging(true)
+                                self?.ViewModel.storageManager.saveUserLogging(true)
                                 guard let tokenData = token.data(using: .utf8)else{return}
                                 Keychain.save(key: Constants.KeyChain.token.rawValue, data: tokenData)
                                 print(tokenData)
@@ -130,7 +129,7 @@ class POPUPVC: UIViewController{
                         print("User logging is 'TRUE'")
                         self?.dismiss(animated: true)
                         self?.delegate?.showToastMessage(message: "Congratulations🥳")
-                        self?.storageManager.saveUserLogging(true)
+                        self?.ViewModel.storageManager.saveUserLogging(true)
                     }
                 }
             }
@@ -153,7 +152,7 @@ class POPUPVC: UIViewController{
                         if type == "admin"{
                             print("admin Data \(adminData)")
                             self?.getAdminTabbar()
-                            self?.storageManager.saveAdminLogging(true)
+                            self?.ViewModel.storageManager.saveAdminLogging(true)
                         }else{
                             self?.present(UIAlertController.showAlert(title: "ERROR❌", message: "Please enter valid admin phone number"), animated: true)
                             print("DEBUG PRINT: Here when the enterer enter password for user phone number")
@@ -172,7 +171,7 @@ class POPUPVC: UIViewController{
         }
     }
     func getAdminTabbar(){
-        navManager.show(screen: .adminTabbar, incontroller: self)
+        ViewModel.navManager.show(screen: .adminTabbar, incontroller: self)
     }
     func validateTextFields(){
         if passwordTF.text == "" && passwordView.isHidden == false{

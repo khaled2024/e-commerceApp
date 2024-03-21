@@ -57,6 +57,13 @@ class SecondMainViewController: UIViewController {
     
 }
 extension SecondMainViewController: CategoryTableViewCellDelegate{
+    // for all product
+    func showProductDetail(cell: CategoryTableViewCell, product: ProductData) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailProVC = storyboard.instantiateViewController(withIdentifier: ProductDetailViewController.identifier) as! ProductDetailViewController
+        self.present(detailProVC, animated: true)
+        detailProVC.setUpData(product: product)
+    }
     func showResturantDetail(cell: CategoryTableViewCell, resturant: RestaurantModel) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailResVC = storyboard.instantiateViewController(withIdentifier: ResturantDetailViewController.identifier) as! ResturantDetailViewController
@@ -68,7 +75,7 @@ extension SecondMainViewController: CategoryTableViewCellDelegate{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailProVC = storyboard.instantiateViewController(withIdentifier: ProductDetailViewController.identifier) as! ProductDetailViewController
         self.present(detailProVC, animated: true)
-        detailProVC.setUpData(product: product)
+        detailProVC.setUpDataForBurger(product: product)
         
     }
     

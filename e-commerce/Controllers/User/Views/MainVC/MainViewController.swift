@@ -39,27 +39,25 @@ class MainViewController: UIViewController {
         getAllBestProducts()
     }
     // MARK: - Functions
-    
-    
     // MARK: - API Functions
-    func getUserProfile(){
-        guard let loadedToken = loadToken() else{return}
-        APIService.shared.fetchDataWithToken(url: "https://fastorder1.com/api/profile", token: loadedToken) { (profileData: LoginData?, error) in
-            guard let profileData = profileData else{return}
-            print(profileData)
-        }
-    }
     func loadToken()-> String?{
         if let loadedToken = Keychain.load(key: Constants.KeyChain.token.rawValue),let loadedTokenString = String(data: loadedToken, encoding: .utf8){
             return loadedTokenString
         }
         return nil
     }
+    func getUserProfile(){
+        guard let loadedToken = loadToken() else{return}
+        APIService.shared.fetchDataWithToken(url: Constants.TheUrl + Endpoint.Path.profile.rawValue, token: loadedToken) { (profileData: LoginData?, error) in
+            guard let profileData = profileData else{return}
+            print(profileData)
+        }
+    }
     /// Fetch API Functions :-
     func getAllBestProducts(){
         guard let tokenData = Keychain.load(key: Constants.KeyChain.token.rawValue)else{return}
         guard let loadedToken = String(data: tokenData, encoding: .utf8)else{return}
-        APIService.shared.fetchDataWithToken(url: Constants.TheUrl + "/api/products", token: loadedToken) { [weak self] (allProducts: UserProductModel?,error) in
+        APIService.shared.fetchDataWithToken(url: Constants.TheUrl + Endpoint.Path.allProduct.rawValue, token: loadedToken) { [weak self] (allProducts: UserProductModel?,error) in
             if let allProducts = allProducts?.data{
                 print("All Products :- \n \(allProducts)")
                 self?.allProducts = allProducts
@@ -97,9 +95,7 @@ class MainViewController: UIViewController {
         }
         bannerCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .centeredHorizontally, animated: true)
         bannerPageController.currentPage = currentCellIndex
-        
     }
-
     // MARK: - Actions
     @IBAction func searchBtnTapped(_ sender: UIButton) {
         print("Search Tapped :-")
@@ -110,18 +106,26 @@ class MainViewController: UIViewController {
 }
 // MARK: - (CategoryTableViewCellDelegate)
 extension MainViewController: CategoryTableViewCellDelegate{
-    
+    // for all product
+    func showProductDetail(cell: CategoryTableViewCell, product: ProductData) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailProVC = storyboard.instantiateViewController(withIdentifier: ProductDetailViewController.identifier) as! ProductDetailViewController
+        self.present(detailProVC, animated: true)
+        detailProVC.setUpData(product: product)
+    }
+    // for resturant
     func showResturantDetail(cell: CategoryTableViewCell, resturant: RestaurantModel) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailResVC = storyboard.instantiateViewController(withIdentifier: ResturantDetailViewController.identifier) as! ResturantDetailViewController
         self.present(detailResVC, animated: true)
         detailResVC.setUpData(resturant: resturant)
     }
+    // for burger product
     func showProductDetail(cell: CategoryTableViewCell, product: Product) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailProVC = storyboard.instantiateViewController(withIdentifier: ProductDetailViewController.identifier) as! ProductDetailViewController
         self.present(detailProVC, animated: true)
-        detailProVC.setUpData(product: product)
+        detailProVC.setUpDataForBurger(product: product)
         
     }
 }
@@ -151,6 +155,7 @@ extension MainViewController: UITableViewDelegate,UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier, for: indexPath)as! CategoryTableViewCell
             cell.headerLabel.text = "Best Products"
             cell.showAllBtn.isHidden = false
+            // TODO:- here for tapped on item delegate it from the cell
             cell.delegate = self
             cell.allProducts = allProducts
             return cell

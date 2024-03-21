@@ -9,7 +9,7 @@ import UIKit
 
 class ProductDetailViewController: UIViewController {
     
-    // outlets & Vars
+    // MARK: -  outlets & Vars
     @IBOutlet weak var ingredientTableView: UITableView!
     @IBOutlet weak var smallBtn: UIButton!
     @IBOutlet weak var quantityLabel: UILabel!
@@ -30,6 +30,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var productView: UIView!
     static let identifier = String(describing: ProductDetailViewController.self)
     var quantity: Int = 0
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpDesign()
@@ -38,10 +39,17 @@ class ProductDetailViewController: UIViewController {
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
     }
-    // functions
-    func setUpData(product: Product){
+    // MARK: -  functions
+    // for burger product
+    func setUpDataForBurger(product: Product){
         self.productImage.image = UIImage(named: product.image)
         self.priceLabel.text = "$\(product.price)"
+    }
+    // for all product detail
+    func setUpData(product: ProductData){
+        self.productImage.loadDataUsingCacheWithUrlString(urlString: product.images.image)
+        self.priceLabel.text = "$\(product.price)"
+        self.descriptionLabel.text = product.description
     }
     func registerCell(){
         ingredientTableView.register(IngredientsTableViewCell.uiNib(), forCellReuseIdentifier: IngredientsTableViewCell.identifier)
@@ -59,7 +67,7 @@ class ProductDetailViewController: UIViewController {
         ingredientTableView.showsVerticalScrollIndicator = false
         ingredientTableView.separatorStyle = .none
     }
-    // IBActions
+    // MARK: -  IBActions
     @IBAction func plusBtnTapped(_ sender: UIButton) {
         quantity += 1
         quantityLabel.text = "\(quantity)"
@@ -129,7 +137,7 @@ class ProductDetailViewController: UIViewController {
         }
     }
 }
-// extensions
+// MARK: -  extensions
 extension ProductDetailViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4

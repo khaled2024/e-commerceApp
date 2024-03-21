@@ -14,18 +14,15 @@ class CartViewController: UIViewController {
     @IBOutlet weak var cartTableView: UITableView!
     @IBOutlet weak var priceCartView: UIView!
     // MARK: - Vars
-    let navManager = NavigationManager()
-    let storageManager = StorageManager()
+    let userCartVM = UserCartViewModel()
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpDesign()
-        /// TEST
-        testForPopUpView()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if storageManager.isUserLogging(){
+        if userCartVM.storageManager.isUserLogging(){
             // show the cart view for user and dismiss the popup View
             print("USER is Logging 🥳")
             self.showToast(message: "USER is Logging 🥳", font: .systemFont(ofSize: 16))
@@ -35,20 +32,7 @@ class CartViewController: UIViewController {
         }
     }
     // MARK: - Functions
-    func getAdminTabbar(){
-        navManager.show(screen: .adminTabbar, incontroller: self)
-    }
-    func showLoginPopUpView(){
-        print("show pop up view with phone number:)")
-        let popUpVC = navManager.instantiate(screen: .loginPopUp)as! POPUPVC
-        popUpVC.modalTransitionStyle = .crossDissolve
-        popUpVC.delegate = self
-        self.present(popUpVC, animated: true)
-    }
-    func testForPopUpView(){
-        self.cartTableView.isHidden = true
-//      self.priceCartView.isHidden = true
-    }
+    // design func
     private func setUpDesign(){
         cartTableView.delegate = self
         cartTableView.dataSource = self
@@ -56,6 +40,23 @@ class CartViewController: UIViewController {
         cartTableView.showsVerticalScrollIndicator = false
         cartTableView.separatorStyle = .none
         confirmBtn.layer.cornerRadius = 15
+        // TEST
+        testForPopUpView()
+    }
+    func testForPopUpView(){
+        self.cartTableView.isHidden = true
+        //self.priceCartView.isHidden = true
+    }
+    // logic func
+    func getAdminTabbar(){
+        userCartVM.navManager.show(screen: .adminTabbar, incontroller: self)
+    }
+    func showLoginPopUpView(){
+        print("show pop up view with phone number:)")
+        let popUpVC = userCartVM.navManager.instantiate(screen: .loginPopUp)as! POPUPVC
+        popUpVC.modalTransitionStyle = .crossDissolve
+        popUpVC.delegate = self
+        self.present(popUpVC, animated: true)
     }
 }
 // MARK: -  extensions

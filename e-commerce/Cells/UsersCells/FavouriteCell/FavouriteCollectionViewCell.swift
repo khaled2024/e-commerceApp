@@ -31,8 +31,8 @@ class FavouriteCollectionViewCell: UICollectionViewCell {
     func config(product: ProductData){
         self.availableLabel.text = product.status
         self.productName.text = product.name
-        guard let imageUrl = product.images?.image else{return}
-        self.favouriteImage.loadDataUsingCacheWithUrlString(urlString: imageUrl)
+//        guard let imageUrl = product.images?.image else{return}
+        self.favouriteImage.loadDataUsingCacheWithUrlString(urlString: product.images.image)
         if product.status == "available"{
             self.availableLabel.textColor = .systemGreen
         }else{

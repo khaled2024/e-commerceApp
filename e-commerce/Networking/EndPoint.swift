@@ -7,6 +7,20 @@
 
 import Foundation
 enum Endpoint {
+    enum Path: String {
+        case login = "/api/login"
+        case register = "/api/register"
+        case profile = "/api/profile"
+        case allProduct = "/api/products"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     case login(url: String = "/api/login",login: loginBody)
     var request: URLRequest? {
         guard let url = self.url else { return nil }

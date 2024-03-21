@@ -10,6 +10,7 @@ import UIKit
 protocol CategoryTableViewCellDelegate: AnyObject {
     func showResturantDetail(cell: CategoryTableViewCell,resturant: RestaurantModel)
     func showProductDetail(cell: CategoryTableViewCell,product: Product)
+    func showProductDetail(cell: CategoryTableViewCell,product: ProductData)
 }
 class CategoryTableViewCell: UITableViewCell{
     
@@ -105,11 +106,19 @@ extension CategoryTableViewCell: UICollectionViewDelegate,UICollectionViewDataSo
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // resturant detail
         if indexPath.section == 1{
             let resturant = resturants[indexPath.row]
             delegate?.showResturantDetail(cell: self, resturant: resturant)
             print(resturant.name,resturant.state,resturant.image.utf8)
         }
+        // all product detail
+        if indexPath.section == 2{
+            let product = allProducts[indexPath.row]
+            delegate?.showProductDetail(cell: self, product: product)
+            print(product.name,product.marketName)
+        }
+        // burger detail
         if indexPath.section == 4{
             let product = burgerProducts[indexPath.row]
             delegate?.showProductDetail(cell: self, product: product)

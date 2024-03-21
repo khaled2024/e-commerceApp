@@ -35,12 +35,10 @@ class bestProductsCollectionViewCell: UICollectionViewCell {
     }
     // config for best products
     func config(product: ProductData){
-        if let productPrice = product.price,let imageURL = product.images?.image {
-            self.priceLabel.text = "$\(productPrice)"
-            self.productImage.loadDataUsingCacheWithUrlString(urlString: imageURL)
-            self.productName.text = product.name
-            self.resturantname.text = product.marketName
-        }
+        self.priceLabel.text = "$\(product.price)"
+        self.productImage.loadDataUsingCacheWithUrlString(urlString: product.images.image)
+        self.productName.text = product.name
+        self.resturantname.text = product.marketName
     }
     func config(product: Product){
         self.priceLabel.text = "$\(product.price)"
@@ -60,5 +58,10 @@ class bestProductsCollectionViewCell: UICollectionViewCell {
         self.productName.text = product.productName
         self.resturantname.text = product.resturantName
     }
-
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.productImage.image = UIImage(systemName: "photo.fill")
+        self.productImage.tintColor = .systemGray
+    }
+    
 }
