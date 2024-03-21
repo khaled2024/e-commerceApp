@@ -20,12 +20,27 @@ class SecondMainViewController: UIViewController {
         view.backgroundColor = .systemYellow
         return view
     }
+    var allProducts: [ProductData] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         mainTableView.separatorStyle = .none
         setUpDesign()
         setUpDelegate()
-        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getAllBestProducts()
+    }
+    /// Fetch API Functions :-
+    func getAllBestProducts(){
+        guard let tokenData = Keychain.load(key: Constants.KeyChain.token.rawValue)else{return}
+        guard let loadedToken = String(data: tokenData, encoding: .utf8)else{return}
+        APIService.shared.fetchDataWithToken(url: Constants.TheUrl + "/api/products", token: loadedToken) { [weak self] (allProducts: UserProductModel?,error) in
+            if let allProducts = allProducts?.data{
+                print("All Products :- \n \(allProducts)")
+                self?.allProducts = allProducts
+            }
+        }
     }
     func setUpDelegate(){
         mainTableView.delegate = self
@@ -85,7 +100,7 @@ extension SecondMainViewController: UITableViewDelegate,UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier, for: indexPath)as! CategoryTableViewCell
             cell.headerLabel.text = "Best Products"
             cell.showAllBtn.isHidden = false
-            cell.products = bestProducts
+            cell.allProducts = allProducts
             return cell
         }
         else if indexPath.section == 3{

@@ -9,21 +9,58 @@ import UIKit
 
 class FavouriteViewController: UIViewController {
     @IBOutlet weak var favouriteCollectionView: UICollectionView!
+    var userFavouriteProducts: [ProductData] = []
+    let refreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         favouriteCollectionView.delegate = self
         favouriteCollectionView.dataSource = self
         favouriteCollectionView.register(FavouriteCollectionViewCell.uiNib(), forCellWithReuseIdentifier: FavouriteCollectionViewCell.identifier)
+        refreshControlSetUp()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getAllFavouriteProduct()
+    }
+    // MARK: - Functions
+    func loadToken()-> String?{
+        if let loadedToken = Keychain.load(key: Constants.KeyChain.token.rawValue),let loadedTokenString = String(data: loadedToken, encoding: .utf8){
+            return loadedTokenString
+        }
+        return nil
+    }
+    func getAllFavouriteProduct(){
+        guard let loadedToken = loadToken() else{return}
+        APIService.shared.fetchDataWithToken(url: "https://fastorder1.com/api/user/all/favorite", token: loadedToken) { [weak self] (favouriteData: UserProductModel?, error) in
+            if let error = error {print(error.localizedDescription)}
+            if let favouriteData = favouriteData {
+                self?.userFavouriteProducts = favouriteData.data
+                DispatchQueue.main.async {
+                    self?.favouriteCollectionView.reloadData()
+                }
+            }
+        }
+    }
+    func refreshControlSetUp(){
+        self.refreshControl.addTarget(self, action: #selector(refreshTapped), for: .valueChanged)
+        favouriteCollectionView.refreshControl = refreshControl
+    }
+    @objc func refreshTapped(){
+        DispatchQueue.main.async {[weak self] in
+            self?.getAllFavouriteProduct()
+            self?.favouriteCollectionView.reloadData()
+            self?.refreshControl.endRefreshing()
+        }
     }
 }
-// Extension
+// MARK: - Extension
 extension FavouriteViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return favouriteProducts.count
+        return userFavouriteProducts.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavouriteCollectionViewCell.identifier, for: indexPath)as! FavouriteCollectionViewCell
-        cell.config(product: favouriteProducts[indexPath.row])
+        cell.config(product: userFavouriteProducts[indexPath.row])
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -31,6 +68,6 @@ extension FavouriteViewController: UICollectionViewDelegate,UICollectionViewData
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print(favouriteProducts[indexPath.row].productName)
+        print(self.userFavouriteProducts[indexPath.row].name)
     }
 }

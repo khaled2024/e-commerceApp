@@ -11,7 +11,6 @@ protocol CategoryTableViewCellDelegate: AnyObject {
     func showResturantDetail(cell: CategoryTableViewCell,resturant: RestaurantModel)
     func showProductDetail(cell: CategoryTableViewCell,product: Product)
 }
-
 class CategoryTableViewCell: UITableViewCell{
     
     var delegate: CategoryTableViewCellDelegate?
@@ -22,7 +21,11 @@ class CategoryTableViewCell: UITableViewCell{
     
     var categories = [CategoryModel]()
     var resturants = [RestaurantModel]()
+    
+    // testProducts
     var products = [Product]()
+    // best products
+    var allProducts = [ProductData]()
     
     var bestResturants = [RestaurantModel]()
     var burgerProducts = [Product]()
@@ -39,6 +42,9 @@ class CategoryTableViewCell: UITableViewCell{
         collectionView.register(CategoryCollectionViewCell.uiNib(), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         collectionView.register(RestaurantsCollectionViewCell.uiNib(), forCellWithReuseIdentifier: RestaurantsCollectionViewCell.identifier)
         collectionView.register(bestProductsCollectionViewCell.uiNib(), forCellWithReuseIdentifier: bestProductsCollectionViewCell.identifier)
+        
+        // API Functions
+        // best products:-
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -52,7 +58,9 @@ extension CategoryTableViewCell: UICollectionViewDelegate,UICollectionViewDataSo
         }else if section == 1{
             return resturants.count
         }else if section == 2{
-            return products.count
+            // best products
+            print("all product count :- \(allProducts.count)")
+            return allProducts.count
         }else if section == 3{
             return bestResturants.count
         }else if section == 4{
@@ -77,8 +85,9 @@ extension CategoryTableViewCell: UICollectionViewDelegate,UICollectionViewDataSo
             collectionView.collectionViewLayout = UICollectionViewFlowLayout()
             return cell
         }else if indexPath.section == 2{
+            // best products
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: bestProductsCollectionViewCell.identifier, for: indexPath)as! bestProductsCollectionViewCell
-            cell.config(product: products[indexPath.row])
+            cell.config(product: allProducts[indexPath.row])
             return cell
         }
         else if indexPath.section == 3{

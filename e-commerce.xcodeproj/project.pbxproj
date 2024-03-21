@@ -24,6 +24,7 @@
 		EA2ECF9E2B643F3200DF2C31 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */; };
 		EA2ECFA22B643F6900DF2C31 /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECFA02B643F6900DF2C31 /* FavouriteCollectionViewCell.swift */; };
 		EA2ECFA32B643F6900DF2C31 /* FavouriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2ECFA12B643F6900DF2C31 /* FavouriteCollectionViewCell.xib */; };
+		EA44A36B2BABA259006F7396 /* UserProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44A36A2BABA259006F7396 /* UserProductModel.swift */; };
 		EA4BF1A62B63B63700743F3F /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4BF1A42B63B63700743F3F /* IngredientsTableViewCell.swift */; };
 		EA4BF1A72B63B63700743F3F /* IngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4BF1A52B63B63700743F3F /* IngredientsTableViewCell.xib */; };
 		EA4BF1AB2B63DB7700743F3F /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4BF1A92B63DB7700743F3F /* OrdersTableViewCell.swift */; };
@@ -146,6 +147,7 @@
 		EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		EA2ECFA02B643F6900DF2C31 /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA2ECFA12B643F6900DF2C31 /* FavouriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCollectionViewCell.xib; sourceTree = "<group>"; };
+		EA44A36A2BABA259006F7396 /* UserProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProductModel.swift; sourceTree = "<group>"; };
 		EA4BF1A42B63B63700743F3F /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
 		EA4BF1A52B63B63700743F3F /* IngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsTableViewCell.xib; sourceTree = "<group>"; };
 		EA4BF1A92B63DB7700743F3F /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
@@ -676,9 +678,9 @@
 				EAB2B6112B86A55800A7D419 /* SecondMainViewController.swift */,
 				EA5E7F8E2B630F2F0045C6D7 /* CartViewController.swift */,
 				EA2ECF9B2B63E14E00DF2C31 /* OrderViewController.swift */,
+				EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */,
 				EA6AE09A2B62AEE100AE45DB /* ResturantDetailViewController.swift */,
 				EA2439212B63A0DA00ACD5BE /* ProductDetailViewController.swift */,
-				EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */,
 				EACFEE2F2B656469008AE44C /* SearchViewController.swift */,
 				EACFEE312B65888D008AE44C /* TrackViewController.swift */,
 			);
@@ -885,6 +887,7 @@
 			isa = PBXGroup;
 			children = (
 				EAF24E5D2BA8D2B000297CE5 /* LoginData.swift */,
+				EA44A36A2BABA259006F7396 /* UserProductModel.swift */,
 			);
 			path = NetworkingModels;
 			sourceTree = "<group>";
@@ -1070,6 +1073,7 @@
 				EAD2A3422B9BB9E800FF25B2 /* MarketMealsViewController.swift in Sources */,
 				EA4BF1AB2B63DB7700743F3F /* OrdersTableViewCell.swift in Sources */,
 				EA5F4F412B99152500475EF3 /* MarketHomeViewController.swift in Sources */,
+				EA44A36B2BABA259006F7396 /* UserProductModel.swift in Sources */,
 				EA5F4F512B9917CC00475EF3 /* MarketAnnouncementViewController.swift in Sources */,
 				EAE8417F2B88CAE4006E2742 /* CostumerTableViewCell.swift in Sources */,
 				EA8A7A972B8B3C5400CCC677 /* Extension+UitableView.swift in Sources */,

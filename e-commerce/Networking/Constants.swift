@@ -8,6 +8,7 @@
 import Foundation
 struct Constants {
     // MARK: - API
+    static let TheUrl = "https://fastorder1.com"
     static let scheme = "https"
     static let baseURL = "fastorder1.com"
     static let port: Int? = nil

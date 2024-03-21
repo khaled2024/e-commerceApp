@@ -33,6 +33,15 @@ class bestProductsCollectionViewCell: UICollectionViewCell {
         productView.layer.shadowOpacity = 3
         productView.layer.shadowOffset = CGSize(width: 1, height: 1)
     }
+    // config for best products
+    func config(product: ProductData){
+        if let productPrice = product.price,let imageURL = product.images?.image {
+            self.priceLabel.text = "$\(productPrice)"
+            self.productImage.loadDataUsingCacheWithUrlString(urlString: imageURL)
+            self.productName.text = product.name
+            self.resturantname.text = product.marketName
+        }
+    }
     func config(product: Product){
         self.priceLabel.text = "$\(product.price)"
         self.productImage.image = UIImage(named: product.image)
