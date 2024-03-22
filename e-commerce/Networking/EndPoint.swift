@@ -15,6 +15,7 @@ enum Endpoint {
         case allFavourie = "/api/user/all/favorite"
         case postUserFavourite = "/api/user/"
         case allCartProduct = "/api/user/all/cart"
+        case quantityUpdate = "/api/user/cart/quantity/update/"
     }
     
     case login(url: String = "/api/login",login: loginBody)

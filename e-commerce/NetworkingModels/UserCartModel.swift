@@ -12,7 +12,7 @@ struct UserCartModel: Codable {
     let status: String
     let error: Int
     let message: String
-    let data: [UserCartData]
+    let data: [UserCartData]?
 }
 
 // MARK: - Datum

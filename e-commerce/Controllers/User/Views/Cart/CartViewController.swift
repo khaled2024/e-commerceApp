@@ -17,7 +17,8 @@ class CartViewController: UIViewController {
     let refreshControl = UIRefreshControl()
     var cartItems: [UserCartData] = []
     let userCartVM = UserCartViewModel()
-    var totalPrice: Int? = 0
+    var totalPrice: Int = 0
+    var delivary: Int = 10
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,15 +47,17 @@ class CartViewController: UIViewController {
                     print(error)
                 }
                 if let cartData = cartData?.data{
-                    print(cartData)
+//                    print(cartData)
                     self?.cartItems = cartData
                     DispatchQueue.main.async {
                         let cartItems = self?.cartItems
                         self?.cartTableView.reloadData()
                         for cart in cartItems!{
-                            self?.totalPrice!  += cart.totalPrice as Int
+                            self?.totalPrice  += cart.totalPrice
                         }
+                        self?.delivaryLabel.text = String(self?.delivary ?? 10)
                         self?.totalItemLabel.text = String(self?.totalPrice ?? 0)
+                        self?.totalPriceLabel.text = String((self?.totalPrice)! + (self?.delivary)! )
                     }
                 }
             }
@@ -81,8 +84,22 @@ class CartViewController: UIViewController {
         }
     }
     // add and minues the product
-    func updateTheProduct(){
-        APIService.shared.
+    func updateTheProduct(with quantity: String,cartID: String){
+        let param = [
+            "quantity" : quantity
+        ]
+        guard let loadedToken = userCartVM.storageManager.loadToken() else{return}
+        APIService.shared.postDataWithBody(url: Constants.TheUrl + Endpoint.Path.quantityUpdate.rawValue + cartID, token: loadedToken, param: param) { (userCartResponse: UserCartModel?, error) in
+            if let error = error {
+                print(error)
+            }
+            if let userCartResponse = userCartResponse{
+                print(userCartResponse.message)
+                DispatchQueue.main.async {
+                    self.cartTableView.reloadData()
+                }
+            }
+        }
     }
     // design func
     private func setUpDesign(){
@@ -113,9 +130,10 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CartTableViewCell.identifier, for: indexPath)as! CartTableViewCell
-        let cartItem = self.cartItems[indexPath.row].product
-        cell.itemImage.loadDataUsingCacheWithUrlString(urlString: cartItem.image.image)
-        cell.nameObject.text = cartItem.name
+        // minus plus tapped
+        cell.delegate = self
+        cell.cartData = self.cartItems[indexPath.row]
+        cell.setUpCartItem(cartItem: self.cartItems[indexPath.row].product)
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -139,4 +157,27 @@ extension CartViewController: POPUPVCDelegate{
             self?.getAdminTabbar()
         }))
     }
+}
+// MARK: - CartTableViewCellDelegate
+extension CartViewController: CartTableViewCellDelegate{
+    func plusTapped(cell: CartTableViewCell,sender: UIButton, quantity: String,cartID: String) {
+        print("Quantity in func \(quantity)")
+        self.updateTheProduct(with: quantity, cartID: cartID)
+        self.getCartProduct()
+        DispatchQueue.main.async {
+            cell.numberLabel.text = quantity
+            self.cartTableView.reloadData()
+        }
+    }
+    func minusTapped(cell: CartTableViewCell,sender: UIButton, quantity: String,cartID: String) {
+        print("Quantity in func \(quantity)")
+
+        self.updateTheProduct(with: quantity, cartID: cartID)
+        self.getCartProduct()
+        DispatchQueue.main.async {
+            cell.numberLabel.text = quantity
+            self.cartTableView.reloadData()
+        }
+    }
+    
 }

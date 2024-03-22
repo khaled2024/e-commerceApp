@@ -142,7 +142,7 @@ class APIService {
         }
     }
     // Genaric
-    // fetch without token
+    // MARK: -  fetch without token
     func fetchData<T: Decodable>(url: String,completion: @escaping (T?,Error?)-> Void){
         let headers: HTTPHeaders = [
             HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
@@ -163,7 +163,7 @@ class APIService {
             }
         }
     }
-    /// fetch with token
+    // MARK: -  fetch with token
     func fetchDataWithToken<T: Decodable>(url: String,token: String,completion: @escaping (T?,Error?)-> Void){
         let headers: HTTPHeaders = [
             HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
@@ -185,13 +185,36 @@ class APIService {
             }
         }
     }
-    /// post
+    // MARK: -  post with token
     func postDataWithToken<T: Decodable>(url: String,token: String,completion: @escaping (T?,Error?)-> Void){
         let headers: HTTPHeaders = [
             HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
             HTTP.Headers.Key.authorization.rawValue:"\(Constants.TokenBearer)\(token)"
         ]
         AF.request(url,method: .post,encoding: JSONEncoding.default,headers: headers).responseJSON { (response) in
+            
+            guard let data = response.data else{return}
+            switch response.result {
+            case .success(_):
+                do {
+                    let result = try JSONDecoder().decode(T.self, from: data)
+                    completion(result,nil)
+                } catch let jsonError {
+                    print(jsonError)
+                    completion(nil,jsonError)
+                }
+            case .failure(let error):
+                completion(nil,error)
+            }
+        }
+    }
+    // MARK: - post with Body
+    func postDataWithBody<T: Decodable>(url: String,token: String,param:[String:Any],completion: @escaping (T?,Error?)-> Void){
+        let headers: HTTPHeaders = [
+            HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
+            HTTP.Headers.Key.authorization.rawValue:"\(Constants.TokenBearer)\(token)"
+        ]
+        AF.request(url,method: .post, parameters: param,encoding: JSONEncoding.default,headers: headers).responseJSON { (response) in
             
             guard let data = response.data else{return}
             switch response.result {
