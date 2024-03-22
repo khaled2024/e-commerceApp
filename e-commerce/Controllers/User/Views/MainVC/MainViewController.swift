@@ -55,9 +55,7 @@ class MainViewController: UIViewController {
     }
     /// Fetch API Functions :-
     func getAllBestProducts(){
-        guard let tokenData = Keychain.load(key: Constants.KeyChain.token.rawValue)else{return}
-        guard let loadedToken = String(data: tokenData, encoding: .utf8)else{return}
-        APIService.shared.fetchDataWithToken(url: Constants.TheUrl + Endpoint.Path.allProduct.rawValue, token: loadedToken) { [weak self] (allProducts: UserProductModel?,error) in
+        APIService.shared.fetchData(url: Constants.TheUrl + Endpoint.Path.allProduct.rawValue) { [weak self] (allProducts: UserProductModel?,error) in
             if let allProducts = allProducts?.data{
                 print("All Products :- \n \(allProducts)")
                 self?.allProducts = allProducts
@@ -68,7 +66,6 @@ class MainViewController: UIViewController {
     func setUpDelegate(){
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self
-        
         mainTableView.delegate = self
         mainTableView.dataSource = self
     }
@@ -112,6 +109,7 @@ extension MainViewController: CategoryTableViewCellDelegate{
         let detailProVC = storyboard.instantiateViewController(withIdentifier: ProductDetailViewController.identifier) as! ProductDetailViewController
         self.present(detailProVC, animated: true)
         detailProVC.setUpData(product: product)
+        detailProVC.product = product
     }
     // for resturant
     func showResturantDetail(cell: CategoryTableViewCell, resturant: RestaurantModel) {

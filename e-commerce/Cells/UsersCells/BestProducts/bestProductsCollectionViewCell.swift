@@ -15,7 +15,6 @@ class bestProductsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     
-    
     static let identifier = String(describing: bestProductsCollectionViewCell.self)
     static func uiNib()-> UINib{
         return UINib(nibName: bestProductsCollectionViewCell.identifier, bundle: nil)
@@ -61,7 +60,7 @@ class bestProductsCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         self.productImage.image = UIImage(systemName: "photo.fill")
-        self.productImage.tintColor = .systemGray
+        self.productImage.tintColor = .systemOrange
     }
     
 }

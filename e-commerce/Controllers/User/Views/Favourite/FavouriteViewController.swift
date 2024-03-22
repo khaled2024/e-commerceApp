@@ -11,6 +11,7 @@ class FavouriteViewController: UIViewController {
     @IBOutlet weak var favouriteCollectionView: UICollectionView!
     var userFavouriteProducts: [ProductData] = []
     let refreshControl = UIRefreshControl()
+    let storageManager = StorageManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         favouriteCollectionView.delegate = self
@@ -20,7 +21,7 @@ class FavouriteViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getAllFavouriteProduct()
+        checkingUserLogging()
     }
     // MARK: - Functions
     func loadToken()-> String?{
@@ -29,9 +30,22 @@ class FavouriteViewController: UIViewController {
         }
         return nil
     }
+    func checkingUserLogging(){
+        if storageManager.isUserLogging(){
+            getAllFavouriteProduct()
+            self.refreshControl.endRefreshing()
+        }else{
+            self.userFavouriteProducts = []
+            DispatchQueue.main.async {
+                self.favouriteCollectionView.reloadData()
+                self.refreshControl.endRefreshing()
+            }
+        }
+    }
     func getAllFavouriteProduct(){
         guard let loadedToken = loadToken() else{return}
-        APIService.shared.fetchDataWithToken(url: "https://fastorder1.com/api/user/all/favorite", token: loadedToken) { [weak self] (favouriteData: UserProductModel?, error) in
+        print(loadedToken)
+        APIService.shared.fetchDataWithToken(url: Constants.TheUrl + Endpoint.Path.allFavourie.rawValue, token: loadedToken) { [weak self] (favouriteData: UserProductModel?, error) in
             if let error = error {print(error.localizedDescription)}
             if let favouriteData = favouriteData {
                 self?.userFavouriteProducts = favouriteData.data
@@ -46,11 +60,7 @@ class FavouriteViewController: UIViewController {
         favouriteCollectionView.refreshControl = refreshControl
     }
     @objc func refreshTapped(){
-        DispatchQueue.main.async {[weak self] in
-            self?.getAllFavouriteProduct()
-            self?.favouriteCollectionView.reloadData()
-            self?.refreshControl.endRefreshing()
-        }
+        checkingUserLogging()
     }
 }
 // MARK: - Extension

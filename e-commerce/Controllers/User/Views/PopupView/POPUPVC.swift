@@ -125,11 +125,14 @@ class POPUPVC: UIViewController{
                     }else{
                         guard let loginData = loginData else{return}
                         guard let userData = loginData.data else{return}
+                        guard let token = userData.token else{return}
+                        self?.ViewModel.storageManager.saveUserLogging(true)
+                        guard let tokenData = token.data(using: .utf8)else{return}
+                        Keychain.save(key: Constants.KeyChain.token.rawValue, data: tokenData)
+                        self?.delegate?.showToastMessage(message: "Congratulations🥳")
                         print(userData)
                         print("User logging is 'TRUE'")
                         self?.dismiss(animated: true)
-                        self?.delegate?.showToastMessage(message: "Congratulations🥳")
-                        self?.ViewModel.storageManager.saveUserLogging(true)
                     }
                 }
             }

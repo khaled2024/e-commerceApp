@@ -63,6 +63,7 @@
 		EA78A5F72B60559D00790B12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA78A5F52B60559D00790B12 /* LaunchScreen.storyboard */; };
 		EA78A6002B605A5A00790B12 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78A5FE2B605A5A00790B12 /* BannerCollectionViewCell.swift */; };
 		EA78A6012B605A5A00790B12 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA78A5FF2B605A5A00790B12 /* BannerCollectionViewCell.xib */; };
+		EA7DB0C52BAD0D5E0015474E /* UserFavouriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DB0C42BAD0D5E0015474E /* UserFavouriteModel.swift */; };
 		EA8881FF2B8823EF00A1B51A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8881FE2B8823EF00A1B51A /* MainTabBarController.swift */; };
 		EA8A7A902B8B389300CCC677 /* UserChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A7A8E2B8B389300CCC677 /* UserChatRoomTableViewCell.swift */; };
 		EA8A7A912B8B389300CCC677 /* UserChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8A7A8F2B8B389300CCC677 /* UserChatRoomTableViewCell.xib */; };
@@ -190,6 +191,7 @@
 		EA78A5F82B60559D00790B12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA78A5FE2B605A5A00790B12 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA78A5FF2B605A5A00790B12 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		EA7DB0C42BAD0D5E0015474E /* UserFavouriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFavouriteModel.swift; sourceTree = "<group>"; };
 		EA8881FE2B8823EF00A1B51A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		EA8A7A8E2B8B389300CCC677 /* UserChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		EA8A7A8F2B8B389300CCC677 /* UserChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChatRoomTableViewCell.xib; sourceTree = "<group>"; };
@@ -975,6 +977,7 @@
 			children = (
 				EAF24E5D2BA8D2B000297CE5 /* LoginData.swift */,
 				EA44A36A2BABA259006F7396 /* UserProductModel.swift */,
+				EA7DB0C42BAD0D5E0015474E /* UserFavouriteModel.swift */,
 			);
 			path = NetworkingModels;
 			sourceTree = "<group>";
@@ -1208,6 +1211,7 @@
 				EAE841712B8891F4006E2742 /* AdminHomeViewController.swift in Sources */,
 				EA9CCB522B8A4FEA00733C4F /* Models.swift in Sources */,
 				EA9CCB422B8A097100733C4F /* AdminChatViewController.swift in Sources */,
+				EA7DB0C52BAD0D5E0015474E /* UserFavouriteModel.swift in Sources */,
 				EA8A7A982B8B3C5400CCC677 /* Extension+UitextField.swift in Sources */,
 				EA8A7A9D2B8B3EA900CCC677 /* MessageModel.swift in Sources */,
 				EA9E8E882B6182B600A250B0 /* CategoryCollectionViewCell.swift in Sources */,

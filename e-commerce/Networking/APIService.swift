@@ -142,14 +142,34 @@ class APIService {
         }
     }
     // Genaric
-    /// fetch
+    // fetch without token
+    func fetchData<T: Decodable>(url: String,completion: @escaping (T?,Error?)-> Void){
+        let headers: HTTPHeaders = [
+            HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
+        ]
+        AF.request(url,method: .get,encoding: JSONEncoding.default,headers: headers).responseJSON { (response) in
+            guard let data = response.data else{return}
+            switch response.result {
+            case .success(_):
+                do {
+                    let result = try JSONDecoder().decode(T.self, from: data)
+                    completion(result,nil)
+                } catch let jsonError {
+                    print(jsonError)
+                    completion(nil,jsonError)
+                }
+            case .failure(let error):
+                completion(nil,error)
+            }
+        }
+    }
+    /// fetch with token
     func fetchDataWithToken<T: Decodable>(url: String,token: String,completion: @escaping (T?,Error?)-> Void){
         let headers: HTTPHeaders = [
             HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
             HTTP.Headers.Key.authorization.rawValue:"\(Constants.TokenBearer)\(token)"
         ]
         AF.request(url,method: .get,encoding: JSONEncoding.default,headers: headers).responseJSON { (response) in
-            
             guard let data = response.data else{return}
             switch response.result {
             case .success(_):
@@ -166,7 +186,28 @@ class APIService {
         }
     }
     /// post
-    
+    func postDataWithToken<T: Decodable>(url: String,token: String,completion: @escaping (T?,Error?)-> Void){
+        let headers: HTTPHeaders = [
+            HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
+            HTTP.Headers.Key.authorization.rawValue:"\(Constants.TokenBearer)\(token)"
+        ]
+        AF.request(url,method: .post,encoding: JSONEncoding.default,headers: headers).responseJSON { (response) in
+            
+            guard let data = response.data else{return}
+            switch response.result {
+            case .success(_):
+                do {
+                    let result = try JSONDecoder().decode(T.self, from: data)
+                    completion(result,nil)
+                } catch let jsonError {
+                    print(jsonError)
+                    completion(nil,jsonError)
+                }
+            case .failure(let error):
+                completion(nil,error)
+            }
+        }
+    }
     
     // MARK: - Func for Codable
     func makeRequest<T: Codable>(with request: URLRequest,respModel: T.Type,completion: @escaping (T?, APIError?) -> Void) {

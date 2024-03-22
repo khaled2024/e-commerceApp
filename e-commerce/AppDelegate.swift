@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ///  for reset the user logging :-
 //        storageManager.resetAdminLogging()
 //        storageManager.resetUserLogging()
+//        Keychain.delete(key: Constants.KeyChain.token.rawValue)
         return true
     }
     // MARK: UISceneSession Lifecycle

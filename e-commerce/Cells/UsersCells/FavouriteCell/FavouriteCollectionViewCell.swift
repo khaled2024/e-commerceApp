@@ -31,7 +31,7 @@ class FavouriteCollectionViewCell: UICollectionViewCell {
     func config(product: ProductData){
         self.availableLabel.text = product.status
         self.productName.text = product.name
-//        guard let imageUrl = product.images?.image else{return}
+        //        guard let imageUrl = product.images?.image else{return}
         self.favouriteImage.loadDataUsingCacheWithUrlString(urlString: product.images.image)
         if product.status == "available"{
             self.availableLabel.textColor = .systemGreen
@@ -43,5 +43,10 @@ class FavouriteCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         favouriteView.setUpLayerForCell()
         favouriteImage.layer.cornerRadius = 10
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.favouriteImage.image = UIImage(systemName: "photo.fill")
+        self.favouriteImage.tintColor = .systemOrange
     }
 }

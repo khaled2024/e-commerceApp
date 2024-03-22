@@ -30,6 +30,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var productView: UIView!
     static let identifier = String(describing: ProductDetailViewController.self)
     var quantity: Int = 0
+    var product: ProductData?
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,10 @@ class ProductDetailViewController: UIViewController {
         registerCell()
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkingProductInFavourite()
     }
     // MARK: -  functions
     // for burger product
@@ -67,6 +72,48 @@ class ProductDetailViewController: UIViewController {
         ingredientTableView.showsVerticalScrollIndicator = false
         ingredientTableView.separatorStyle = .none
     }
+    func loadToken()-> String?{
+        if let loadedToken = Keychain.load(key: Constants.KeyChain.token.rawValue),let loadedTokenString = String(data: loadedToken, encoding: .utf8){
+            return loadedTokenString
+        }
+        return nil
+    }
+    func addToFavourite(){
+        guard let loadedToken = loadToken() else{return}
+        print(loadedToken)
+        guard let product = product else{return}
+        let productID = product.id
+        let urlString =  Constants.TheUrl + Endpoint.Path.postUserFavourite.rawValue + "\(productID)/favorite"
+        APIService.shared.postDataWithToken(url: urlString, token: loadedToken) { (userFavouriteResponse : UserFavouriteModel?, error) in
+            if let error = error{
+                print(error.localizedDescription)
+                return
+            }
+            if let userFavouriteResponse = userFavouriteResponse{
+                print(userFavouriteResponse.message)
+                self.showToast(message: "\(userFavouriteResponse.message) ❤️", font: .systemFont(ofSize: 16))
+            }
+        }
+    }
+    func checkingProductInFavourite(){
+        
+        guard let loadedToken = loadToken() else{return}
+        print(loadedToken)
+        APIService.shared.fetchDataWithToken(url: Constants.TheUrl + Endpoint.Path.allFavourie.rawValue, token: loadedToken) { [weak self] (favouriteData: UserProductModel?, error) in
+            if let error = error {print(error.localizedDescription)}
+            if let favouriteData = favouriteData{
+                for product in favouriteData.data{
+                    if self?.product?.id == product.id{
+                        self?.heartBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                        self?.heartBtn.imageView?.tintColor = .red
+                        return
+                    }else{
+                        self?.heartBtn.setImage(UIImage(systemName: "heart"), for: .normal)
+                    }
+                }
+            }
+        }
+    }
     // MARK: -  IBActions
     @IBAction func plusBtnTapped(_ sender: UIButton) {
         quantity += 1
@@ -80,23 +127,25 @@ class ProductDetailViewController: UIViewController {
         }
         quantityLabel.text = "\(quantity)"
     }
-    
+    // Go cart Btn
     @IBAction func gotocartBtnTapped(_ sender: UIButton) {
         print("\(sender.titleLabel?.text ?? "")")
     }
+    // Back Btn
     @IBAction func backBtnTapped(_ sender: UIButton) {
-        
         self.dismiss(animated: true)
-        
     }
+    // Heart Btn
     @IBAction func heartBtnTapped(_ sender: UIButton) {
         if sender.imageView?.image == UIImage(systemName: "heart"){
             sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
             sender.imageView?.tintColor = .red
+            addToFavourite()
         }else{
             sender.setImage(UIImage(systemName: "heart"), for: .normal)
         }
     }
+    // Size Btn
     @IBAction func largeBtnTapped(_ sender: UIButton) {
         if sender.backgroundColor == .white{
             print("tapped \(sender.titleLabel?.text ?? "")")

@@ -12,14 +12,9 @@ enum Endpoint {
         case register = "/api/register"
         case profile = "/api/profile"
         case allProduct = "/api/products"
+        case allFavourie = "/api/user/all/favorite"
+        case postUserFavourite = "/api/user/"
     }
-    
-    
-    
-    
-    
-    
-    
     
     case login(url: String = "/api/login",login: loginBody)
     var request: URLRequest? {

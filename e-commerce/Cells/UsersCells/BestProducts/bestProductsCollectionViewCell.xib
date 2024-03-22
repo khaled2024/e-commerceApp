@@ -20,8 +20,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mE4-VG-4VG">
                         <rect key="frame" x="5" y="5" width="140" height="151"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Burger-image" translatesAutoresizingMaskIntoConstraints="NO" id="apV-bf-0WP">
-                                <rect key="frame" x="0.0" y="0.0" width="140" height="78.666666666666671"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="apV-bf-0WP">
+                                <rect key="frame" x="0.0" y="1.6666666666666643" width="140" height="75.666666666666686"/>
+                                <color key="tintColor" red="0.94509804249999996" green="0.61176472900000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXo-Ij-Xk5">
                                 <rect key="frame" x="5" y="86.333333333333329" width="135" height="15.666666666666671"/>
@@ -106,7 +107,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Burger-image" width="175.33332824707031" height="148"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

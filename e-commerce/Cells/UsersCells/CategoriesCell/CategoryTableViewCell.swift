@@ -116,7 +116,7 @@ extension CategoryTableViewCell: UICollectionViewDelegate,UICollectionViewDataSo
         if indexPath.section == 2{
             let product = allProducts[indexPath.row]
             delegate?.showProductDetail(cell: self, product: product)
-            print(product.name,product.marketName)
+            print(product.id,product.name,product.marketName)
         }
         // burger detail
         if indexPath.section == 4{
