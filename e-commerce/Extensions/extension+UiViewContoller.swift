@@ -15,7 +15,7 @@ extension UIViewController{
 // toast
 extension UIViewController{
     func showToast(message: String,font: UIFont){
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 100, y:  self.view.frame.size.height/5 , width: 200, height: 40))
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 100, y:  self.view.frame.size.height/5 , width: 200, height: 45))
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = .white
         toastLabel.font = font
@@ -23,7 +23,9 @@ extension UIViewController{
         toastLabel.text = message
         toastLabel.alpha = 1.0
         toastLabel.numberOfLines = 0
-        toastLabel.layer.cornerRadius = 15
+        toastLabel.layer.cornerRadius = 18
+        toastLabel.adjustsFontSizeToFitWidth = true
+        toastLabel.minimumScaleFactor = 0.7
         toastLabel.clipsToBounds = true
         self.view.addSubview(toastLabel)
         UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseIn) {

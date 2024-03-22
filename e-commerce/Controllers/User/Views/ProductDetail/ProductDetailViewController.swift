@@ -7,8 +7,10 @@
 
 import UIKit
 
+protocol ProductDetailDelegate: AnyObject{
+    func removeProduct(vc: ProductDetailViewController,myProduct:ProductData)
+}
 class ProductDetailViewController: UIViewController {
-    
     // MARK: -  outlets & Vars
     @IBOutlet weak var ingredientTableView: UITableView!
     @IBOutlet weak var smallBtn: UIButton!
@@ -31,6 +33,7 @@ class ProductDetailViewController: UIViewController {
     static let identifier = String(describing: ProductDetailViewController.self)
     var quantity: Int = 0
     var product: ProductData?
+    weak var delegate: ProductDetailDelegate?
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,11 +95,13 @@ class ProductDetailViewController: UIViewController {
             if let userFavouriteResponse = userFavouriteResponse{
                 print(userFavouriteResponse.message)
                 self.showToast(message: "\(userFavouriteResponse.message) ❤️", font: .systemFont(ofSize: 16))
+                self.heartBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                self.heartBtn.imageView?.tintColor = .red
             }
         }
     }
     func checkingProductInFavourite(){
-        
+        // maping with all favourite and get the id and compare it with tehe product id
         guard let loadedToken = loadToken() else{return}
         print(loadedToken)
         APIService.shared.fetchDataWithToken(url: Constants.TheUrl + Endpoint.Path.allFavourie.rawValue, token: loadedToken) { [weak self] (favouriteData: UserProductModel?, error) in
@@ -106,6 +111,7 @@ class ProductDetailViewController: UIViewController {
                     if self?.product?.id == product.id{
                         self?.heartBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
                         self?.heartBtn.imageView?.tintColor = .red
+                        print("Added to Favourite")
                         return
                     }else{
                         self?.heartBtn.setImage(UIImage(systemName: "heart"), for: .normal)
@@ -137,11 +143,16 @@ class ProductDetailViewController: UIViewController {
     }
     // Heart Btn
     @IBAction func heartBtnTapped(_ sender: UIButton) {
-        if sender.imageView?.image == UIImage(systemName: "heart"){
-            sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            sender.imageView?.tintColor = .red
-            addToFavourite()
+        if let loadedToken = loadToken(),loadedToken.isEmpty == false{
+            if sender.imageView?.image == UIImage(systemName: "heart"){
+                print("loaded Token: Start adding to favourite")
+                sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                sender.imageView?.tintColor = .red
+                addToFavourite()
+            }
+            // here if i want to remove the item from favourite!
         }else{
+            print("No Token")
             sender.setImage(UIImage(systemName: "heart"), for: .normal)
         }
     }

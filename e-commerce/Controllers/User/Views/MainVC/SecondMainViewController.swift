@@ -30,12 +30,25 @@ class SecondMainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getAllBestProducts()
+        getUserProfile()
+    }
+    // MARK: - API Functions
+    func loadToken()-> String?{
+        if let loadedToken = Keychain.load(key: Constants.KeyChain.token.rawValue),let loadedTokenString = String(data: loadedToken, encoding: .utf8){
+            return loadedTokenString
+        }
+        return nil
+    }
+    func getUserProfile(){
+        guard let loadedToken = loadToken() else{return}
+        APIService.shared.fetchDataWithToken(url: Constants.TheUrl + Endpoint.Path.profile.rawValue, token: loadedToken) { (profileData: LoginData?, error) in
+            guard let profileData = profileData else{return}
+            print(profileData)
+        }
     }
     /// Fetch API Functions :-
     func getAllBestProducts(){
-        guard let tokenData = Keychain.load(key: Constants.KeyChain.token.rawValue)else{return}
-        guard let loadedToken = String(data: tokenData, encoding: .utf8)else{return}
-        APIService.shared.fetchDataWithToken(url: Constants.TheUrl + "/api/products", token: loadedToken) { [weak self] (allProducts: UserProductModel?,error) in
+        APIService.shared.fetchData(url: Constants.TheUrl + Endpoint.Path.allProduct.rawValue) { [weak self] (allProducts: UserProductModel?,error) in
             if let allProducts = allProducts?.data{
                 print("All Products :- \n \(allProducts)")
                 self?.allProducts = allProducts
@@ -56,6 +69,7 @@ class SecondMainViewController: UIViewController {
     
     
 }
+// MARK: - CategoryTableViewCellDelegate
 extension SecondMainViewController: CategoryTableViewCellDelegate{
     // for all product
     func showProductDetail(cell: CategoryTableViewCell, product: ProductData) {
@@ -63,6 +77,7 @@ extension SecondMainViewController: CategoryTableViewCellDelegate{
         let detailProVC = storyboard.instantiateViewController(withIdentifier: ProductDetailViewController.identifier) as! ProductDetailViewController
         self.present(detailProVC, animated: true)
         detailProVC.setUpData(product: product)
+        detailProVC.product = product
     }
     func showResturantDetail(cell: CategoryTableViewCell, resturant: RestaurantModel) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -81,7 +96,7 @@ extension SecondMainViewController: CategoryTableViewCellDelegate{
     
     
 }
-// UITableViewDelegate
+// MARK: -  UITableViewDelegate
 extension SecondMainViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1

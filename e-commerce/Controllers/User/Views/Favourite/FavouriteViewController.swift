@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavouriteViewController: UIViewController {
+class FavouriteViewController: UIViewController{
     @IBOutlet weak var favouriteCollectionView: UICollectionView!
     var userFavouriteProducts: [ProductData] = []
     let refreshControl = UIRefreshControl()

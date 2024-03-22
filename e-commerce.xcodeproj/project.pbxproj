@@ -92,6 +92,7 @@
 		EA9E8E892B6182B600A250B0 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E8E872B6182B600A250B0 /* CategoryCollectionViewCell.xib */; };
 		EA9E8E912B61B03500A250B0 /* RestaurantsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E8E8F2B61B03500A250B0 /* RestaurantsCollectionViewCell.swift */; };
 		EA9E8E922B61B03500A250B0 /* RestaurantsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E8E902B61B03500A250B0 /* RestaurantsCollectionViewCell.xib */; };
+		EAA727152BADBD500060964F /* UserCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA727142BADBD500060964F /* UserCartModel.swift */; };
 		EAB2B6122B86A55800A7D419 /* SecondMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B6112B86A55800A7D419 /* SecondMainViewController.swift */; };
 		EAB2B6152B86A74800A7D419 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B6142B86A74800A7D419 /* OnboardingViewController.swift */; };
 		EAB2B6172B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B6162B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift */; };
@@ -220,6 +221,7 @@
 		EA9E8E872B6182B600A250B0 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA9E8E8F2B61B03500A250B0 /* RestaurantsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA9E8E902B61B03500A250B0 /* RestaurantsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantsCollectionViewCell.xib; sourceTree = "<group>"; };
+		EAA727142BADBD500060964F /* UserCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCartModel.swift; sourceTree = "<group>"; };
 		EAB2B6112B86A55800A7D419 /* SecondMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMainViewController.swift; sourceTree = "<group>"; };
 		EAB2B6142B86A74800A7D419 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		EAB2B6162B86AE4B00A7D419 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -978,6 +980,7 @@
 				EAF24E5D2BA8D2B000297CE5 /* LoginData.swift */,
 				EA44A36A2BABA259006F7396 /* UserProductModel.swift */,
 				EA7DB0C42BAD0D5E0015474E /* UserFavouriteModel.swift */,
+				EAA727142BADBD500060964F /* UserCartModel.swift */,
 			);
 			path = NetworkingModels;
 			sourceTree = "<group>";
@@ -1166,6 +1169,7 @@
 				EA5F4F412B99152500475EF3 /* MarketHomeViewController.swift in Sources */,
 				EA44A36B2BABA259006F7396 /* UserProductModel.swift in Sources */,
 				EA5F4F512B9917CC00475EF3 /* MarketAnnouncementViewController.swift in Sources */,
+				EAA727152BADBD500060964F /* UserCartModel.swift in Sources */,
 				EAE8417F2B88CAE4006E2742 /* CostumerTableViewCell.swift in Sources */,
 				EA8A7A972B8B3C5400CCC677 /* Extension+UitableView.swift in Sources */,
 				EA5F4F4D2B99177800475EF3 /* MarketSettingViewController.swift in Sources */,

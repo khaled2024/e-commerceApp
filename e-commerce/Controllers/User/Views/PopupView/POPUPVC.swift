@@ -10,6 +10,7 @@ import UIKit
 protocol POPUPVCDelegate: AnyObject {
     func showAdminTabbar()
     func showToastMessage(message: String)
+    func didFinishLoggingUser()
 }
 class POPUPVC: UIViewController{
     // MARK: - Outlets
@@ -67,13 +68,14 @@ class POPUPVC: UIViewController{
                                 guard let token = userData.token else{return}
                                 self?.ViewModel.storageManager.saveUserLogging(true)
                                 guard let tokenData = token.data(using: .utf8)else{return}
-                                Keychain.save(key: Constants.KeyChain.token.rawValue, data: tokenData)
+                                let _ = Keychain.save(key: Constants.KeyChain.token.rawValue, data: tokenData)
                                 print(tokenData)
                                 print("TYPE : User")
                                 print(userData)
                                 print("User logging is 'TRUE'")
                                 self?.dismiss(animated: true)
                                 self?.delegate?.showToastMessage(message: "Congratulations🥳")
+                                self?.delegate?.didFinishLoggingUser()
                             }
                         }
                         // // Getting failed Data :-
@@ -128,7 +130,7 @@ class POPUPVC: UIViewController{
                         guard let token = userData.token else{return}
                         self?.ViewModel.storageManager.saveUserLogging(true)
                         guard let tokenData = token.data(using: .utf8)else{return}
-                        Keychain.save(key: Constants.KeyChain.token.rawValue, data: tokenData)
+                        let _ = Keychain.save(key: Constants.KeyChain.token.rawValue, data: tokenData)
                         self?.delegate?.showToastMessage(message: "Congratulations🥳")
                         print(userData)
                         print("User logging is 'TRUE'")
@@ -160,7 +162,7 @@ class POPUPVC: UIViewController{
                             self?.present(UIAlertController.showAlert(title: "ERROR❌", message: "Please enter valid admin phone number"), animated: true)
                             print("DEBUG PRINT: Here when the enterer enter password for user phone number")
                             // TODO: can add else if type == user here and validate and cash the user data
-#warning("to me i can add else if type == user here and validate and cash the user data :)")
+                        #warning("to me i can add else if type == user here and validate and cash the user data :)")
                         }
                     case "failed":
                         let errorAlert = UIAlertController.showAlert(title: "ERROR❌", message: loginData.message)
@@ -177,17 +179,22 @@ class POPUPVC: UIViewController{
         ViewModel.navManager.show(screen: .adminTabbar, incontroller: self)
     }
     func validateTextFields(){
-        if passwordTF.text == "" && passwordView.isHidden == false{
-            self.present(UIAlertController.showAlert(title: "ERROR❌", message: "Please enter a Password"), animated: true)
-        }
-        else if passwordView.isHidden == false && passwordTF.text?.isEmpty == false{
-            // call admin login
-            print("Call the Admin api login")
-            checkAdminLogin()
+        if phoneNumTF.text?.count == 11{
+            if passwordTF.text == "" && passwordView.isHidden == false{
+                self.present(UIAlertController.showAlert(title: "ERROR❌", message: "Please enter a Password"), animated: true)
+            }
+            else if passwordView.isHidden == false && passwordTF.text?.isEmpty == false{
+                // call admin login
+                print("Call the Admin api login")
+                checkAdminLogin()
+            }else{
+                print("Call the User api login")
+                checkUserLogin()
+            }
         }else{
-            print("Call the User api login")
-            checkUserLogin()
+            self.showToast(message: "Phone number must be 11 digits ", font: .systemFont(ofSize: 16))
         }
+        
     }
     // MARK: - Actions
     @IBAction func loginBtnTapped(_ sender: UIButton) {

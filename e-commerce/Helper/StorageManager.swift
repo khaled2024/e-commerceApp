@@ -46,6 +46,12 @@ class StorageManager {
     func resetAdminLogging(){
         defaults.set(false, forKey: Key.isAdminLogin.rawValue)
     }
-
+    // Load Token From KeyChain
+    func loadToken()-> String?{
+        if let loadedToken = Keychain.load(key: Constants.KeyChain.token.rawValue),let loadedTokenString = String(data: loadedToken, encoding: .utf8){
+            return loadedTokenString
+        }
+        return nil
+    }
     
 }

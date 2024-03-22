@@ -76,3 +76,13 @@ import Foundation
 //    KeychainWrapper.standard.removeObject(forKey: "usernameKey")
 //    KeychainWrapper.standard.removeObject(forKey: "passwordKey")
 //}
+
+
+
+//
+//func removeProduct(vc: ProductDetailViewController, myProduct: ProductData) {
+//    if let index = self.userFavouriteProducts.firstIndex(where: {$0.id == myProduct.id}){
+//        self.userFavouriteProducts.remove(at: index)
+//        print("remove index \(index) of the product \(myProduct.id)")
+//    }
+//}

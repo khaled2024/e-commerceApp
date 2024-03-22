@@ -14,11 +14,15 @@ class CartViewController: UIViewController {
     @IBOutlet weak var cartTableView: UITableView!
     @IBOutlet weak var priceCartView: UIView!
     // MARK: - Vars
+    let refreshControl = UIRefreshControl()
+    var cartItems: [UserCartData] = []
     let userCartVM = UserCartViewModel()
+    var totalPrice: Int? = 0
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpDesign()
+        refreshControlSetUp()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,12 +30,60 @@ class CartViewController: UIViewController {
             // show the cart view for user and dismiss the popup View
             print("USER is Logging 🥳")
             self.showToast(message: "USER is Logging 🥳", font: .systemFont(ofSize: 16))
+            getCartProduct()
         }else{
             // show pop up view with phone number:)
             showLoginPopUpView()
         }
     }
     // MARK: - Functions
+    //API functions
+    func getCartProduct(){
+        self.totalPrice = 0
+        if let loadedToken = userCartVM.storageManager.loadToken(){
+            APIService.shared.fetchDataWithToken(url: Constants.TheUrl + Endpoint.Path.allCartProduct.rawValue, token: loadedToken) {[weak self] (cartData:UserCartModel?, error) in
+                if let error = error{
+                    print(error)
+                }
+                if let cartData = cartData?.data{
+                    print(cartData)
+                    self?.cartItems = cartData
+                    DispatchQueue.main.async {
+                        let cartItems = self?.cartItems
+                        self?.cartTableView.reloadData()
+                        for cart in cartItems!{
+                            self?.totalPrice!  += cart.totalPrice as Int
+                        }
+                        self?.totalItemLabel.text = String(self?.totalPrice ?? 0)
+                    }
+                }
+            }
+        }
+    }
+    // refresh Control
+    func refreshControlSetUp(){
+        self.refreshControl.addTarget(self, action: #selector(refreshTapped), for: .valueChanged)
+        cartTableView.refreshControl = refreshControl
+    }
+    @objc func refreshTapped(){
+        checkingUserLogging()
+    }
+    func checkingUserLogging(){
+        if userCartVM.storageManager.isUserLogging(){
+            getCartProduct()
+            self.refreshControl.endRefreshing()
+        }else{
+            self.cartItems = []
+            DispatchQueue.main.async {
+                self.cartTableView.reloadData()
+                self.refreshControl.endRefreshing()
+            }
+        }
+    }
+    // add and minues the product
+    func updateTheProduct(){
+        APIService.shared.
+    }
     // design func
     private func setUpDesign(){
         cartTableView.delegate = self
@@ -40,12 +92,6 @@ class CartViewController: UIViewController {
         cartTableView.showsVerticalScrollIndicator = false
         cartTableView.separatorStyle = .none
         confirmBtn.layer.cornerRadius = 15
-        // TEST
-        testForPopUpView()
-    }
-    func testForPopUpView(){
-        self.cartTableView.isHidden = true
-        //self.priceCartView.isHidden = true
     }
     // logic func
     func getAdminTabbar(){
@@ -62,10 +108,14 @@ class CartViewController: UIViewController {
 // MARK: -  extensions
 extension CartViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        print("DEBUG PRINT: \(cartItems.count)")
+        return cartItems.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CartTableViewCell.identifier, for: indexPath)as! CartTableViewCell
+        let cartItem = self.cartItems[indexPath.row].product
+        cell.itemImage.loadDataUsingCacheWithUrlString(urlString: cartItem.image.image)
+        cell.nameObject.text = cartItem.name
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -78,6 +128,9 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource{
 }
 // MARK: - POPUPVCDelegate
 extension CartViewController: POPUPVCDelegate{
+    func didFinishLoggingUser() {
+        self.getCartProduct()
+    }
     func showToastMessage(message: String) {
         self.showToast(message: message, font: .systemFont(ofSize: 15))
     }
