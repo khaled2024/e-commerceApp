@@ -26,6 +26,7 @@
 		EA2ECF9E2B643F3200DF2C31 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */; };
 		EA2ECFA22B643F6900DF2C31 /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ECFA02B643F6900DF2C31 /* FavouriteCollectionViewCell.swift */; };
 		EA2ECFA32B643F6900DF2C31 /* FavouriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2ECFA12B643F6900DF2C31 /* FavouriteCollectionViewCell.xib */; };
+		EA42C99E2BAED0C400543BFE /* UserOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA42C99D2BAED0C400543BFE /* UserOrderModel.swift */; };
 		EA44A36B2BABA259006F7396 /* UserProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44A36A2BABA259006F7396 /* UserProductModel.swift */; };
 		EA4BF1A62B63B63700743F3F /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4BF1A42B63B63700743F3F /* IngredientsTableViewCell.swift */; };
 		EA4BF1A72B63B63700743F3F /* IngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4BF1A52B63B63700743F3F /* IngredientsTableViewCell.xib */; };
@@ -153,6 +154,7 @@
 		EA2ECF9D2B643F3200DF2C31 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		EA2ECFA02B643F6900DF2C31 /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA2ECFA12B643F6900DF2C31 /* FavouriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCollectionViewCell.xib; sourceTree = "<group>"; };
+		EA42C99D2BAED0C400543BFE /* UserOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrderModel.swift; sourceTree = "<group>"; };
 		EA44A36A2BABA259006F7396 /* UserProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProductModel.swift; sourceTree = "<group>"; };
 		EA4BF1A42B63B63700743F3F /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
 		EA4BF1A52B63B63700743F3F /* IngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsTableViewCell.xib; sourceTree = "<group>"; };
@@ -981,6 +983,7 @@
 				EA44A36A2BABA259006F7396 /* UserProductModel.swift */,
 				EA7DB0C42BAD0D5E0015474E /* UserFavouriteModel.swift */,
 				EAA727142BADBD500060964F /* UserCartModel.swift */,
+				EA42C99D2BAED0C400543BFE /* UserOrderModel.swift */,
 			);
 			path = NetworkingModels;
 			sourceTree = "<group>";
@@ -1188,6 +1191,7 @@
 				EAB2B6122B86A55800A7D419 /* SecondMainViewController.swift in Sources */,
 				EA74BD9B2B9E778C007ADDE0 /* OrderDetailsViewController.swift in Sources */,
 				EA5F4F4B2B9916D100475EF3 /* MarketTabbar.swift in Sources */,
+				EA42C99E2BAED0C400543BFE /* UserOrderModel.swift in Sources */,
 				EA02C9F72B97286200C039F5 /* AdminSettingViewController.swift in Sources */,
 				EA2ECF9C2B63E14E00DF2C31 /* OrderViewController.swift in Sources */,
 				EA8A7A992B8B3C5400CCC677 /* Extension+UiimageView.swift in Sources */,

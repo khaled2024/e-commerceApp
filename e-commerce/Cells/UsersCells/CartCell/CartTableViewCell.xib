@@ -118,6 +118,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="9p1-3l-ems" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="5Hx-PZ-MLF"/>
                     <constraint firstAttribute="bottom" secondItem="9p1-3l-ems" secondAttribute="bottom" constant="5" id="OSs-lP-kWC"/>

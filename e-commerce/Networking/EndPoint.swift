@@ -21,6 +21,8 @@ enum Endpoint {
         case deleteCartItem = "/api/user/cart/"
         case addToCart = "/api/user/cart"
         case updateProduct = "/api/user/cart/update/"
+        // order
+        case allUserOrders = "/api/user/order/user"
     }
     
     case login(url: String = "/api/login",login: loginBody)
