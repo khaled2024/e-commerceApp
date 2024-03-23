@@ -12,10 +12,15 @@ enum Endpoint {
         case register = "/api/register"
         case profile = "/api/profile"
         case allProduct = "/api/products"
+        // favourite
         case allFavourie = "/api/user/all/favorite"
         case postUserFavourite = "/api/user/"
+        // cart
         case allCartProduct = "/api/user/all/cart"
         case quantityUpdate = "/api/user/cart/quantity/update/"
+        case deleteCartItem = "/api/user/cart/"
+        case addToCart = "/api/user/cart"
+        case updateProduct = "/api/user/cart/update/"
     }
     
     case login(url: String = "/api/login",login: loginBody)

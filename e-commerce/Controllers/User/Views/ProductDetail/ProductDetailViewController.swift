@@ -34,6 +34,8 @@ class ProductDetailViewController: UIViewController {
     var quantity: Int = 0
     var product: ProductData?
     weak var delegate: ProductDetailDelegate?
+    let storageManager = StorageManager()
+    var selectedSize: String = "small"
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,7 @@ class ProductDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         checkingProductInFavourite()
     }
-    // MARK: -  functions
+    // MARK: - Design Functions
     // for burger product
     func setUpDataForBurger(product: Product){
         self.productImage.image = UIImage(named: product.image)
@@ -75,14 +77,20 @@ class ProductDetailViewController: UIViewController {
         ingredientTableView.showsVerticalScrollIndicator = false
         ingredientTableView.separatorStyle = .none
     }
-    func loadToken()-> String?{
-        if let loadedToken = Keychain.load(key: Constants.KeyChain.token.rawValue),let loadedTokenString = String(data: loadedToken, encoding: .utf8){
-            return loadedTokenString
-        }
-        return nil
+    func unSelectedBtn(btn: UIButton){
+        btn.tintColor = .systemOrange
+        btn.layer.cornerRadius = 12
+        btn.layer.borderColor = UIColor.systemOrange.cgColor
+        btn.layer.borderWidth = 1
+        btn.backgroundColor = .white
     }
+    func selectedBtn(btn: UIButton){
+        btn.tintColor = .white
+        btn.backgroundColor = .systemOrange
+    }
+    // MARK: - API Functions
     func addToFavourite(){
-        guard let loadedToken = loadToken() else{return}
+        guard let loadedToken = storageManager.loadToken() else{return}
         print(loadedToken)
         guard let product = product else{return}
         let productID = product.id
@@ -102,7 +110,7 @@ class ProductDetailViewController: UIViewController {
     }
     func checkingProductInFavourite(){
         // maping with all favourite and get the id and compare it with tehe product id
-        guard let loadedToken = loadToken() else{return}
+        guard let loadedToken = storageManager.loadToken() else{return}
         print(loadedToken)
         APIService.shared.fetchDataWithToken(url: Constants.TheUrl + Endpoint.Path.allFavourie.rawValue, token: loadedToken) { [weak self] (favouriteData: UserProductModel?, error) in
             if let error = error {print(error.localizedDescription)}
@@ -117,6 +125,43 @@ class ProductDetailViewController: UIViewController {
                         self?.heartBtn.setImage(UIImage(systemName: "heart"), for: .normal)
                     }
                 }
+            }
+        }
+    }
+    // add to cart
+    func addToCart(productID: String,marketID: String,extraID: [String],size: String,quantity: String){
+        guard let loadedToken = storageManager.loadToken() else{return}
+        let parameters: [String:Any] = [
+            "market_id" : marketID,
+//         "extra_id" : extraID,
+            "size" : selectedSize,
+            "quantity" : quantity
+        ]
+        print(parameters)
+        APIService.shared.postDataWithBody(url: Constants.TheUrl + Endpoint.Path.addToCart.rawValue + "/\(productID)", token: loadedToken, param: parameters) { (itemResponse: UserCartModel?, error) in
+            print(Constants.TheUrl + Endpoint.Path.addToCart.rawValue + "/\(productID)")
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            if let itemResponse = itemResponse{
+                print(itemResponse.message)
+                self.showToast(message: "\(itemResponse.message)🥳", font: .systemFont(ofSize: 16))
+            }
+        }
+    }
+    func updateProduct(with quantity: Int,cartID: String,size:String,marketID: String){
+        guard let loadedToken = storageManager.loadToken() else{return}
+        let parameters: [String:Any] = [
+            "size" : size,
+            "market_id" : marketID,
+            "quantity" : quantity
+        ]
+        APIService.shared.postDataWithBody(url: Constants.TheUrl + Endpoint.Path.updateProduct.rawValue + cartID, token: loadedToken, param: parameters) { (updatedResponse: UserCartModel?, error) in
+            if let error = error{
+                print(error)
+            }
+            if let updatedResponse = updatedResponse{
+                print(updatedResponse.message)
             }
         }
     }
@@ -135,7 +180,13 @@ class ProductDetailViewController: UIViewController {
     }
     // Go cart Btn
     @IBAction func gotocartBtnTapped(_ sender: UIButton) {
-        print("\(sender.titleLabel?.text ?? "")")
+        print("Go To Cart :)")
+        if let product = self.product,let quantity = quantityLabel.text{
+            let productID = String(product.id)
+            let marketID = String(product.marketID)
+            let size = self.selectedSize
+            addToCart(productID: productID, marketID: marketID, extraID: ["1","2"], size: size, quantity: quantity)
+        }
     }
     // Back Btn
     @IBAction func backBtnTapped(_ sender: UIButton) {
@@ -143,7 +194,7 @@ class ProductDetailViewController: UIViewController {
     }
     // Heart Btn
     @IBAction func heartBtnTapped(_ sender: UIButton) {
-        if let loadedToken = loadToken(),loadedToken.isEmpty == false{
+        if let loadedToken = storageManager.loadToken(),loadedToken.isEmpty == false{
             if sender.imageView?.image == UIImage(systemName: "heart"){
                 print("loaded Token: Start adding to favourite")
                 sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
@@ -156,48 +207,42 @@ class ProductDetailViewController: UIViewController {
             sender.setImage(UIImage(systemName: "heart"), for: .normal)
         }
     }
-    // Size Btn
+    // MARK: -  Size Btn
     @IBAction func largeBtnTapped(_ sender: UIButton) {
         if sender.backgroundColor == .white{
-            print("tapped \(sender.titleLabel?.text ?? "")")
-            largeBtn.tintColor = .white
-            largeBtn.backgroundColor = .systemOrange
+            self.selectedSize = "large"
+            print(self.selectedSize)
+            selectedBtn(btn: largeBtn)
+            unSelectedBtn(btn: smallBtn)
+            unSelectedBtn(btn: mediumBtn)
         }else{
-            largeBtn.tintColor = .systemOrange
-            largeBtn.layer.cornerRadius = 12
-            largeBtn.layer.borderColor = UIColor.systemOrange.cgColor
-            largeBtn.layer.borderWidth = 1
-            largeBtn.backgroundColor = .white
+            unSelectedBtn(btn: largeBtn)
         }
     }
     @IBAction func smallBtnTapped(_ sender: UIButton) {
         if sender.backgroundColor == .white{
-            print("tapped \(sender.titleLabel?.text ?? "")")
-            sender.tintColor = .white
-            sender.backgroundColor = .systemOrange
+            self.selectedSize = "small"
+            print(self.selectedSize)
+            selectedBtn(btn: smallBtn)
+            unSelectedBtn(btn: largeBtn)
+            unSelectedBtn(btn: mediumBtn)
         }else{
-            sender.tintColor = .systemOrange
-            sender.layer.cornerRadius = 12
-            sender.layer.borderColor = UIColor.systemOrange.cgColor
-            sender.layer.borderWidth = 1
-            sender.backgroundColor = .white
+            unSelectedBtn(btn: smallBtn)
         }
     }
     @IBAction func mediumBtnTapped(_ sender: UIButton) {
         if sender.backgroundColor == .white{
-            print("tapped \(sender.titleLabel?.text ?? "")")
-            sender.tintColor = .white
-            sender.backgroundColor = .systemOrange
+            self.selectedSize = "medium"
+            print(self.selectedSize)
+            selectedBtn(btn: mediumBtn)
+            unSelectedBtn(btn: smallBtn)
+            unSelectedBtn(btn: largeBtn)
         }else{
-            sender.tintColor = .systemOrange
-            sender.layer.cornerRadius = 12
-            sender.layer.borderColor = UIColor.systemOrange.cgColor
-            sender.layer.borderWidth = 1
-            sender.backgroundColor = .white
+            unSelectedBtn(btn: mediumBtn)
         }
     }
 }
-// MARK: -  extensions
+// MARK: -  extensions (UITableViewDelegate)
 extension ProductDetailViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4

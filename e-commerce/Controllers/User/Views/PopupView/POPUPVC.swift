@@ -38,6 +38,7 @@ class POPUPVC: UIViewController{
         self.passwordLabel.isHidden = true
         self.passwordView.isHidden = true
     }
+    // MARK: - checkUserLogin
     func checkUserLogin(){
         if let phoneNum = phoneNumTF.text,
            phoneNum.isEmpty == false{
@@ -116,7 +117,6 @@ class POPUPVC: UIViewController{
                 self?.showToast(message: registerError.message, font: .systemFont(ofSize: 16))
             }else{
                 guard let registerData = registerData else{return}
-                guard let userData = registerData.data else{return}
                 // here login again after registeration
                 APIService.shared.userLogin(phone: phone) {[weak self] loginData, loginError, error in
                     if let error = error{

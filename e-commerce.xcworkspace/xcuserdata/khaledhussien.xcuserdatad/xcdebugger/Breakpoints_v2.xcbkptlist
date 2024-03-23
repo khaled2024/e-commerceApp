@@ -14,28 +14,13 @@
             filePath = "e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "updateTheProduct(with:cartID:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "8A91FA64-F0B1-446B-88EE-24B3AC201252 - 986c3a8f09142562"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;e_commerce.UserCartModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in e_commerce.CartViewController.updateTheProduct(with: Swift.String) -&gt; ()"
-                  moduleName = "e-commerce"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "176">
-               </Location>
-               <Location
-                  uuid = "8A91FA64-F0B1-446B-88EE-24B3AC201252 - c018bff47e89ebb1"
+                  uuid = "8A91FA64-F0B1-446B-88EE-24B3AC201252 - c018bff47e89eff0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,9 +30,24 @@
                   urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "176">
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "668">
+               </Location>
+               <Location
+                  uuid = "8A91FA64-F0B1-446B-88EE-24B3AC201252 - c018bff47e89eff0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;e_commerce.UserCartModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in e_commerce.CartViewController.updateTheProduct(with: Swift.String, cartID: Swift.String) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "384">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -62,43 +62,13 @@
             filePath = "e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "updateTheProduct(with:cartID:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "AE8466CC-E521-4BFF-8614-50F090221A17 - 986c3a8f091425dd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;e_commerce.UserCartModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in e_commerce.CartViewController.updateTheProduct(with: Swift.String) -&gt; ()"
-                  moduleName = "e-commerce"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "660">
-               </Location>
-               <Location
-                  uuid = "AE8466CC-E521-4BFF-8614-50F090221A17 - 986c3a8f091425dd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;e_commerce.UserCartModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in e_commerce.CartViewController.updateTheProduct(with: Swift.String) -&gt; ()"
-                  moduleName = "e-commerce"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "440">
-               </Location>
-               <Location
-                  uuid = "AE8466CC-E521-4BFF-8614-50F090221A17 - c018bff47e89eb0e"
+                  uuid = "AE8466CC-E521-4BFF-8614-50F090221A17 - c018bff47e89ef4d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -108,9 +78,24 @@
                   urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "440">
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "1024">
+               </Location>
+               <Location
+                  uuid = "AE8466CC-E521-4BFF-8614-50F090221A17 - c018bff47e89ef4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;e_commerce.UserCartModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in e_commerce.CartViewController.updateTheProduct(with: Swift.String, cartID: Swift.String) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "756">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -125,13 +110,13 @@
             filePath = "e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
             landmarkName = "plusTapped(cell:sender:quantity:cartID:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "35B2FC96-28A1-4D6F-B467-E31CF5E1601F - ee32730185ae10a2"
+                  uuid = "35B2FC96-28A1-4D6F-B467-E31CF5E1601F - ee32730185ae1448"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -141,12 +126,12 @@
                   urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "292">
+                  startingLineNumber = "197"
+                  endingLineNumber = "197"
+                  offsetFromSymbolStart = "872">
                </Location>
                <Location
-                  uuid = "35B2FC96-28A1-4D6F-B467-E31CF5E1601F - ee32730185ae10a2"
+                  uuid = "35B2FC96-28A1-4D6F-B467-E31CF5E1601F - ee32730185ae1448"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -156,9 +141,9 @@
                   urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "840">
+                  startingLineNumber = "197"
+                  endingLineNumber = "197"
+                  offsetFromSymbolStart = "824">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -173,28 +158,13 @@
             filePath = "e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "minusTapped(cell:sender:quantity:cartID:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "9AB81A4B-5A3B-4228-B730-6E8573B859F4 - fb124adde21c670d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in e_commerce.CartViewController.minusTapped(cell: e_commerce.CartTableViewCell, sender: __C.UIButton, quantity: Swift.String, cartID: Swift.String) -&gt; ()"
-                  moduleName = "e-commerce"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "169"
-                  endingLineNumber = "169"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "9AB81A4B-5A3B-4228-B730-6E8573B859F4 - ae23807a1ebe50f1"
+                  uuid = "9AB81A4B-5A3B-4228-B730-6E8573B859F4 - ae23807a1ebe5def"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -204,9 +174,39 @@
                   urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "169"
-                  endingLineNumber = "169"
-                  offsetFromSymbolStart = "840">
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
+                  offsetFromSymbolStart = "872">
+               </Location>
+               <Location
+                  uuid = "9AB81A4B-5A3B-4228-B730-6E8573B859F4 - ae23807a1ebe5def"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.CartViewController.minusTapped(cell: e_commerce.CartTableViewCell, sender: __C.UIButton, quantity: Swift.String, cartID: Swift.String) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
+                  offsetFromSymbolStart = "824">
+               </Location>
+               <Location
+                  uuid = "9AB81A4B-5A3B-4228-B730-6E8573B859F4 - ae23807a1ebe5d8e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.CartViewController.minusTapped(cell: e_commerce.CartTableViewCell, sender: __C.UIButton, quantity: Swift.String, cartID: Swift.String) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "206"
+                  endingLineNumber = "206"
+                  offsetFromSymbolStart = "824">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -221,104 +221,55 @@
             filePath = "e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "minusTapped(cell:sender:quantity:cartID:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "39E52E61-85DD-4227-82F2-401DD7D32241"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "plusBtnTapped(_:)"
-            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "39E52E61-85DD-4227-82F2-401DD7D32241 - 1e8c2468f199cc79"
+                  uuid = "6BE49115-ACD7-42E6-BAD7-19C54845DE3B - ae23807a1ebe5d44"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "e_commerce.CartTableViewCell.plusBtnTapped(__C.UIButton) -&gt; ()"
+                  symbolName = "e_commerce.CartViewController.minusTapped(cell: e_commerce.CartTableViewCell, sender: __C.UIButton, quantity: Swift.String, cartID: Swift.String) -&gt; ()"
                   moduleName = "e-commerce"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "580">
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "1140">
                </Location>
                <Location
-                  uuid = "39E52E61-85DD-4227-82F2-401DD7D32241 - 1e8c2468f199cc79"
+                  uuid = "6BE49115-ACD7-42E6-BAD7-19C54845DE3B - fb124adde21c6ab8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "e_commerce.CartTableViewCell.plusBtnTapped(__C.UIButton) -&gt; ()"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in e_commerce.CartViewController.minusTapped(cell: e_commerce.CartTableViewCell, sender: __C.UIButton, quantity: Swift.String, cartID: Swift.String) -&gt; ()"
                   moduleName = "e-commerce"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "596">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1E9158FC-24D4-48E3-812F-FEB4D18ABDBA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "plusBtnTapped(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1E9158FC-24D4-48E3-812F-FEB4D18ABDBA - 1e8c2468f199cc58"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "e_commerce.CartTableViewCell.plusBtnTapped(__C.UIButton) -&gt; ()"
-                  moduleName = "e-commerce"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "652">
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "484">
                </Location>
                <Location
-                  uuid = "1E9158FC-24D4-48E3-812F-FEB4D18ABDBA - 1e8c2468f199cc58"
+                  uuid = "6BE49115-ACD7-42E6-BAD7-19C54845DE3B - fb124adde21c6a97"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "e_commerce.CartTableViewCell.plusBtnTapped(__C.UIButton) -&gt; ()"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in e_commerce.CartViewController.minusTapped(cell: e_commerce.CartTableViewCell, sender: __C.UIButton, quantity: Swift.String, cartID: Swift.String) -&gt; ()"
                   moduleName = "e-commerce"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "668">
+                  startingLineNumber = "211"
+                  endingLineNumber = "211"
+                  offsetFromSymbolStart = "484">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -333,26 +284,392 @@
             filePath = "e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "minusBtnTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "75914EA2-5FD0-46D9-B1EB-DAA99C5C54A1 - 3f4c5bd5f079e880"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.CartTableViewCell.deletedItemTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "75914EA2-5FD0-46D9-B1EB-DAA99C5C54A1 - 3f4c5bd5f079e880"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.CartTableViewCell.deletedItemTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "75914EA2-5FD0-46D9-B1EB-DAA99C5C54A1 - 55743b1d2a46ef1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.CartTableViewCell.minusBtnTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "1508">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84A39F48-06F1-4154-A861-A0EFC9DA69AE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "e-commerce/Controllers/User/Views/ProductDetail/ProductDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "addToCart(productID:marketID:extraID:size:quantity:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3D2A47A2-B397-4931-ABB7-6FB869B99C00"
+            uuid = "12D7F023-32AC-4B2D-9BF7-8A7A052FADE1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "e-commerce/Controllers/User/Views/ProductDetail/ProductDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "addToCart(productID:marketID:extraID:size:quantity:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C8958D3-C1DD-4FFE-9A2B-C6254F1DE3C9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "e-commerce/Networking/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "postDataWithBody(url:token:param:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9657D52C-0DDE-4F26-8FF7-7FDD92559397"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "e-commerce/Networking/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "postDataWithBody(url:token:param:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9657D52C-0DDE-4F26-8FF7-7FDD92559397 - e53eafe79606f3a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.APIService.postDataWithBody&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Swift.String, token: Swift.String, param: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Networking/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "924">
+               </Location>
+               <Location
+                  uuid = "9657D52C-0DDE-4F26-8FF7-7FDD92559397 - 4d07d1ced8f5ac6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in e_commerce.APIService.postDataWithBody&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Swift.String, token: Swift.String, param: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Networking/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "396">
+               </Location>
+               <Location
+                  uuid = "9657D52C-0DDE-4F26-8FF7-7FDD92559397 - 4d07d1ced8f5ac0f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in e_commerce.APIService.postDataWithBody&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Swift.String, token: Swift.String, param: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Networking/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "396">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C0101B4-5C32-4097-8F8D-13C6BF86B359"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "e-commerce/Networking/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "postDataWithBody(url:token:param:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6C0101B4-5C32-4097-8F8D-13C6BF86B359 - 4d07d1ced8f5adf0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in e_commerce.APIService.postDataWithBody&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Swift.String, token: Swift.String, param: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Networking/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226"
+                  offsetFromSymbolStart = "612">
+               </Location>
+               <Location
+                  uuid = "6C0101B4-5C32-4097-8F8D-13C6BF86B359 - 4d07d1ced8f5adf0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in e_commerce.APIService.postDataWithBody&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Swift.String, token: Swift.String, param: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Networking/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226"
+                  offsetFromSymbolStart = "716">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2F3D194-A0CC-43C1-8C77-E81D2E9592A9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "e-commerce/Networking/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
+            landmarkName = "postDataWithBody(url:token:param:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DF55DAB-C1F1-4137-97BF-A091F434E508"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3DF55DAB-C1F1-4137-97BF-A091F434E508 - a8b2d6a6bc1e2942"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.CartViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "532">
+               </Location>
+               <Location
+                  uuid = "3DF55DAB-C1F1-4137-97BF-A091F434E508 - a8b2d6a6bc1e2942"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.CartViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "508">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "961C9250-858A-443E-BFAA-050BBA4D0453"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "e-commerce/Controllers/User/Views/Cart/CartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "checkingUserLogging()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "415492BB-53B2-4FFD-B85A-2C2814B91BBC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "minusBtnTapped(_:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "plusBtnTapped(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "415492BB-53B2-4FFD-B85A-2C2814B91BBC - 1e8c2468f199cc1a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.CartTableViewCell.plusBtnTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "688">
+               </Location>
+               <Location
+                  uuid = "415492BB-53B2-4FFD-B85A-2C2814B91BBC - 1e8c2468f199cc1a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.CartTableViewCell.plusBtnTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D617BB2-F292-4D1F-B10E-FE83E490D076"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "setUpCartItem(cartItem:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8D617BB2-F292-4D1F-B10E-FE83E490D076 - aa520ed7370cf4d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.CartTableViewCell.setSelected(_: Swift.Bool, animated: Swift.Bool) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "8D617BB2-F292-4D1F-B10E-FE83E490D076 - 13febd394cf169fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "e_commerce.CartTableViewCell.setUpCartItem(cartItem: e_commerce.CartProduct) -&gt; ()"
+                  moduleName = "e-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khaledhussien/Desktop/e-commerce%20copy%202/e-commerce/Cells/UsersCells/CartCell/CartTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "1420">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -10,6 +10,7 @@ import UIKit
 protocol CartTableViewCellDelegate: AnyObject {
     func plusTapped(cell: CartTableViewCell,sender: UIButton,quantity: String,cartID: String)
     func minusTapped(cell: CartTableViewCell,sender: UIButton,quantity: String,cartID: String)
+    func deleteItemTapped(cell: CartTableViewCell,sender: UIButton,cartID: String)
 }
 class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var minusBtn: UIButton!
@@ -25,6 +26,7 @@ class CartTableViewCell: UITableViewCell {
         return UINib(nibName: CartTableViewCell.identifier, bundle: nil)
     }
     weak var delegate: CartTableViewCellDelegate?
+    var cartQuantity: Int?
     var cartData: UserCartData?
     // MARK: - LifeCycle
     override func awakeFromNib() {
@@ -49,28 +51,34 @@ class CartTableViewCell: UITableViewCell {
             self.itemImage.loadDataUsingCacheWithUrlString(urlString: cartItem.image.image)
             self.nameObject.text = cartItem.name
             self.numberLabel.text = String(cartItem.quantity)
+            guard let quantityLabel = self.numberLabel.text else{return}
+            self.cartQuantity = Int(quantityLabel)
+            print("first quantity: \(quantityLabel)")
         }
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     @IBAction func plusBtnTapped(_ sender: UIButton) {
-        guard let quantity = self.numberLabel.text,let cartData = self.cartData else{return}
-        guard let quantityInt = Int(quantity)else{return}
-        let finalQuantity = quantityInt + 1
-        self.numberLabel.text = String(finalQuantity)
-        delegate?.plusTapped(cell: self, sender: sender, quantity: String(finalQuantity), cartID: String(cartData.cartID))
-        print("DEBUG PRINT: \(finalQuantity)")
+        guard var cartQuantity = self.cartQuantity else{return}
+        cartQuantity += 1
+        guard let cartData = self.cartData else{return}
+        self.numberLabel.text = "\(cartQuantity)"
+        print("quantity plus: \(cartQuantity)")
+        delegate?.plusTapped(cell: self, sender: sender, quantity: String(cartQuantity), cartID: String(cartData.cartID))
     }
     @IBAction func minusBtnTapped(_ sender: UIButton) {
-        guard let quantity = self.numberLabel.text,let cartData = self.cartData else{return}
-        guard let quantityInt = Int(quantity)else{return}
-        let finalQuantity = quantityInt - 1
-        self.numberLabel.text = String(finalQuantity)
-        delegate?.minusTapped(cell: self, sender: sender, quantity: String(finalQuantity), cartID: String(cartData.cartID))
-        print("DEBUG PRINT: \(finalQuantity)")
+        guard var cartQuantity = self.cartQuantity else{return}
+        cartQuantity -= 1
+        guard let cartData = self.cartData else{return}
+        self.numberLabel.text = "\(cartQuantity)"
+        print("quantity minus: \(cartQuantity)")
+        delegate?.minusTapped(cell: self, sender: sender, quantity: String(cartQuantity), cartID: String(cartData.cartID))
     }
-    
+    @IBAction func deletedItemTapped(_ sender: UIButton) {
+        guard let cartData = self.cartData else{return}
+        let cartID = cartData.cartID
+        delegate?.deleteItemTapped(cell: self, sender: sender, cartID: String(cartID))
+    }
 }

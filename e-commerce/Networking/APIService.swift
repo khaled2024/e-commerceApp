@@ -19,7 +19,6 @@ class APIService {
     // MARK: - ALAMOFIRE
     static let shared = APIService()
     private init(){}
-    
     // MARK: - User :-
     /// Login User
     func userLogin(phone: String,completion: @escaping (LoginData?,LoginError?,Error?)-> Void) {
@@ -32,7 +31,7 @@ class APIService {
                    encoding: JSONEncoding.default,
                    headers: nil)
         .validate(statusCode: 200..<300)
-        .responseJSON { (response) in
+        .responseDecodable(of: LoginData.self) { (response) in
             switch response.result {
                 // success result Handel (loginData & loginError)
             case .success(_):
@@ -74,7 +73,7 @@ class APIService {
                    encoding: JSONEncoding.default,
                    headers: nil)
         .validate(statusCode: 200..<300)
-        .responseJSON { (response) in
+        .responseDecodable(of: LoginData.self) { (response) in
             switch response.result {
                 // success result Handel (loginData & loginError)
             case .success(_):
@@ -112,7 +111,7 @@ class APIService {
         ]
         AF.request("https://" + Constants.baseURL + "/api/login",method: .post,parameters: parameters,encoding: JSONEncoding.default,headers: nil)
         .validate(statusCode: 200..<300)
-        .responseJSON { (response) in
+        .responseDecodable(of: LoginData.self) { (response) in
             switch response.result {
                 // success result Handel (loginData & loginError)
             case .success(_):
@@ -147,7 +146,8 @@ class APIService {
         let headers: HTTPHeaders = [
             HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
         ]
-        AF.request(url,method: .get,encoding: JSONEncoding.default,headers: headers).responseJSON { (response) in
+        AF.request(url,method: .get,encoding: JSONEncoding.default,headers: headers)
+            .responseDecodable(of: T.self) { (response) in
             guard let data = response.data else{return}
             switch response.result {
             case .success(_):
@@ -169,7 +169,8 @@ class APIService {
             HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
             HTTP.Headers.Key.authorization.rawValue:"\(Constants.TokenBearer)\(token)"
         ]
-        AF.request(url,method: .get,encoding: JSONEncoding.default,headers: headers).responseJSON { (response) in
+        AF.request(url,method: .get,encoding: JSONEncoding.default,headers: headers)
+            .responseDecodable(of: T.self) { (response) in
             guard let data = response.data else{return}
             switch response.result {
             case .success(_):
@@ -191,7 +192,8 @@ class APIService {
             HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
             HTTP.Headers.Key.authorization.rawValue:"\(Constants.TokenBearer)\(token)"
         ]
-        AF.request(url,method: .post,encoding: JSONEncoding.default,headers: headers).responseJSON { (response) in
+        AF.request(url,method: .post,encoding: JSONEncoding.default,headers: headers)
+            .responseDecodable(of: T.self) { (response) in
             
             guard let data = response.data else{return}
             switch response.result {
@@ -214,7 +216,31 @@ class APIService {
             HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
             HTTP.Headers.Key.authorization.rawValue:"\(Constants.TokenBearer)\(token)"
         ]
-        AF.request(url,method: .post, parameters: param,encoding: JSONEncoding.default,headers: headers).responseJSON { (response) in
+        AF.request(url,method: .post, parameters: param, encoding: JSONEncoding.default,headers: headers)
+            .responseDecodable(of: T.self) { (response) in
+            guard let data = response.data else{return}
+            switch response.result {
+            case .success(_):
+                do {
+                    let result = try JSONDecoder().decode(T.self, from: data)
+                    completion(result,nil)
+                } catch let jsonError {
+                    print(jsonError)
+                    completion(nil,jsonError)
+                }
+            case .failure(let error):
+                completion(nil,error)
+            }
+        }
+    }
+    // delete item
+    func deleteDataWithBody<T: Decodable>(url: String,token: String,completion: @escaping (T?,Error?)-> Void){
+        let headers: HTTPHeaders = [
+            HTTP.Headers.Key.contentType.rawValue : HTTP.Headers.Value.applicationJson.rawValue,
+            HTTP.Headers.Key.authorization.rawValue:"\(Constants.TokenBearer)\(token)"
+        ]
+        AF.request(url,method: .delete,encoding: JSONEncoding.default,headers: headers)
+            .responseDecodable(of: T.self) { (response) in
             
             guard let data = response.data else{return}
             switch response.result {
